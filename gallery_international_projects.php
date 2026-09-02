@@ -10,8 +10,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Photo gallery of Delta Engineering Services' completed engineering projects internationally, including Oman and India.">
+    <meta name="author" content="Delta Engineering Services">
+    <link rel="canonical" href="https://www.deltaengineering.ca/gallery_international_projects.php">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Delta Engineering Services">
+    <meta property="og:title" content="Gallery - International Projects | Delta Engineering Services">
+    <meta property="og:description" content="Completed engineering projects internationally, including Oman and India.">
+    <meta property="og:url" content="https://www.deltaengineering.ca/gallery_international_projects.php">
+    <meta property="og:image" content="https://www.deltaengineering.ca/assets/images/logo.png">
 
 	<title>Gallery - International Projects | Delta Engineering Services</title>
 

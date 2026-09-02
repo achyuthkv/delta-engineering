@@ -10,8 +10,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Infrastructure and municipal engineering services from Delta Engineering Services — roadway design, water and sewer systems, and capital improvement planning.">
+    <meta name="author" content="Delta Engineering Services">
+    <link rel="canonical" href="https://www.deltaengineering.ca/infrastructure_and_municipal_engineering.php">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Delta Engineering Services">
+    <meta property="og:title" content="Infrastructure &amp; Municipal Engineering | Delta Engineering Services">
+    <meta property="og:description" content="Roadway design, water and sewer systems, and capital improvement planning for municipalities.">
+    <meta property="og:url" content="https://www.deltaengineering.ca/infrastructure_and_municipal_engineering.php">
+    <meta property="og:image" content="https://www.deltaengineering.ca/assets/images/logo.png">
 
 	<title>Infrastructure & Municipal Engineering | Delta Engineering Services</title>
 
@@ -40,7 +47,7 @@
 						
 						<div class="col-md-5 col-sm-12 col-xs-12">
 							<div class="about-content">
-								<p>Working with municipalities and local governments, Infrastructure Design Group, Inc. understands the complex infrastructure needs of today’s communities. We offer comprehensive services to help you meet these needs and accomplish your goals.  We foster relationships with our municipal clients and consider ourselves as an extension of their staff.  Our communication, responsiveness and attention to detail are what set us apart from other competitors.</p>
+								<p>Working with municipalities and local governments, Delta Engineering Services understands the complex infrastructure needs of today’s communities. We offer comprehensive services to help you meet these needs and accomplish your goals. We foster relationships with our municipal clients and consider ourselves as an extension of their staff. Our communication, responsiveness and attention to detail are what set us apart from other competitors.</p>
 								
 								<p><b>Municipal Engineering Services:</b></p>
 								<ul style="text-align:left;list-style-position:outside; padding-left:0;margin-left:18px;padding-bottom:25px;line-height:25px">

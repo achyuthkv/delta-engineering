@@ -10,8 +10,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Civil engineering services from Delta Engineering Services, covering planning, design, transportation and distribution systems for construction projects.">
+    <meta name="author" content="Delta Engineering Services">
+    <link rel="canonical" href="https://www.deltaengineering.ca/civil_engineering.php">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Delta Engineering Services">
+    <meta property="og:title" content="Civil Engineering | Delta Engineering Services">
+    <meta property="og:description" content="Planning, design, transportation and distribution systems for construction projects.">
+    <meta property="og:url" content="https://www.deltaengineering.ca/civil_engineering.php">
+    <meta property="og:image" content="https://www.deltaengineering.ca/assets/images/logo.png">
 
 	<title>Civil Engineering | Delta Engineering Services</title>
 
@@ -40,7 +47,7 @@
 						
 						<div class="col-md-5 col-sm-12 col-xs-12">
 							<div class="about-content">
-								<p>Are you looking for 100% result oriented civil engineering services or solutions, then yes your search ends at Silicon Engineering Consultants Pvt Ltd. We are the leading civil engineering company that provides full-fledged engineering services to its clients globally. Our engineering services have proper data and that is from its start to the end. Our list of civil engineering solutions includes proper and structured work. The set of work is having planning, designing, transportation systems, distribution systems, and many other aspects that are required for construction. Thus, if this is so, then you must actually outsource civil engineering services with the expert civil engineering company like Silicon Engineering Consultants Pvt. Ltd.</p>
+								<p>Are you looking for result-oriented civil engineering services, then yes your search ends at Delta Engineering Services. We are a leading civil engineering company that provides full-fledged engineering services to clients globally. Our engineering services have proper data and that is from start to end. Our list of civil engineering solutions includes proper and structured work — planning, designing, transportation systems, distribution systems, and many other aspects required for construction. Outsource your civil engineering services to Delta Engineering Services.</p>
 								
 								<p><b>Project Management Services:</b></p>
 								<ul style="text-align:left;list-style-position:outside; padding-left:0;margin-left:18px;padding-bottom:25px;line-height:25px">

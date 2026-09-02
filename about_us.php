@@ -10,8 +10,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Learn about Delta Engineering Services — over three decades of structural and civil engineering experience shaping the Greater Toronto Area's skyline and infrastructure.">
+    <meta name="author" content="Delta Engineering Services">
+    <link rel="canonical" href="https://www.deltaengineering.ca/about_us.php">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Delta Engineering Services">
+    <meta property="og:title" content="About Us | Delta Engineering Services">
+    <meta property="og:description" content="Over three decades of structural and civil engineering experience shaping the Greater Toronto Area's skyline and infrastructure.">
+    <meta property="og:url" content="https://www.deltaengineering.ca/about_us.php">
+    <meta property="og:image" content="https://www.deltaengineering.ca/assets/images/logo.png">
 
 	<title>About Us | Delta Engineering Services</title>
 

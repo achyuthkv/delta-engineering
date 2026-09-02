@@ -10,8 +10,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Terms and conditions for using the Delta Engineering Services website.">
+    <meta name="author" content="Delta Engineering Services">
+    <link rel="canonical" href="https://www.deltaengineering.ca/terms_and_conditions.php">
 
 	<title>Terms & Conditions | Delta Engineering</title>
 

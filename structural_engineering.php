@@ -10,8 +10,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Structural engineering services from Delta Engineering Services — design, analysis, and construction support for buildings and structures across the GTA.">
+    <meta name="author" content="Delta Engineering Services">
+    <link rel="canonical" href="https://www.deltaengineering.ca/structural_engineering.php">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Delta Engineering Services">
+    <meta property="og:title" content="Structural Engineering | Delta Engineering Services">
+    <meta property="og:description" content="Design, analysis, and construction support for buildings and structures across the Greater Toronto Area.">
+    <meta property="og:url" content="https://www.deltaengineering.ca/structural_engineering.php">
+    <meta property="og:image" content="https://www.deltaengineering.ca/assets/images/logo.png">
 
 	<title>Structural Engineering | Delta Engineering Services</title>
 

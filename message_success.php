@@ -10,8 +10,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Your message has been sent to Delta Engineering Services.">
+    <meta name="author" content="Delta Engineering Services">
+    <meta name="robots" content="noindex, nofollow">
 
 	<title>Message Sent | Delta Engineering Services</title>
 
