@@ -12,13 +12,13 @@
 
     <meta name="description" content="Civil engineering services from Delta Engineering Services, covering planning, design, transportation and distribution systems for construction projects.">
     <meta name="author" content="Delta Engineering Services">
-    <link rel="canonical" href="https://delta-engineering.ca/civil_engineering.php">
+    <link rel="canonical" href="https://www.delta-engineering.ca/civil_engineering.php">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Delta Engineering Services">
     <meta property="og:title" content="Civil Engineering | Delta Engineering Services">
     <meta property="og:description" content="Planning, design, transportation and distribution systems for construction projects.">
-    <meta property="og:url" content="https://delta-engineering.ca/civil_engineering.php">
-    <meta property="og:image" content="https://delta-engineering.ca/assets/images/logo.png">
+    <meta property="og:url" content="https://www.delta-engineering.ca/civil_engineering.php">
+    <meta property="og:image" content="https://www.delta-engineering.ca/assets/images/logo.png">
 
 	<title>Civil Engineering | Delta Engineering Services</title>
 

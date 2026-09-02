@@ -12,13 +12,13 @@
 
     <meta name="description" content="Structural engineering services from Delta Engineering Services — design, analysis, and construction support for buildings and structures across the GTA.">
     <meta name="author" content="Delta Engineering Services">
-    <link rel="canonical" href="https://delta-engineering.ca/structural_engineering.php">
+    <link rel="canonical" href="https://www.delta-engineering.ca/structural_engineering.php">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Delta Engineering Services">
     <meta property="og:title" content="Structural Engineering | Delta Engineering Services">
     <meta property="og:description" content="Design, analysis, and construction support for buildings and structures across the Greater Toronto Area.">
-    <meta property="og:url" content="https://delta-engineering.ca/structural_engineering.php">
-    <meta property="og:image" content="https://delta-engineering.ca/assets/images/logo.png">
+    <meta property="og:url" content="https://www.delta-engineering.ca/structural_engineering.php">
+    <meta property="og:image" content="https://www.delta-engineering.ca/assets/images/logo.png">
 
 	<title>Structural Engineering | Delta Engineering Services</title>
 

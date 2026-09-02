@@ -12,13 +12,13 @@
 
     <meta name="description" content="Learn about Delta Engineering Services — over three decades of structural and civil engineering experience shaping the Greater Toronto Area's skyline and infrastructure.">
     <meta name="author" content="Delta Engineering Services">
-    <link rel="canonical" href="https://delta-engineering.ca/about_us.php">
+    <link rel="canonical" href="https://www.delta-engineering.ca/about_us.php">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Delta Engineering Services">
     <meta property="og:title" content="About Us | Delta Engineering Services">
     <meta property="og:description" content="Over three decades of structural and civil engineering experience shaping the Greater Toronto Area's skyline and infrastructure.">
-    <meta property="og:url" content="https://delta-engineering.ca/about_us.php">
-    <meta property="og:image" content="https://delta-engineering.ca/assets/images/logo.png">
+    <meta property="og:url" content="https://www.delta-engineering.ca/about_us.php">
+    <meta property="og:image" content="https://www.delta-engineering.ca/assets/images/logo.png">
 
 	<title>About Us | Delta Engineering Services</title>
 

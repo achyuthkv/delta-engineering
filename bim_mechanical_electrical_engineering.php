@@ -12,13 +12,13 @@
 
     <meta name="description" content="BIM, mechanical, and electrical engineering services from Delta Engineering Services, including drone-based 3D mapping and clash-free BIM modelling.">
     <meta name="author" content="Delta Engineering Services">
-    <link rel="canonical" href="https://delta-engineering.ca/bim_mechanical_electrical_engineering.php">
+    <link rel="canonical" href="https://www.delta-engineering.ca/bim_mechanical_electrical_engineering.php">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Delta Engineering Services">
     <meta property="og:title" content="BIM, Mechanical &amp; Electrical Engineering | Delta Engineering Services">
     <meta property="og:description" content="Drone-based 3D mapping and clash-free BIM modelling for construction projects.">
-    <meta property="og:url" content="https://delta-engineering.ca/bim_mechanical_electrical_engineering.php">
-    <meta property="og:image" content="https://delta-engineering.ca/assets/images/logo.png">
+    <meta property="og:url" content="https://www.delta-engineering.ca/bim_mechanical_electrical_engineering.php">
+    <meta property="og:image" content="https://www.delta-engineering.ca/assets/images/logo.png">
 
 	<title>BIM, Mechanical & Electrical Engineering | Delta Engineering Services</title>
 

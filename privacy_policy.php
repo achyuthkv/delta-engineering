@@ -12,7 +12,7 @@
 
     <meta name="description" content="Privacy policy for the Delta Engineering Services website.">
     <meta name="author" content="Delta Engineering Services">
-    <link rel="canonical" href="https://delta-engineering.ca/privacy_policy.php">
+    <link rel="canonical" href="https://www.delta-engineering.ca/privacy_policy.php">
 
 	<title>Privacy Policy | Delta Engineering</title>
 

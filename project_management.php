@@ -12,13 +12,13 @@
 
     <meta name="description" content="Project management services from Delta Engineering Services — design development, construction management, and cloud-based project tracking from concept to handover.">
     <meta name="author" content="Delta Engineering Services">
-    <link rel="canonical" href="https://delta-engineering.ca/project_management.php">
+    <link rel="canonical" href="https://www.delta-engineering.ca/project_management.php">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Delta Engineering Services">
     <meta property="og:title" content="Project Management | Delta Engineering Services">
     <meta property="og:description" content="Design development, construction management, and cloud-based project tracking from concept to handover.">
-    <meta property="og:url" content="https://delta-engineering.ca/project_management.php">
-    <meta property="og:image" content="https://delta-engineering.ca/assets/images/logo.png">
+    <meta property="og:url" content="https://www.delta-engineering.ca/project_management.php">
+    <meta property="og:image" content="https://www.delta-engineering.ca/assets/images/logo.png">
 
 	<title>Project Management | Delta Engineering Services</title>
 

@@ -12,13 +12,13 @@
 
     <meta name="description" content="Infrastructure and municipal engineering services from Delta Engineering Services — roadway design, water and sewer systems, and capital improvement planning.">
     <meta name="author" content="Delta Engineering Services">
-    <link rel="canonical" href="https://delta-engineering.ca/infrastructure_and_municipal_engineering.php">
+    <link rel="canonical" href="https://www.delta-engineering.ca/infrastructure_and_municipal_engineering.php">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Delta Engineering Services">
     <meta property="og:title" content="Infrastructure &amp; Municipal Engineering | Delta Engineering Services">
     <meta property="og:description" content="Roadway design, water and sewer systems, and capital improvement planning for municipalities.">
-    <meta property="og:url" content="https://delta-engineering.ca/infrastructure_and_municipal_engineering.php">
-    <meta property="og:image" content="https://delta-engineering.ca/assets/images/logo.png">
+    <meta property="og:url" content="https://www.delta-engineering.ca/infrastructure_and_municipal_engineering.php">
+    <meta property="og:image" content="https://www.delta-engineering.ca/assets/images/logo.png">
 
 	<title>Infrastructure & Municipal Engineering | Delta Engineering Services</title>
 

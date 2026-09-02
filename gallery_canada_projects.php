@@ -12,13 +12,13 @@
 
     <meta name="description" content="Photo gallery of Delta Engineering Services' completed engineering projects across Canada.">
     <meta name="author" content="Delta Engineering Services">
-    <link rel="canonical" href="https://delta-engineering.ca/gallery_canada_projects.php">
+    <link rel="canonical" href="https://www.delta-engineering.ca/gallery_canada_projects.php">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Delta Engineering Services">
     <meta property="og:title" content="Gallery - Canada Projects | Delta Engineering Services">
     <meta property="og:description" content="Completed engineering projects across Canada.">
-    <meta property="og:url" content="https://delta-engineering.ca/gallery_canada_projects.php">
-    <meta property="og:image" content="https://delta-engineering.ca/assets/images/logo.png">
+    <meta property="og:url" content="https://www.delta-engineering.ca/gallery_canada_projects.php">
+    <meta property="og:image" content="https://www.delta-engineering.ca/assets/images/logo.png">
 
 	<title>Gallery - Canada Projects | Delta Engineering Services</title>
 

@@ -12,13 +12,13 @@
 
     <meta name="description" content="Delta Engineering Services provides structural, civil, and infrastructure engineering across the Greater Toronto Area, with over 30 years and 1,000+ completed projects.">
     <meta name="author" content="Delta Engineering Services">
-    <link rel="canonical" href="https://delta-engineering.ca/">
+    <link rel="canonical" href="https://www.delta-engineering.ca/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Delta Engineering Services">
     <meta property="og:title" content="Delta Engineering Services | Structural &amp; Civil Engineering, Toronto">
     <meta property="og:description" content="Structural, civil, and infrastructure engineering across the Greater Toronto Area, with over 30 years and 1,000+ completed projects.">
-    <meta property="og:url" content="https://delta-engineering.ca/">
-    <meta property="og:image" content="https://delta-engineering.ca/assets/images/logo.png">
+    <meta property="og:url" content="https://www.delta-engineering.ca/">
+    <meta property="og:image" content="https://www.delta-engineering.ca/assets/images/logo.png">
 
 	<title>Home | Delta Engineering Services</title>
 
