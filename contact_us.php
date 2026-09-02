@@ -47,7 +47,7 @@
 
 					<div class="contact-form">
 						<?php
-						$action=$_REQUEST['action'];
+						$action=$_REQUEST['action'] ?? '';
 						if ($action=="")    /* display the contact form */
 							{
 							?>
@@ -72,9 +72,9 @@
 							} 
 						else
 							{
-							$name=$_REQUEST['name'];
-							$email=$_REQUEST['email'];
-							$message=$_REQUEST['message'];
+							$name=$_REQUEST['name'] ?? '';
+							$email=$_REQUEST['email'] ?? '';
+							$message=$_REQUEST['message'] ?? '';
 							if (($name=="")||($email=="")||($message==""))
 								{
 								echo "All fields are required, please fill <a href=\"\">the form</a> again.";

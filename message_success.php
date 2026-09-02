@@ -13,7 +13,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-	<title>Message Success | Dr. Samir Bhagwat</title>
+	<title>Message Sent | Delta Engineering Services</title>
 
 	<?php
 	include 'header.php';
@@ -41,7 +41,7 @@
 					<div class="row">
 						<div class="col-md-12 col-sm-12 col-xs-12">
 							<div>
-								<h4 style="text-align:justify;line-height:25px"><br><br><center>Thank You for contacting<br>Dr. Samir Bhagwat.<br><br>Our representative will contact you shortly.<br><br><br></center></h4>
+								<h4 style="text-align:justify;line-height:25px"><br><br><center>Thank You for contacting<br>Delta Engineering Services.<br><br>Our representative will contact you shortly.<br><br><br></center></h4>
 							</div>
 						</div>
 					</div>

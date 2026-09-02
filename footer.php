@@ -43,9 +43,6 @@
 	
 	<script src="assets/js/slick/slick.min.js"></script>
 	
-	<!-- Library - Google Map API -->
-	<script src="../../maps/api/js?key=AIzaSyDW40y4kdsjsz714OVTvrw7woVCpD8EbLE"></script>
-	
 	<!-- Library - Theme JS -->
 	<script src="assets/js/functions.js"></script>
 	
