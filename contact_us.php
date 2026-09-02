@@ -13,13 +13,13 @@
 
     <meta name="description" content="Get in touch with Delta Engineering Services for structural, civil, and infrastructure engineering inquiries in the Greater Toronto Area.">
     <meta name="author" content="Delta Engineering Services">
-    <link rel="canonical" href="https://www.deltaengineering.ca/contact_us.php">
+    <link rel="canonical" href="https://delta-engineering.ca/contact_us.php">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Delta Engineering Services">
     <meta property="og:title" content="Contact Us | Delta Engineering Services">
     <meta property="og:description" content="Get in touch for structural, civil, and infrastructure engineering inquiries in the Greater Toronto Area.">
-    <meta property="og:url" content="https://www.deltaengineering.ca/contact_us.php">
-    <meta property="og:image" content="https://www.deltaengineering.ca/assets/images/logo.png">
+    <meta property="og:url" content="https://delta-engineering.ca/contact_us.php">
+    <meta property="og:image" content="https://delta-engineering.ca/assets/images/logo.png">
 
 	<title>Contact Us | Delta Engineering Services</title>
 

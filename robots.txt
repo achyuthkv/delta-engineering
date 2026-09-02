@@ -3,4 +3,4 @@ Disallow: /mailer/
 Disallow: /cgi-bin/
 Disallow: /message_success.php
 
-Sitemap: https://www.deltaengineering.ca/sitemap.xml
+Sitemap: https://delta-engineering.ca/sitemap.xml
