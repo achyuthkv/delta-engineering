@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+	<title>Structural Engineering | Delta Engineering Services</title>
+
+	<?php
+	include 'header.php';
+	?>
+		
+	<div class="main-container">
+		<main>
+			
+			<!-- About Section -->
+			<div class="about-section container-fluid no-left-padding no-right-padding">
+				<!-- Container -->
+				<div class="container">
+					<div class="section-header">
+						<h3 style="text-transform:none">Structural Engineering</h3>
+					</div>
+					<div class="row">
+						<div class="col-md-1 col-sm-12 col-xs-12">
+						</div>
+						<div class="col-md-5 col-sm-12 col-xs-12">
+							<div class="about-content">
+								<img alt="blog" src="assets/images/slider/01_02.jpg" width="100%" style="border-radius:10px"><br><br>
+							</div>
+						</div>
+						
+						<div class="col-md-5 col-sm-12 col-xs-12">
+							<div class="about-content">
+								<p>Structural engineering is a specialized field of engineering that focuses on the design, analysis, and construction of structures. It involves applying principles of physics and mathematics to ensure that buildings, bridges, dams, and other structures are safe, durable, and able to withstand various loads and environmental conditions.</p>
+								
+								<p><b>Structural Engineering Services:</b></p>
+								<ul style="text-align:left;list-style-position:outside; padding-left:0;margin-left:18px;padding-bottom:25px;line-height:25px">
+									<li style="margin-top:-28px;"><font color="#1e1e1e">Industrial & Warehouse Buildings</font></li>
+									<li><font color="#1e1e1e">Process Plants: Chemical, Food Industry, Industrial Manufacturing, Pharmaceuticals</font></li>
+									<li><font color="#1e1e1e">Commercial Plazas and Retail Stores</font></li>
+									<li><font color="#1e1e1e">Hotels</font></li>
+									<li><font color="#1e1e1e">Medical Buildings</font></li>
+									<li><font color="#1e1e1e">Apartment Buildings and Custom Houses</font></li>
+									<li><font color="#1e1e1e">Places of Worship - Temples, Churches, Mosques, Jamatkhanas, Gurdwaras</font></li>
+									<li><font color="#1e1e1e">Restoration of Deteriorated Parking Garages</font></li>
+									<li><font color="#1e1e1e">Renovation of Buildings</font></li>
+									<li><font color="#1e1e1e">Infrastructure Projects: Water Tanks, Bridges, Bulk Storage Facilities</font></li>
+								</ul>
+								
+								
+							</div>
+						</div>
+						<div class="col-md-1 col-sm-12 col-xs-12">
+						</div>	
+											
+					</div>
+				</div><!-- Container /- -->
+			</div><!-- About Section -->
+			
+			<br>
+		</main>
+	</div>
+		
+	<?php
+	include 'footer.php';
+	?>

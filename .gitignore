@@ -1,0 +1,5 @@
+error_log
+*.log
+mailer/config-credentials.php
+mailer/mailCorporate-credentials.php
+.DS_Store
