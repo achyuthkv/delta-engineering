@@ -292,6 +292,29 @@
 .de-message h1 { font-family: "Archivo Expanded", sans-serif; font-weight: 800; font-size: 32px; margin: 0 0 12px; color: #0d1626; }
 .de-message p { font-size: 16px; color: var(--de-ink-soft); margin: 0 0 28px; max-width: 460px; margin-left: auto; margin-right: auto; }
 
+/* ---------- accordion ---------- */
+.de-accordion { max-width: 900px; margin: 0 auto; }
+/* .panel is added only so Bootstrap's collapse.js (hardcoded to `.panel > .in`) can
+   find sibling panels to auto-close; neutralize its default card styling here. */
+.de-accordion-item.panel {
+	background: transparent; border: none; border-radius: 0; box-shadow: none; margin-bottom: 0;
+	border-bottom: 1px solid var(--de-line);
+}
+.de-accordion-item.panel:first-child { border-top: 1px solid var(--de-line); }
+.de-accordion-toggle {
+	display: flex; align-items: center; justify-content: space-between; gap: 16px;
+	padding: 22px 4px; font-family: "Archivo Expanded", sans-serif; font-weight: 700;
+	font-size: 17px; color: #0d1626; cursor: pointer;
+}
+.de-accordion-toggle:hover { color: var(--de-brand); }
+.de-accordion-toggle .chev { width: 14px; height: 14px; flex-shrink: 0; stroke: var(--de-brand); transition: transform 0.2s; transform: rotate(180deg); }
+.de-accordion-toggle.collapsed .chev { transform: rotate(0deg); }
+.de-accordion-body.collapse:not(.in) { display: none; }
+.de-accordion-body-inner { padding: 0 4px 28px; }
+.de-accordion-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.de-accordion-list li { display: flex; gap: 10px; align-items: flex-start; font-size: 14.5px; line-height: 1.6; color: #364059; }
+.de-accordion-list li::before { content: ""; width: 6px; height: 6px; background: var(--de-brand); border-radius: 50%; margin-top: 7px; flex-shrink: 0; }
+
 /* ---------- responsive ---------- */
 @media (max-width: 991px) {
 	.de-hero-grid, .de-about-grid, .de-intro-grid { grid-template-columns: 1fr; }
