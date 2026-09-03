@@ -1,32 +1,31 @@
-﻿<div class="footer-bottom" style="text-align:left">
-		<!-- Container -->
-		<div class="container">
-			<div class="row">
-			<div class="col-md-3 col-sm-12 col-xs-12">
-			<p><b>CANADA</b><br>204-4211 Sheppard Ave. E., Scarborough ON M1S5H5.<br><br>
-			</div>
-			<div class="col-md-3 col-sm-12 col-xs-12">
-			<p><b>OMAN</b><br>In Association with Al Hashar Engineering, PO Box-28, PC-114.<br>
-			<font color="#ffffff">Telephone: (968) 94666640.</font>
-			<br><br>
-			</div>
-			<div class="col-md-3 col-sm-12 col-xs-12">
-			<p><b>INDIA</b><br>Dev Arced, New Shahibaug, Nana Chiloda, Ahmedabad GUJARAT.<br><br>
-			</div>
-			<div class="col-md-3 col-sm-12 col-xs-12">
-			<p><b>CONTACT US</b><br><font color="#ffffff">Telephone: (416) 573-1573</font><br>
-			<a href="mailto:palak@deltaengineering.ca"><font color="#ffffff">Email: palak@deltaengineering.ca</font></a></p>
-			</div>
-			</div>
-			<br>
-			<div class="row">
-			<div class="col-md-12 col-sm-12 col-xs-12">
-			<center><p>&copy; 2026 Delta Engineering Services. All Rights Reserved.<br><a href="privacy_policy.php"><font color="#ffffff">Privacy Policy</font></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="terms_and_conditions.php"><font color="#ffffff">Terms & Conditions</font></a></p></center>
-			</div>
-			</div>
-		</div><!-- Container /- -->
-</div>
-	
+﻿<footer class="de-footer">
+	<div class="de-foot-grid">
+		<div>
+			<img class="de-foot-logo" src="assets/images/logo.png" alt="Delta Engineering Services">
+			<p style="max-width:280px">Structural &amp; civil engineering across the Greater Toronto Area since 1985.</p>
+		</div>
+		<div>
+			<h5>Canada</h5>
+			<p>204-4211 Sheppard Ave. E.<br>Scarborough, ON M1S 5H5</p>
+		</div>
+		<div>
+			<h5>Oman</h5>
+			<p>In association with<br>Al Hashar Engineering<br>PO Box 28, PC-114<br>Tel: (968) 9466 6640</p>
+		</div>
+		<div>
+			<h5>India</h5>
+			<p>Dev Arced, New Shahibaug<br>Nana Chiloda, Ahmedabad<br>Gujarat</p>
+			<h5 style="margin-top:20px">Contact</h5>
+			<p><a href="tel:+14165731573">(416) 573-1573</a><br><a href="mailto:palak@deltaengineering.ca">palak@deltaengineering.ca</a></p>
+		</div>
+	</div>
+	<div class="de-foot-bottom">
+		<span>&copy; 2026 Delta Engineering Services. All rights reserved.</span>
+		<span><a href="privacy_policy.php">Privacy Policy</a><a href="terms_and_conditions.php">Terms &amp; Conditions</a></span>
+	</div>
+</footer>
+</div><!-- /.de-root -->
+
 	<!-- JQuery v1.12.4 -->
 	<script src="assets/js/jquery.min.js"></script>
 	

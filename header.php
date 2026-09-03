@@ -1,20 +1,24 @@
-﻿	<!-- Standard Favicon -->
+﻿	<!-- Favicon (Delta Engineering "E" mark) -->
 	<link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-	
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+
 	<!-- For iPhone 4 Retina display: -->
 	<link rel="apple-touch-icon-precomposed" href="assets/images/apple-touch-icon-114x114-precomposed.png">
-	
+
 	<!-- For iPad: -->
 	<link rel="apple-touch-icon-precomposed" href="assets/images//apple-touch-icon-72x72-precomposed.png">
-	
+
 	<!-- For iPhone: -->
-	<link rel="apple-touch-icon-precomposed" href="assets/images/apple-touch-icon-57x57-precomposed.png">	
-	
+	<link rel="apple-touch-icon-precomposed" href="assets/images/apple-touch-icon-57x57-precomposed.png">
+
 	<!-- Library - Google Font Familys -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Montserrat+Alternates:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Playfair+Display:400,400i,700,700i,900,900i|Poppins:300,400,500,600,700|Quattrocento:400,700|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
-	
+	<link href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@600;700;800&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+
 	<link rel="stylesheet" type="text/css" href="assets/revolution/css/settings.css">
 	
 	<link rel="stylesheet" type="text/css" href="assets/revolution/fonts/font-awesome/css/font-awesome.css">
@@ -37,7 +41,9 @@
 	<link href="assets/css/rtl.css" rel="stylesheet">
 	<link id="color" href="assets/css/color-schemes/default.css" rel="stylesheet">
 	<!-- Custom - Theme CSS -->
-	<link rel="stylesheet" type="text/css" href="style.css">	
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- Redesign - Blueprint Technical design system -->
+	<link rel="stylesheet" type="text/css" href="assets/css/redesign.css">
 	<!--[if lt IE 9]>
 		<script src="js/html5/respond.min.js"></script>
     <![endif]-->
@@ -78,75 +84,66 @@
 
 </head>
 
-<body data-offset="200" data-spy="scroll" data-target=".ow-navigation" style="margin-top:-20px">
+<body data-offset="200" data-spy="scroll" data-target=".ow-navigation">
 
 <a onclick="location.href='https://wa.me/+14165799787';" class="float" target="_blank">
 <i class="fa fa-whatsapp my-float"></i>
 </a>
 
-<div class="boxed-container">
-	<header class="header_s header_s5 header_s1 header_s8">
-		<!-- Ownavigation -->
-		<nav class="navbar ownavigation">
-			<!-- Container -->
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="index.php"><img src="assets/images/logo.png" width="340px"></a>
+<div class="de-root">
+	<header class="de-nav de-blueprint-bg">
+		<a href="index.php" class="de-nav-logo"><img src="assets/images/logo.png" alt="Delta Engineering Services" width="170"></a>
+		<button type="button" class="de-nav-toggle" id="deNavToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="deNavLinks">
+			<span></span><span></span><span></span>
+		</button>
+		<nav class="de-nav-links" id="deNavLinks">
+			<a href="index.php" title="Home">Home</a>
+			<div class="de-nav-dropdown" id="deServicesDropdown">
+				<a href="#" class="de-nav-dropdown-toggle" title="Services">Services <svg viewBox="0 0 10 10" fill="none"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.4"/></svg></a>
+				<div class="de-nav-dropdown-menu">
+					<a href="structural_engineering.php" title="Structural Engineering">Structural Engineering</a>
+					<a href="civil_engineering.php" title="Civil Engineering">Civil Engineering</a>
+					<a href="infrastructure_and_municipal_engineering.php" title="Infrastructure &amp; Municipal Engineering">Infrastructure &amp; Municipal Engineering</a>
+					<a href="bim_mechanical_electrical_engineering.php" title="BIM, Mechanical &amp; Electrical Engineering">BIM, Mechanical &amp; Electrical Engineering</a>
+					<a href="project_management.php" title="Project Management">Project Management</a>
 				</div>
-				<!--<a href="tel:+918422030220" title="+918422030220" class="phone-call"><i class="fa fa-phone-square"></i>+91 8422030220</a>-->
-				<a href="tel:+4165731573" title="+4165731573" class="phone-call"><i class="fa fa-phone-square"></i>(416) 573-1573</a>
-				<div class="navbar-collapse collapse" id="navbar">
-					<ul class="nav navbar-nav menubar navbar-left">
-						<li><a title="Home" href="index.php">Home</a></li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" title="Services" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services</a>
-							<i class="ddl-switch fa fa-angle-down"></i>
-							<ul class="dropdown-menu">
-								<li><a style="text-transform:none" href="structural_engineering.php" title="Structural Engineering">Structural Engineering</a></li>
-								<li><a style="text-transform:none" href="civil_engineering.php" title="Civil Engineering">Civil Engineering</a></li>
-								<li><a style="text-transform:none" href="infrastructure_and_municipal_engineering.php" title="Infrastructure & Municipal Engineering">Infrastructure & Municipal Engineering</a></li>
-								<li><a style="text-transform:none" href="bim_mechanical_electrical_engineering.php" title="BIM, Mechanical & Electrical Engineering">BIM, Mechanical & Electrical Engineering</a></li>
-								<li><a style="text-transform:none" href="project_management.php" title="Project Management">Project Management</a></li>
-							</ul>
-						</li>
-						<li><a title="Projects" href="projects.php">Projects</a></li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" title="Gallery" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery</a>
-							<i class="ddl-switch fa fa-angle-down"></i>
-							<ul class="dropdown-menu">
-								<li><a style="text-transform:none" href="gallery_canada_projects.php" title="Canada Projects">Canada Projects</a></li>
-								<li><a style="text-transform:none" href="gallery_international_projects.php" title="International Projects">International Projects</a></li>
-							</ul>
-						</li>
-						<li><a title="Contact" href="contact_us.php">Contact</a></li>
-					</ul>
+			</div>
+			<a href="projects.php" title="Projects">Projects</a>
+			<div class="de-nav-dropdown" id="deGalleryDropdown">
+				<a href="#" class="de-nav-dropdown-toggle" title="Gallery">Gallery <svg viewBox="0 0 10 10" fill="none"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.4"/></svg></a>
+				<div class="de-nav-dropdown-menu">
+					<a href="gallery_canada_projects.php" title="Canada Projects">Canada Projects</a>
+					<a href="gallery_international_projects.php" title="International Projects">International Projects</a>
 				</div>
-			</div><!-- Container /- -->
-		</nav><!-- Ownavigation /- -->
-		<!-- SidePanel -->
-		<div id="slidepanel">
-			<!-- Top Header -->
-			<div class="top-header container-fluid no-left-padding no-right-padding">
-				<!-- Container -->
-				<div class="container">
-					<div class="call-info">
-						<p><a href="mailto:palak@deltaengineering.ca" title="palak@deltaengineering.ca"><i class="fa fa-envelope-o"></i>palak@deltaengineering.ca</a></p>
-						<!--<p><a href="tel:+918422030220" title="call us"><i class="fa fa-phone"></i>+91 8422030220</a></p>-->
-					</div>
-					<div class="header-social"> 
-						<ul>
-							<li><a href="#" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-						</ul>
-					</div>
-				</div><!-- Container /- -->
-			</div><!-- Top Header /- -->
-		</div><!-- SidePanel /- -->
+			</div>
+			<a href="about_us.php" title="About">About</a>
+			<a href="contact_us.php" title="Contact">Contact</a>
+		</nav>
+		<a href="tel:+14165731573" title="(416) 573-1573" class="de-nav-cta">
+			<svg viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.4 21 3 13.6 3 4.6c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1.1L6.6 10.8Z" stroke="currentColor" stroke-width="1.5"/></svg>
+			(416) 573-1573
+		</a>
 	</header>
+	<script>
+		(function () {
+			var toggle = document.getElementById('deNavToggle');
+			var links = document.getElementById('deNavLinks');
+			if (toggle && links) {
+				toggle.addEventListener('click', function () {
+					var open = links.classList.toggle('is-open');
+					toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+				});
+			}
+			['deServicesDropdown', 'deGalleryDropdown'].forEach(function (id) {
+				var dd = document.getElementById(id);
+				if (!dd) return;
+				var link = dd.querySelector('.de-nav-dropdown-toggle');
+				link.addEventListener('click', function (e) {
+					if (window.innerWidth <= 767) {
+						e.preventDefault();
+						dd.classList.toggle('is-open');
+					}
+				});
+			});
+		})();
+	</script>
