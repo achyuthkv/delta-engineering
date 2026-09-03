@@ -25,282 +25,297 @@
 	<?php
 	include 'header.php';
 	?>
-		
-	<div class="main-container">
-		<main>
-			
-			<!-- Gallery Section -->
-			<div class="gallery-section gallery-section1 container-fluid no-left-padding no-right-padding">
-				<!-- Container -->
-				<div class="container">
-					<ul class="portfolio-list no-left-padding">
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/gallery_canada/001.jpg" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/gallery_canada/001.jpg"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-							<center><h5>Water Tank<br>Norwood, Ontario</h5></center><br>
-						</li>
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/gallery_canada/002.jpg" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/gallery_canada/002.jpg"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-							<center><h5>Water Tank<br>Norwood, Ontario</h5></center><br>
-						</li>
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/gallery_canada/003.jpg" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/gallery_canada/003.jpg"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-							<center><h5>Code Compliance for Custom House<br>Richmond Hill, Ontario</h5></center><br>
-						</li>
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/gallery_canada/004.png" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/gallery_canada/004.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-							<center><h5>Retaining Wall<br>Woodbridge, Ontario</h5></center><br>
-						</li>
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/gallery_canada/005.png" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/gallery_canada/005.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-							<center><h5>Retaining Wall<br>Woodbridge, Ontario</h5></center><br>
-						</li>
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/gallery_canada/007.png" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/gallery_canada/007.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-							<center><h5>Weather Shelter for Industrial Building<br>Scarborough, Ontario</h5></center><br>
-						</li>
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/gallery_canada/008.png" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/gallery_canada/008.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-							<center><h5>Arya Samaj Vedic Cultural Centre<br>Markham, Ontario</h5></center><br>
-						</li>
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/gallery_canada/009.png" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/gallery_canada/009.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-							<center><h5>Shri Lakshmi Narayan Temple<br>Scarborough, Ontario</h5></center><br>
-						</li>
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/gallery_canada/010.png" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/gallery_canada/010.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-							<center><h5>Gauri Shankar Mandir<br>Brampton, Ontario</h5></center><br>
-						</li>
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/gallery_canada/011.png" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/gallery_canada/011.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-							<center><h5>Gauri Shankar Mandir<br>Brampton, Ontario</h5></center><br>
-						</li>
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/gallery_canada/012.png" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/gallery_canada/012.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-							<center><h5>Deck Remodelling<br>886 Carlaw Avenue, Toronto</h5></center><br>
-						</li>
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/gallery_canada/013.png" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/gallery_canada/013.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-							<center><h5>Industrial Building<br>Concord, Ontario</h5></center><br>
-						</li>
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/gallery_canada/014.png" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/gallery_canada/014.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-							<center><h5>Industrial Building<br>Concord, Ontario</h5></center><br>
-						</li>
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/gallery_canada/015.png" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/gallery_canada/015.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-							<center><h5>Industrial Building<br>Concord, Ontario</h5></center><br>
-						</li>
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/gallery_canada/016.png" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/gallery_canada/016.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-							<center><h5>Industrial<br>Building</h5><br></center>
-						</li>
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/gallery_canada/017.png" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/gallery_canada/017.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-							<center><h5>JIL - Praise Valley Camping Shelter<br>Oaklake</h5></center><br>
-						</li>
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/gallery_canada/018.png" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/gallery_canada/018.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-							<center><h5>JIL - Praise Valley Camping Shelter<br>Oaklake</h5></center><br>
-						</li>
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/gallery_canada/019.png" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/gallery_canada/019.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-							<center><h5>JIL - Basketball Court<br>Orleans, Ottawa</h5></center><br>
-						</li>
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/gallery_canada/021.png" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/gallery_canada/021.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-							<center><h5>Wedding Hall Canopy<br>Richmond, Ontario</h5></center><br>
-						</li>
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/gallery_canada/020.png" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/gallery_canada/020.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-							<center><h5>Wedding Hall Canopy<br>Richmond, Ontario</h5></center><br>
-						</li>
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/gallery_canada/022.png" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/gallery_canada/022.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-							<center><h5>Wedding Hall Canopy<br>Richmond, Ontario</h5></center><br>
-						</li>
-						<li class="col-md-12 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/gallery_canada/023.png" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/gallery_canada/023.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-							<center><h5>Showroom For Formula Honda<br>Markham Road, Scarborough, Ontario</h5></center><br>
-						</li>
-						<li class="col-md-12 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/gallery_canada/024.png" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/gallery_canada/024.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-							<center><h5>Showroom for Mercedes & Volvo<br>​Steeles & Yonge, North York, Ontario</h5></center><br>
-						</li>
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/gallery_canada/012.jpg" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/gallery_canada/012.jpg"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-							<center><h5>Industrial Building<br>​Aliston</h5></center><br>
-						</li>
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/gallery_canada/013.jpg" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/gallery_canada/013.jpg"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-							<center><h5>Industrial Building<br>​Aliston</h5></center><br>
-						</li>
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/gallery_canada/014.jpg" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/gallery_canada/014.jpg"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-							<center><h5>Industrial Building<br>​Aliston</h5></center><br>
-						</li>
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/gallery_canada/015.jpg" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/gallery_canada/015.jpg"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-							<center><h5>Industrial Building<br>​Aliston</h5></center><br>
-						</li>
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/gallery_canada/016.jpg" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/gallery_canada/016.jpg"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-							<center><h5>Shikhar Works for Hindusabha Temple<br>​Hamilton</h5></center><br>
-						</li>
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/gallery_canada/017.jpg" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/gallery_canada/017.jpg"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-							<center><h5>Structural Assessment for Barn<br>Mount Albert Road</h5></center><br>
-						</li>
-					</ul>
-				</div><!-- Container /- -->
-			</div><!-- Gallery Section -->
-		</main>
-	</div>
-		
+	<main>
+
+		<!-- Banner -->
+		<div class="de-banner de-blueprint-bg">
+			<div class="de-banner-inner">
+				<div class="de-crumbs"><a href="index.php">Home</a> / <span class="cur">Canada Projects</span></div>
+				<h1>Canada Projects</h1>
+				<p>A photo record of completed structural and civil engineering work across Canada, spanning industrial buildings, temples, and custom homes.</p>
+			</div>
+		</div>
+
+		<div class="de-section">
+			<div class="gallery-section de-photo-grid">
+				<div class="de-photo-item">
+					<div class="content-image-block">
+						<img src="assets/images/gallery_canada/001.jpg" alt="Water Tank Norwood, Ontario">
+						<div class="content-block-hover">
+							<a class="zoom-in" href="assets/images/gallery_canada/001.jpg"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
+						</div>
+					</div>
+					<div class="de-photo-cap">Water Tank<span>Norwood, Ontario</span></div>
+				</div>
+				<div class="de-photo-item">
+					<div class="content-image-block">
+						<img src="assets/images/gallery_canada/002.jpg" alt="Water Tank Norwood, Ontario">
+						<div class="content-block-hover">
+							<a class="zoom-in" href="assets/images/gallery_canada/002.jpg"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
+						</div>
+					</div>
+					<div class="de-photo-cap">Water Tank<span>Norwood, Ontario</span></div>
+				</div>
+				<div class="de-photo-item">
+					<div class="content-image-block">
+						<img src="assets/images/gallery_canada/003.jpg" alt="Code Compliance for Custom House Richmond Hill, Ontario">
+						<div class="content-block-hover">
+							<a class="zoom-in" href="assets/images/gallery_canada/003.jpg"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
+						</div>
+					</div>
+					<div class="de-photo-cap">Code Compliance for Custom House<span>Richmond Hill, Ontario</span></div>
+				</div>
+				<div class="de-photo-item">
+					<div class="content-image-block">
+						<img src="assets/images/gallery_canada/004.png" alt="Retaining Wall Woodbridge, Ontario">
+						<div class="content-block-hover">
+							<a class="zoom-in" href="assets/images/gallery_canada/004.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
+						</div>
+					</div>
+					<div class="de-photo-cap">Retaining Wall<span>Woodbridge, Ontario</span></div>
+				</div>
+				<div class="de-photo-item">
+					<div class="content-image-block">
+						<img src="assets/images/gallery_canada/005.png" alt="Retaining Wall Woodbridge, Ontario">
+						<div class="content-block-hover">
+							<a class="zoom-in" href="assets/images/gallery_canada/005.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
+						</div>
+					</div>
+					<div class="de-photo-cap">Retaining Wall<span>Woodbridge, Ontario</span></div>
+				</div>
+				<div class="de-photo-item">
+					<div class="content-image-block">
+						<img src="assets/images/gallery_canada/007.png" alt="Weather Shelter for Industrial Building Scarborough, Ontario">
+						<div class="content-block-hover">
+							<a class="zoom-in" href="assets/images/gallery_canada/007.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
+						</div>
+					</div>
+					<div class="de-photo-cap">Weather Shelter for Industrial Building<span>Scarborough, Ontario</span></div>
+				</div>
+				<div class="de-photo-item">
+					<div class="content-image-block">
+						<img src="assets/images/gallery_canada/008.png" alt="Arya Samaj Vedic Cultural Centre Markham, Ontario">
+						<div class="content-block-hover">
+							<a class="zoom-in" href="assets/images/gallery_canada/008.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
+						</div>
+					</div>
+					<div class="de-photo-cap">Arya Samaj Vedic Cultural Centre<span>Markham, Ontario</span></div>
+				</div>
+				<div class="de-photo-item">
+					<div class="content-image-block">
+						<img src="assets/images/gallery_canada/009.png" alt="Shri Lakshmi Narayan Temple Scarborough, Ontario">
+						<div class="content-block-hover">
+							<a class="zoom-in" href="assets/images/gallery_canada/009.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
+						</div>
+					</div>
+					<div class="de-photo-cap">Shri Lakshmi Narayan Temple<span>Scarborough, Ontario</span></div>
+				</div>
+				<div class="de-photo-item">
+					<div class="content-image-block">
+						<img src="assets/images/gallery_canada/010.png" alt="Gauri Shankar Mandir Brampton, Ontario">
+						<div class="content-block-hover">
+							<a class="zoom-in" href="assets/images/gallery_canada/010.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
+						</div>
+					</div>
+					<div class="de-photo-cap">Gauri Shankar Mandir<span>Brampton, Ontario</span></div>
+				</div>
+				<div class="de-photo-item">
+					<div class="content-image-block">
+						<img src="assets/images/gallery_canada/011.png" alt="Gauri Shankar Mandir Brampton, Ontario">
+						<div class="content-block-hover">
+							<a class="zoom-in" href="assets/images/gallery_canada/011.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
+						</div>
+					</div>
+					<div class="de-photo-cap">Gauri Shankar Mandir<span>Brampton, Ontario</span></div>
+				</div>
+				<div class="de-photo-item">
+					<div class="content-image-block">
+						<img src="assets/images/gallery_canada/012.png" alt="Deck Remodelling 886 Carlaw Avenue, Toronto">
+						<div class="content-block-hover">
+							<a class="zoom-in" href="assets/images/gallery_canada/012.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
+						</div>
+					</div>
+					<div class="de-photo-cap">Deck Remodelling<span>886 Carlaw Avenue, Toronto</span></div>
+				</div>
+				<div class="de-photo-item">
+					<div class="content-image-block">
+						<img src="assets/images/gallery_canada/013.png" alt="Industrial Building Concord, Ontario">
+						<div class="content-block-hover">
+							<a class="zoom-in" href="assets/images/gallery_canada/013.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
+						</div>
+					</div>
+					<div class="de-photo-cap">Industrial Building<span>Concord, Ontario</span></div>
+				</div>
+				<div class="de-photo-item">
+					<div class="content-image-block">
+						<img src="assets/images/gallery_canada/014.png" alt="Industrial Building Concord, Ontario">
+						<div class="content-block-hover">
+							<a class="zoom-in" href="assets/images/gallery_canada/014.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
+						</div>
+					</div>
+					<div class="de-photo-cap">Industrial Building<span>Concord, Ontario</span></div>
+				</div>
+				<div class="de-photo-item">
+					<div class="content-image-block">
+						<img src="assets/images/gallery_canada/015.png" alt="Industrial Building Concord, Ontario">
+						<div class="content-block-hover">
+							<a class="zoom-in" href="assets/images/gallery_canada/015.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
+						</div>
+					</div>
+					<div class="de-photo-cap">Industrial Building<span>Concord, Ontario</span></div>
+				</div>
+				<div class="de-photo-item">
+					<div class="content-image-block">
+						<img src="assets/images/gallery_canada/016.png" alt="Industrial Building">
+						<div class="content-block-hover">
+							<a class="zoom-in" href="assets/images/gallery_canada/016.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
+						</div>
+					</div>
+					<div class="de-photo-cap">Industrial<span>Building</span></div>
+				</div>
+				<div class="de-photo-item">
+					<div class="content-image-block">
+						<img src="assets/images/gallery_canada/017.png" alt="JIL - Praise Valley Camping Shelter Oaklake">
+						<div class="content-block-hover">
+							<a class="zoom-in" href="assets/images/gallery_canada/017.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
+						</div>
+					</div>
+					<div class="de-photo-cap">JIL - Praise Valley Camping Shelter<span>Oaklake</span></div>
+				</div>
+				<div class="de-photo-item">
+					<div class="content-image-block">
+						<img src="assets/images/gallery_canada/018.png" alt="JIL - Praise Valley Camping Shelter Oaklake">
+						<div class="content-block-hover">
+							<a class="zoom-in" href="assets/images/gallery_canada/018.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
+						</div>
+					</div>
+					<div class="de-photo-cap">JIL - Praise Valley Camping Shelter<span>Oaklake</span></div>
+				</div>
+				<div class="de-photo-item">
+					<div class="content-image-block">
+						<img src="assets/images/gallery_canada/019.png" alt="JIL - Basketball Court Orleans, Ottawa">
+						<div class="content-block-hover">
+							<a class="zoom-in" href="assets/images/gallery_canada/019.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
+						</div>
+					</div>
+					<div class="de-photo-cap">JIL - Basketball Court<span>Orleans, Ottawa</span></div>
+				</div>
+				<div class="de-photo-item">
+					<div class="content-image-block">
+						<img src="assets/images/gallery_canada/021.png" alt="Wedding Hall Canopy Richmond, Ontario">
+						<div class="content-block-hover">
+							<a class="zoom-in" href="assets/images/gallery_canada/021.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
+						</div>
+					</div>
+					<div class="de-photo-cap">Wedding Hall Canopy<span>Richmond, Ontario</span></div>
+				</div>
+				<div class="de-photo-item">
+					<div class="content-image-block">
+						<img src="assets/images/gallery_canada/020.png" alt="Wedding Hall Canopy Richmond, Ontario">
+						<div class="content-block-hover">
+							<a class="zoom-in" href="assets/images/gallery_canada/020.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
+						</div>
+					</div>
+					<div class="de-photo-cap">Wedding Hall Canopy<span>Richmond, Ontario</span></div>
+				</div>
+				<div class="de-photo-item">
+					<div class="content-image-block">
+						<img src="assets/images/gallery_canada/022.png" alt="Wedding Hall Canopy Richmond, Ontario">
+						<div class="content-block-hover">
+							<a class="zoom-in" href="assets/images/gallery_canada/022.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
+						</div>
+					</div>
+					<div class="de-photo-cap">Wedding Hall Canopy<span>Richmond, Ontario</span></div>
+				</div>
+				<div class="de-photo-item de-photo-wide">
+					<div class="content-image-block">
+						<img src="assets/images/gallery_canada/023.png" alt="Showroom For Formula Honda Markham Road, Scarborough, Ontario">
+						<div class="content-block-hover">
+							<a class="zoom-in" href="assets/images/gallery_canada/023.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
+						</div>
+					</div>
+					<div class="de-photo-cap">Showroom For Formula Honda<span>Markham Road, Scarborough, Ontario</span></div>
+				</div>
+				<div class="de-photo-item de-photo-wide">
+					<div class="content-image-block">
+						<img src="assets/images/gallery_canada/024.png" alt="Showroom for Mercedes & Volvo ​Steeles & Yonge, North York, Ontario">
+						<div class="content-block-hover">
+							<a class="zoom-in" href="assets/images/gallery_canada/024.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
+						</div>
+					</div>
+					<div class="de-photo-cap">Showroom for Mercedes & Volvo<span>​Steeles & Yonge, North York, Ontario</span></div>
+				</div>
+				<div class="de-photo-item">
+					<div class="content-image-block">
+						<img src="assets/images/gallery_canada/012.jpg" alt="Industrial Building ​Aliston">
+						<div class="content-block-hover">
+							<a class="zoom-in" href="assets/images/gallery_canada/012.jpg"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
+						</div>
+					</div>
+					<div class="de-photo-cap">Industrial Building<span>​Aliston</span></div>
+				</div>
+				<div class="de-photo-item">
+					<div class="content-image-block">
+						<img src="assets/images/gallery_canada/013.jpg" alt="Industrial Building ​Aliston">
+						<div class="content-block-hover">
+							<a class="zoom-in" href="assets/images/gallery_canada/013.jpg"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
+						</div>
+					</div>
+					<div class="de-photo-cap">Industrial Building<span>​Aliston</span></div>
+				</div>
+				<div class="de-photo-item">
+					<div class="content-image-block">
+						<img src="assets/images/gallery_canada/014.jpg" alt="Industrial Building ​Aliston">
+						<div class="content-block-hover">
+							<a class="zoom-in" href="assets/images/gallery_canada/014.jpg"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
+						</div>
+					</div>
+					<div class="de-photo-cap">Industrial Building<span>​Aliston</span></div>
+				</div>
+				<div class="de-photo-item">
+					<div class="content-image-block">
+						<img src="assets/images/gallery_canada/015.jpg" alt="Industrial Building ​Aliston">
+						<div class="content-block-hover">
+							<a class="zoom-in" href="assets/images/gallery_canada/015.jpg"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
+						</div>
+					</div>
+					<div class="de-photo-cap">Industrial Building<span>​Aliston</span></div>
+				</div>
+				<div class="de-photo-item">
+					<div class="content-image-block">
+						<img src="assets/images/gallery_canada/016.jpg" alt="Shikhar Works for Hindusabha Temple ​Hamilton">
+						<div class="content-block-hover">
+							<a class="zoom-in" href="assets/images/gallery_canada/016.jpg"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
+						</div>
+					</div>
+					<div class="de-photo-cap">Shikhar Works for Hindusabha Temple<span>​Hamilton</span></div>
+				</div>
+				<div class="de-photo-item">
+					<div class="content-image-block">
+						<img src="assets/images/gallery_canada/017.jpg" alt="Structural Assessment for Barn Mount Albert Road">
+						<div class="content-block-hover">
+							<a class="zoom-in" href="assets/images/gallery_canada/017.jpg"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
+						</div>
+					</div>
+					<div class="de-photo-cap">Structural Assessment for Barn<span>Mount Albert Road</span></div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- CTA band -->
+		<div class="de-cta-band">
+			<div class="de-cta-band-inner">
+				<div>
+					<h2>Have a project like these?</h2>
+					<p>(416) 573-1573 &nbsp;&middot;&nbsp; palak@deltaengineering.ca</p>
+				</div>
+				<a href="contact_us.php" class="de-btn-primary">Request a Consultation</a>
+			</div>
+		</div>
+
+	</main>
+
 	<?php
 	include 'footer.php';
 	?>
