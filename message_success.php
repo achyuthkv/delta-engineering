@@ -19,39 +19,18 @@
 	<?php
 	include 'header.php';
 	?>
-		
-	<div class="main-container">
-		<main>
-			<!-- Page Banner -->
-			<div class="page-banner container-fluid no-left-padding no-right-padding">
-				<!-- Container -->
-				<div class="container">
-					<div class="banner-content">
-						<ol class="breadcrumb">
-							<li class="active">Message Success</li>
-						</ol>
-					</div>
-				</div><!-- Container /- -->
-			</div><!-- Page Banner -->
-			
-			
-			<!-- About Section -->
-			<div class="about-section container-fluid no-left-padding no-right-padding">
-				<!-- Container -->
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12 col-sm-12 col-xs-12">
-							<div>
-								<h4 style="text-align:justify;line-height:25px"><br><br><center>Thank You for contacting<br>Delta Engineering Services.<br><br>Our representative will contact you shortly.<br><br><br></center></h4>
-							</div>
-						</div>
-					</div>
-				</div><!-- Container /- -->
-			</div><!-- About Section -->
-		</main>
-	</div>
-	<br><br><br>
-	
+
+	<main>
+
+		<div class="de-message de-blueprint-bg">
+			<div class="de-message-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+			<h1>Thank you for contacting us.</h1>
+			<p>Your message has been sent to Delta Engineering Services. Our representative will contact you shortly.</p>
+			<a href="index.php" class="de-btn-outline">Back to Home</a>
+		</div>
+
+	</main>
+
 	<?php
 	include 'footer.php';
 	?>

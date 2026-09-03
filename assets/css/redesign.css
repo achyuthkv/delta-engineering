@@ -242,6 +242,56 @@
 .de-spec-tick { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: #7fa0d9; padding-top: 2px; }
 .de-spec-row p { margin: 0; font-size: 14.5px; line-height: 1.5; color: #dbe1ee; }
 
+/* ---------- contact ---------- */
+.de-contact-grid { max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.3fr; gap: 56px; align-items: start; }
+.de-contact-info h3 { font-family: "Archivo Expanded", sans-serif; font-weight: 700; font-size: 20px; margin: 0 0 18px; color: #0d1626; }
+.de-contact-info-row { display: flex; gap: 14px; align-items: flex-start; padding: 16px 0; border-top: 1px solid var(--de-line); }
+.de-contact-info-row:first-of-type { border-top: none; }
+.de-contact-info-row .icon { width: 34px; height: 34px; border-radius: 4px; background: var(--de-line-soft); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.de-contact-info-row .icon svg { width: 17px; height: 17px; stroke: var(--de-brand); }
+.de-contact-info-row .l { font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: #5a6478; margin-bottom: 3px; }
+.de-contact-info-row .v { font-size: 14.5px; color: #2b364e; line-height: 1.5; }
+.de-contact-info-row a.v { color: #2b364e; }
+.de-contact-info-row a.v:hover { color: var(--de-brand); }
+.de-form-card { background: var(--de-paper-raised); border: 1px solid #e4e1d7; border-radius: 6px; padding: 34px; }
+.de-form-card h3 { font-family: "Archivo Expanded", sans-serif; font-weight: 700; font-size: 20px; margin: 0 0 8px; color: #0d1626; }
+.de-form-card > p { font-size: 14.5px; color: var(--de-ink-soft); margin: 0 0 24px; line-height: 1.55; }
+.de-form-field { margin-bottom: 18px; }
+.de-form-field label { display: block; font-size: 12.5px; font-weight: 600; color: #2b364e; margin-bottom: 7px; }
+.de-form-field input, .de-form-field textarea {
+	width: 100%; border: 1.5px solid #d8d4c6; border-radius: 3px; padding: 12px 14px;
+	font-family: "Public Sans", sans-serif; font-size: 14.5px; color: var(--de-ink);
+	background: var(--de-paper); resize: vertical;
+}
+.de-form-field input:focus, .de-form-field textarea:focus { outline: none; border-color: var(--de-brand); background: #fff; }
+.de-form-submit {
+	background: var(--de-accent); color: #fff; font-weight: 600; font-size: 14.5px;
+	padding: 14px 28px; border-radius: 3px; border: none; cursor: pointer; font-family: "Public Sans", sans-serif;
+}
+.de-form-submit:hover { background: #a94a1e; }
+.de-form-result { font-size: 15px; color: #2b364e; }
+.de-form-result a { font-weight: 600; }
+
+/* ---------- legal ---------- */
+.de-legal { padding: 64px 40px 96px; }
+.de-legal-inner { max-width: 800px; margin: 0 auto; }
+.de-legal-inner h2 { font-family: "Archivo Expanded", sans-serif; font-weight: 700; font-size: 19px; margin: 36px 0 12px; color: #0d1626; }
+.de-legal-inner h2:first-child { margin-top: 0; }
+.de-legal-inner p { font-size: 15px; line-height: 1.75; color: #364059; margin: 0 0 16px; }
+.de-legal-inner ul { list-style: none; margin: 0 0 16px; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.de-legal-inner ul li { display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.6; color: #364059; }
+.de-legal-inner ul li::before { content: ""; width: 6px; height: 6px; background: var(--de-brand); border-radius: 50%; margin-top: 8px; flex-shrink: 0; }
+
+/* ---------- message state ---------- */
+.de-message { padding: 96px 40px; text-align: center; }
+.de-message-icon {
+	width: 64px; height: 64px; border-radius: 50%; background: var(--de-line-soft);
+	display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;
+}
+.de-message-icon svg { width: 30px; height: 30px; stroke: var(--de-brand); }
+.de-message h1 { font-family: "Archivo Expanded", sans-serif; font-weight: 800; font-size: 32px; margin: 0 0 12px; color: #0d1626; }
+.de-message p { font-size: 16px; color: var(--de-ink-soft); margin: 0 0 28px; max-width: 460px; margin-left: auto; margin-right: auto; }
+
 /* ---------- responsive ---------- */
 @media (max-width: 991px) {
 	.de-hero-grid, .de-about-grid, .de-intro-grid { grid-template-columns: 1fr; }
@@ -252,6 +302,8 @@
 }
 
 @media (max-width: 767px) {
+	.de-contact-grid { grid-template-columns: 1fr; }
+	.de-form-card { padding: 24px; }
 	.de-block-grid { grid-template-columns: 1fr; }
 	.de-block-grid.de-reverse > :first-child { order: 0; }
 	.de-gallery-grid, .de-gallery-grid.de-gallery-2 { grid-template-columns: 1fr; }

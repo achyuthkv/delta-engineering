@@ -25,43 +25,71 @@
 	<?php
 	include 'header.php';
 	?>
-		
-	<div class="main-container">
-		<main>
-			
-			<!-- About Section -->
-			<div class="about-section container-fluid no-left-padding no-right-padding">
-				<!-- Container -->
-				<div class="container">
-					<div class="section-header">
-						<h3 style="text-transform:none">About Us</h3>
+
+	<main>
+
+		<!-- Banner -->
+		<div class="de-banner de-blueprint-bg">
+			<div class="de-banner-inner">
+				<div class="de-crumbs"><a href="index.php">Home</a> / <span class="cur">About Us</span></div>
+				<h1>About Us</h1>
+				<p>Built by engineers who think differently — over four decades of structural and civil engineering experience shaping the Greater Toronto Area's skyline and infrastructure.</p>
+			</div>
+		</div>
+
+		<!-- Intro -->
+		<div class="de-intro">
+			<div class="de-intro-grid">
+				<div class="de-intro-copy">
+					<p>Delta Engineering was founded by <b>Dave (Devender) Arora</b> in 1985 and incorporated in 1987. We have proudly delivered design and engineering services for over 1,000 building projects in the Greater Toronto Area, covering more than 10 million sq&nbsp;ft of building space across a variety of projects over four decades since inception.</p>
+					<p>We think differently, and at times recommend alternate design solutions for our projects — a mindset that's carried us from a single founder to a firm with offices across Canada, Oman, and India.</p>
+					<div class="de-intro-stats">
+						<div class="de-stat"><div class="n">1985</div><div class="l">Founded</div></div>
+						<div class="de-stat"><div class="n">1,000+</div><div class="l">Projects Delivered</div></div>
+						<div class="de-stat"><div class="n">10M+</div><div class="l">Sq. Ft. Engineered</div></div>
 					</div>
-					<div class="row">
-						<div class="col-md-1 col-sm-12 col-xs-12">
-						</div>
-						<div class="col-md-5 col-sm-12 col-xs-12">
-							<div class="about-content">
-								<img alt="blog" src="assets/images/slider/04.jpg" width="100%" style="border-radius:10px"><br><br>
-							</div>
-						</div>
-						
-						<div class="col-md-5 col-sm-12 col-xs-12">
-							<div class="about-content">
-								Delta Engineering was founded by Dave (Devender) Arora in 1985 and incorporated in 1987. We have proudly delivered services to our clients in the Design & Engineering of over 1000 building projects in greater Toronto area covering over 10 Million Sqft of buildings space in variety of projects during the last 38 years since inception. We think differently and at times recommend alternate design solutions for the projects.
-								
-							</div>
-						</div>
-						<div class="col-md-1 col-sm-12 col-xs-12">
-						</div>							
-						
+				</div>
+				<img src="assets/images/slider/04.jpg" alt="Delta Engineering Services team on site">
+			</div>
+		</div>
+
+		<!-- Why Delta -->
+		<div class="de-spec">
+			<div class="de-spec-inner">
+				<div class="de-section-eyebrow" style="color:#7fa0d9">Why Delta Engineering</div>
+				<h2>What sets our work apart.</h2>
+				<div class="de-spec-grid de-spec-grid-3">
+					<div>
+						<div class="de-spec-row"><span class="de-spec-tick">01</span><p>Quality Assurance</p></div>
 					</div>
-				</div><!-- Container /- -->
-			</div><!-- About Section -->
-			
-			<br><br><br>
-		</main>
-	</div>
-		
+					<div>
+						<div class="de-spec-row"><span class="de-spec-tick">02</span><p>Value Engineering</p></div>
+					</div>
+					<div>
+						<div class="de-spec-row"><span class="de-spec-tick">03</span><p>Technical Support</p></div>
+					</div>
+				</div>
+				<div class="de-spec-grid de-spec-grid-3" style="margin-top:0">
+					<div>
+						<div class="de-spec-row" style="border-bottom:none"><span class="de-spec-tick">04</span><p>Timely Response</p></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- CTA band -->
+		<div class="de-cta-band">
+			<div class="de-cta-band-inner">
+				<div>
+					<h2>Want to work with us?</h2>
+					<p>(416) 573-1573 &nbsp;&middot;&nbsp; palak@deltaengineering.ca</p>
+				</div>
+				<a href="contact_us.php" class="de-btn-primary">Request a Consultation</a>
+			</div>
+		</div>
+
+	</main>
+
 	<?php
 	include 'footer.php';
 	?>
