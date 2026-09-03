@@ -10,17 +10,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="BIM, mechanical, and electrical engineering services from Delta Engineering Services, including drone-based 3D mapping and clash-free BIM modelling.">
+    <meta name="description" content="BIM, mechanical, and electrical engineering services in Toronto — drone-based 3D mapping and clash-free BIM modelling for construction projects across the GTA.">
     <meta name="author" content="Delta Engineering Services">
     <link rel="canonical" href="https://www.delta-engineering.ca/bim_mechanical_electrical_engineering.php">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Delta Engineering Services">
-    <meta property="og:title" content="BIM, Mechanical &amp; Electrical Engineering | Delta Engineering Services">
-    <meta property="og:description" content="Drone-based 3D mapping and clash-free BIM modelling for construction projects.">
+    <meta property="og:title" content="BIM, Mechanical &amp; Electrical Engineering in Toronto | Delta Engineering">
+    <meta property="og:description" content="Drone-based 3D mapping and clash-free BIM modelling for construction projects across Toronto and the GTA.">
     <meta property="og:url" content="https://www.delta-engineering.ca/bim_mechanical_electrical_engineering.php">
     <meta property="og:image" content="https://www.delta-engineering.ca/assets/images/logo.png">
 
-	<title>BIM, Mechanical & Electrical Engineering | Delta Engineering Services</title>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Service",
+		"serviceType": "BIM, Mechanical and Electrical Engineering",
+		"name": "BIM, Mechanical & Electrical Engineering Services",
+		"description": "Drone-based 3D mapping and clash-free BIM modelling for construction projects across Toronto and the GTA.",
+		"provider": { "@type": "ProfessionalService", "name": "Delta Engineering Services", "url": "https://www.delta-engineering.ca/" },
+		"areaServed": "Greater Toronto Area",
+		"url": "https://www.delta-engineering.ca/bim_mechanical_electrical_engineering.php"
+	}
+	</script>
+
+	<title>BIM, Mechanical &amp; Electrical Engineering in Toronto | Delta Engineering</title>
 
 	<?php
 	include 'header.php';
@@ -32,8 +45,8 @@
 		<div class="de-banner de-blueprint-bg">
 			<div class="de-banner-inner">
 				<div class="de-crumbs"><a href="index.php">Home</a> / <span class="cur">BIM, Mechanical &amp; Electrical Engineering</span></div>
-				<h1>BIM, Mechanical &amp; Electrical Engineering</h1>
-				<p>Drone-based 3D mapping, clash-free BIM modelling, and mechanical &amp; electrical design coordinated with architects and MEP teams from concept to handover.</p>
+				<h1>BIM, Mechanical &amp; Electrical Engineering in Toronto &amp; the GTA</h1>
+				<p>Drone-based 3D mapping, clash-free BIM modelling, and mechanical &amp; electrical design coordinated with architects and MEP teams from concept to handover, across Toronto and the Greater Toronto Area.</p>
 			</div>
 		</div>
 

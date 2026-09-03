@@ -10,17 +10,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="Infrastructure and municipal engineering services from Delta Engineering Services — roadway design, water and sewer systems, and capital improvement planning.">
+    <meta name="description" content="Infrastructure and municipal engineering services for GTA municipalities — roadway design, water and sewer systems, and capital improvement planning.">
     <meta name="author" content="Delta Engineering Services">
     <link rel="canonical" href="https://www.delta-engineering.ca/infrastructure_and_municipal_engineering.php">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Delta Engineering Services">
-    <meta property="og:title" content="Infrastructure &amp; Municipal Engineering | Delta Engineering Services">
-    <meta property="og:description" content="Roadway design, water and sewer systems, and capital improvement planning for municipalities.">
+    <meta property="og:title" content="Infrastructure &amp; Municipal Engineering | Toronto &amp; the GTA | Delta Engineering">
+    <meta property="og:description" content="Roadway design, water and sewer systems, and capital improvement planning for municipalities across the Greater Toronto Area.">
     <meta property="og:url" content="https://www.delta-engineering.ca/infrastructure_and_municipal_engineering.php">
     <meta property="og:image" content="https://www.delta-engineering.ca/assets/images/logo.png">
 
-	<title>Infrastructure & Municipal Engineering | Delta Engineering Services</title>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Service",
+		"serviceType": "Infrastructure and Municipal Engineering",
+		"name": "Infrastructure & Municipal Engineering Services",
+		"description": "Roadway design, water and sewer systems, and capital improvement planning for municipalities across the Greater Toronto Area.",
+		"provider": { "@type": "ProfessionalService", "name": "Delta Engineering Services", "url": "https://www.delta-engineering.ca/" },
+		"areaServed": "Greater Toronto Area",
+		"url": "https://www.delta-engineering.ca/infrastructure_and_municipal_engineering.php"
+	}
+	</script>
+
+	<title>Infrastructure &amp; Municipal Engineering | Toronto &amp; the GTA | Delta Engineering</title>
 
 	<?php
 	include 'header.php';
@@ -32,7 +45,7 @@
 		<div class="de-banner de-blueprint-bg">
 			<div class="de-banner-inner">
 				<div class="de-crumbs"><a href="index.php">Home</a> / <span class="cur">Infrastructure &amp; Municipal Engineering</span></div>
-				<h1>Infrastructure &amp; Municipal Engineering</h1>
+				<h1>Infrastructure &amp; Municipal Engineering in the GTA</h1>
 				<p>Working with municipalities and local governments across the GTA — roadway design, water and sewer systems, and capital improvement planning delivered as an extension of your own staff.</p>
 			</div>
 		</div>
@@ -41,7 +54,7 @@
 		<div class="de-intro">
 			<div class="de-intro-grid">
 				<div class="de-intro-copy">
-					<p>Working with municipalities and local governments, Delta Engineering Services understands the complex infrastructure needs of today's communities. We offer comprehensive services to help you meet these needs and accomplish your goals.</p>
+					<p>Working with municipalities and local governments across the Greater Toronto Area, Delta Engineering Services understands the complex infrastructure needs of today's communities. We offer comprehensive services to help you meet these needs and accomplish your goals.</p>
 					<p>We foster relationships with our municipal clients and consider ourselves as an extension of their staff. Our communication, responsiveness, and attention to detail are what set us apart from other competitors.</p>
 					<div class="de-intro-stats">
 						<div class="de-stat"><div class="n">1,000+</div><div class="l">Buildings Engineered</div></div>

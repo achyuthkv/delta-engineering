@@ -10,17 +10,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="Civil engineering services from Delta Engineering Services, covering planning, design, transportation and distribution systems for construction projects.">
+    <meta name="description" content="Civil engineering services in Toronto and the Greater Toronto Area — planning, design, site development, and transportation systems for construction projects.">
     <meta name="author" content="Delta Engineering Services">
     <link rel="canonical" href="https://www.delta-engineering.ca/civil_engineering.php">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Delta Engineering Services">
-    <meta property="og:title" content="Civil Engineering | Delta Engineering Services">
-    <meta property="og:description" content="Planning, design, transportation and distribution systems for construction projects.">
+    <meta property="og:title" content="Civil Engineering Services in Toronto &amp; the GTA | Delta Engineering">
+    <meta property="og:description" content="Planning, design, and transportation systems for construction projects across Toronto and the Greater Toronto Area.">
     <meta property="og:url" content="https://www.delta-engineering.ca/civil_engineering.php">
     <meta property="og:image" content="https://www.delta-engineering.ca/assets/images/logo.png">
 
-	<title>Civil Engineering | Delta Engineering Services</title>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Service",
+		"serviceType": "Civil Engineering",
+		"name": "Civil Engineering Services",
+		"description": "Planning, design, and transportation systems for construction projects across Toronto and the Greater Toronto Area.",
+		"provider": { "@type": "ProfessionalService", "name": "Delta Engineering Services", "url": "https://www.delta-engineering.ca/" },
+		"areaServed": "Greater Toronto Area",
+		"url": "https://www.delta-engineering.ca/civil_engineering.php"
+	}
+	</script>
+
+	<title>Civil Engineering Services in Toronto &amp; the GTA | Delta Engineering</title>
 
 	<?php
 	include 'header.php';
@@ -32,7 +45,7 @@
 		<div class="de-banner de-blueprint-bg">
 			<div class="de-banner-inner">
 				<div class="de-crumbs"><a href="index.php">Home</a> / <span class="cur">Civil Engineering</span></div>
-				<h1>Civil Engineering</h1>
+				<h1>Civil Engineering Services in Toronto &amp; the GTA</h1>
 				<p>Planning, design, and distribution systems for construction projects — from site layout to transportation, delivered with the same rigour behind 1,000+ GTA buildings since 1985.</p>
 			</div>
 		</div>

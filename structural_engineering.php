@@ -10,17 +10,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="Structural engineering services from Delta Engineering Services — design, analysis, and construction support for buildings and structures across the GTA.">
+    <meta name="description" content="Structural engineering services in Toronto and the GTA — design, analysis, and construction support for buildings, bridges, and structures since 1985.">
     <meta name="author" content="Delta Engineering Services">
     <link rel="canonical" href="https://www.delta-engineering.ca/structural_engineering.php">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Delta Engineering Services">
-    <meta property="og:title" content="Structural Engineering | Delta Engineering Services">
-    <meta property="og:description" content="Design, analysis, and construction support for buildings and structures across the Greater Toronto Area.">
+    <meta property="og:title" content="Structural Engineering Services in Toronto &amp; the GTA | Delta Engineering">
+    <meta property="og:description" content="Design, analysis, and construction support for buildings and structures across Toronto and the Greater Toronto Area, since 1985.">
     <meta property="og:url" content="https://www.delta-engineering.ca/structural_engineering.php">
     <meta property="og:image" content="https://www.delta-engineering.ca/assets/images/logo.png">
 
-	<title>Structural Engineering | Delta Engineering Services</title>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Service",
+		"serviceType": "Structural Engineering",
+		"name": "Structural Engineering Services",
+		"description": "Design, analysis, and construction support for buildings, bridges, and structures across Toronto and the Greater Toronto Area.",
+		"provider": { "@type": "ProfessionalService", "name": "Delta Engineering Services", "url": "https://www.delta-engineering.ca/" },
+		"areaServed": "Greater Toronto Area",
+		"url": "https://www.delta-engineering.ca/structural_engineering.php"
+	}
+	</script>
+
+	<title>Structural Engineering Services in Toronto &amp; the GTA | Delta Engineering</title>
 
 	<?php
 	include 'header.php';
@@ -32,7 +45,7 @@
 		<div class="de-banner de-blueprint-bg">
 			<div class="de-banner-inner">
 				<div class="de-crumbs"><a href="index.php">Home</a> / <span class="cur">Structural Engineering</span></div>
-				<h1>Structural Engineering</h1>
+				<h1>Structural Engineering Services in Toronto &amp; the GTA</h1>
 				<p>Design, analysis, and construction support that ensures buildings, bridges, and structures are safe, durable, and built to withstand real-world loads — applied across 1,000+ projects in the GTA since 1985.</p>
 			</div>
 		</div>
