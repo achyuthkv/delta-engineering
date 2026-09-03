@@ -25,58 +25,71 @@
 	<?php
 	include 'header.php';
 	?>
-		
-	<div class="main-container">
-		<main>
-			
-			<!-- About Section -->
-			<div class="about-section container-fluid no-left-padding no-right-padding">
-				<!-- Container -->
-				<div class="container">
-					<div class="section-header">
-						<h3 style="text-transform:none">Structural Engineering</h3>
+
+	<main>
+
+		<!-- Banner -->
+		<div class="de-banner de-blueprint-bg">
+			<div class="de-banner-inner">
+				<div class="de-crumbs"><a href="index.php">Home</a> / <span class="cur">Structural Engineering</span></div>
+				<h1>Structural Engineering</h1>
+				<p>Design, analysis, and construction support that ensures buildings, bridges, and structures are safe, durable, and built to withstand real-world loads — applied across 1,000+ projects in the GTA since 1985.</p>
+			</div>
+		</div>
+
+		<!-- Intro -->
+		<div class="de-intro">
+			<div class="de-intro-grid">
+				<div class="de-intro-copy">
+					<p>Structural engineering is a specialized field of engineering that focuses on the design, analysis, and construction of structures. It involves applying principles of physics and mathematics to ensure that buildings, bridges, dams, and other structures are safe, durable, and able to withstand various loads and environmental conditions.</p>
+					<p>Every structural drawing set we deliver has been through the same discipline that's carried Delta Engineering through four decades of GTA construction — from industrial plants to places of worship.</p>
+					<div class="de-intro-stats">
+						<div class="de-stat"><div class="n">1,000+</div><div class="l">Buildings Engineered</div></div>
+						<div class="de-stat"><div class="n">10M+</div><div class="l">Sq. Ft. Delivered</div></div>
+						<div class="de-stat"><div class="n">40+</div><div class="l">Years in the GTA</div></div>
 					</div>
-					<div class="row">
-						<div class="col-md-1 col-sm-12 col-xs-12">
-						</div>
-						<div class="col-md-5 col-sm-12 col-xs-12">
-							<div class="about-content">
-								<img alt="blog" src="assets/images/slider/01_02.jpg" width="100%" style="border-radius:10px"><br><br>
-							</div>
-						</div>
-						
-						<div class="col-md-5 col-sm-12 col-xs-12">
-							<div class="about-content">
-								<p>Structural engineering is a specialized field of engineering that focuses on the design, analysis, and construction of structures. It involves applying principles of physics and mathematics to ensure that buildings, bridges, dams, and other structures are safe, durable, and able to withstand various loads and environmental conditions.</p>
-								
-								<p><b>Structural Engineering Services:</b></p>
-								<ul style="text-align:left;list-style-position:outside; padding-left:0;margin-left:18px;padding-bottom:25px;line-height:25px">
-									<li style="margin-top:-28px;"><font color="#1e1e1e">Industrial & Warehouse Buildings</font></li>
-									<li><font color="#1e1e1e">Process Plants: Chemical, Food Industry, Industrial Manufacturing, Pharmaceuticals</font></li>
-									<li><font color="#1e1e1e">Commercial Plazas and Retail Stores</font></li>
-									<li><font color="#1e1e1e">Hotels</font></li>
-									<li><font color="#1e1e1e">Medical Buildings</font></li>
-									<li><font color="#1e1e1e">Apartment Buildings and Custom Houses</font></li>
-									<li><font color="#1e1e1e">Places of Worship - Temples, Churches, Mosques, Jamatkhanas, Gurdwaras</font></li>
-									<li><font color="#1e1e1e">Restoration of Deteriorated Parking Garages</font></li>
-									<li><font color="#1e1e1e">Renovation of Buildings</font></li>
-									<li><font color="#1e1e1e">Infrastructure Projects: Water Tanks, Bridges, Bulk Storage Facilities</font></li>
-								</ul>
-								
-								
-							</div>
-						</div>
-						<div class="col-md-1 col-sm-12 col-xs-12">
-						</div>	
-											
+				</div>
+				<img src="assets/images/slider/01_02.jpg" alt="Structural steel frame under construction, GTA">
+			</div>
+		</div>
+
+		<!-- Spec list -->
+		<div class="de-spec">
+			<div class="de-spec-inner">
+				<div class="de-section-eyebrow" style="color:#7fa0d9">Structural Engineering Services</div>
+				<h2>What we design and engineer.</h2>
+				<div class="de-spec-grid">
+					<div>
+						<div class="de-spec-row"><span class="de-spec-tick">01</span><p>Industrial &amp; Warehouse Buildings</p></div>
+						<div class="de-spec-row"><span class="de-spec-tick">02</span><p>Process Plants — Chemical, Food Industry, Industrial Manufacturing, Pharmaceuticals</p></div>
+						<div class="de-spec-row"><span class="de-spec-tick">03</span><p>Commercial Plazas and Retail Stores</p></div>
+						<div class="de-spec-row"><span class="de-spec-tick">04</span><p>Hotels</p></div>
+						<div class="de-spec-row"><span class="de-spec-tick">05</span><p>Medical Buildings</p></div>
 					</div>
-				</div><!-- Container /- -->
-			</div><!-- About Section -->
-			
-			<br>
-		</main>
-	</div>
-		
+					<div>
+						<div class="de-spec-row"><span class="de-spec-tick">06</span><p>Apartment Buildings and Custom Houses</p></div>
+						<div class="de-spec-row"><span class="de-spec-tick">07</span><p>Places of Worship — Temples, Churches, Mosques, Jamatkhanas, Gurdwaras</p></div>
+						<div class="de-spec-row"><span class="de-spec-tick">08</span><p>Restoration of Deteriorated Parking Garages</p></div>
+						<div class="de-spec-row"><span class="de-spec-tick">09</span><p>Renovation of Buildings</p></div>
+						<div class="de-spec-row"><span class="de-spec-tick">10</span><p>Infrastructure Projects — Water Tanks, Bridges, Bulk Storage Facilities</p></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- CTA band -->
+		<div class="de-cta-band">
+			<div class="de-cta-band-inner">
+				<div>
+					<h2>Have a structure to design?</h2>
+					<p>(416) 573-1573 &nbsp;&middot;&nbsp; palak@deltaengineering.ca</p>
+				</div>
+				<a href="contact_us.php" class="de-btn-primary">Request a Consultation</a>
+			</div>
+		</div>
+
+	</main>
+
 	<?php
 	include 'footer.php';
 	?>
