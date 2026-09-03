@@ -400,7 +400,7 @@
 	.de-gallery-grid, .de-gallery-grid.de-gallery-2 { grid-template-columns: 1fr; }
 	.de-photo-grid { grid-template-columns: 1fr; }
 	.de-block, .de-gallery { padding-left: 20px; padding-right: 20px; }
-	.de-nav { padding: 14px 20px; }
+	.de-nav { padding: 14px 16px; gap: 10px; }
 	.de-nav-toggle { display: flex; }
 	.de-nav-links {
 		display: none; width: 100%; flex-direction: column; align-items: flex-start; gap: 4px;
@@ -410,7 +410,7 @@
 	.de-nav-links > a, .de-nav-dropdown { width: 100%; }
 	.de-nav-dropdown-menu { position: static; box-shadow: none; border: none; margin-top: 4px; padding-left: 12px; display: none; }
 	.de-nav-dropdown.is-open .de-nav-dropdown-menu { display: block; }
-	.de-nav-cta { order: 2; }
+	.de-nav-links .de-nav-cta { justify-content: center; margin-top: 10px; }
 
 	.de-hero, .de-section, .de-about, .de-cta-band, .de-footer, .de-banner, .de-intro, .de-spec { padding-left: 20px; padding-right: 20px; }
 	.de-hero h1 { font-size: 34px; }
@@ -424,4 +424,7 @@
 	.de-spec-grid { grid-template-columns: 1fr; }
 	.de-cta-band-inner { flex-direction: column; align-items: flex-start; }
 	.de-notable-row { flex-direction: column; gap: 3px; }
+	.de-foot-bottom { flex-direction: column; align-items: center; text-align: center; gap: 10px; }
+	.de-foot-bottom span { display: flex; gap: 16px; }
+	.de-foot-bottom a { margin-left: 0; }
 }
