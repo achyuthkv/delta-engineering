@@ -25,173 +25,101 @@
 	<?php
 	include 'header.php';
 	?>
-		
-	<div class="main-container">
-		<main>
-		
-			<!-- About Section -->
-			<div class="about-section container-fluid no-left-padding no-right-padding">
-				<!-- Container -->
-				<div class="container">
-					<div class="section-header">
-						<h3 style="text-transform:none">Project Management</h3>
-					</div>
-					<div class="row">
-					
-						<div class="col-md-12 col-sm-12 col-xs-12">
-							<div class="about-content">
-								<p>Delta Engineering provides “Project Management Services” right from design development, construction till handover& provides “PMC” services by providing their client “Unique” platform which provides cloud-based data for design, detailing and construction management stages. Delta Engineering has designed customized solution for tracking design data with cloud-based folder system which provides all stake holders to have their data in one place. Any changes happening by any of the team players sends the message to other members for better coordination and implementation.</p>
-								
-								<h4 style="text-transform:none">Mapping, Field Study & Construction Progress Monitoring</h4>
-								<p>Delta Engineering is transforming how we collect, analyze, share drone data for initial feasibility study and construction monitoring and is making the skies open and accessible for everyone, trusted by users across a variety of industries. Our platform is easy to master and makes improving workflows possible for any size company. Easily accessible filed data, progress monitoring, red flag, identifying delays, subsequent planning and project scheduling using Primavera.</p>
-							</div>
-						</div>
-						<div class="col-md-1 col-sm-12 col-xs-12">
-						</div>							
-						
-					</div>
-				</div><!-- Container /- -->
-			</div><!-- About Section -->
-			
-			
-			
-		
-			<!-- Gallery Section -->
-			<div class="gallery-section gallery-section1 container-fluid no-left-padding no-right-padding" style="padding-top:0px;padding-bottom:0px">
-				<!-- Container -->
-				<div class="container">
-					<ul class="portfolio-list no-left-padding">
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/project_management/001.jpg" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/project_management/001.jpg"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
 
-						</li>
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/project_management/002.jpg" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/project_management/002.jpg"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
+	<main>
 
-						</li>
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/project_management/003.jpg" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/project_management/003.jpg"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-						</li>
+		<!-- Banner -->
+		<div class="de-banner de-blueprint-bg">
+			<div class="de-banner-inner">
+				<div class="de-crumbs"><a href="index.php">Home</a> / <span class="cur">Project Management</span></div>
+				<h1>Project Management</h1>
+				<p>Design development through construction and handover — with a cloud-based platform that keeps every stakeholder's data, schedule, and progress in one place.</p>
+			</div>
+		</div>
+
+		<!-- Intro -->
+		<div class="de-intro">
+			<div class="de-intro-grid">
+				<div class="de-intro-copy">
+					<p>Delta Engineering provides "Project Management Services" right from design development through construction to handover, and provides "PMC" services through a unique platform that gives clients cloud-based data for design, detailing, and construction management stages.</p>
+					<p>We've built a customized solution for tracking design data with a cloud-based folder system that gives all stakeholders their data in one place — any change made by any team member sends a message to the others for better coordination and implementation.</p>
+					<div class="de-intro-stats">
+						<div class="de-stat"><div class="n">1,000+</div><div class="l">Buildings Engineered</div></div>
+						<div class="de-stat"><div class="n">10M+</div><div class="l">Sq. Ft. Delivered</div></div>
+						<div class="de-stat"><div class="n">40+</div><div class="l">Years in the GTA</div></div>
+					</div>
+				</div>
+				<img src="assets/images/project_management/001.jpg" alt="Project management site walkthrough">
+			</div>
+		</div>
+
+		<!-- Mapping / drone monitoring -->
+		<div class="de-block">
+			<div class="de-block-grid">
+				<div>
+					<h3>Mapping, Field Study &amp; Construction Progress Monitoring</h3>
+					<p>Delta Engineering is transforming how we collect, analyze, and share drone data for initial feasibility studies and construction monitoring — making the skies accessible for everyone, trusted by users across a variety of industries.</p>
+					<p>Our platform is easy to master and makes improving workflows possible for any size company: easily accessible field data, progress monitoring, red-flagging, identifying delays, and subsequent planning and project scheduling using Primavera.</p>
+				</div>
+				<img src="assets/images/project_management/002.jpg" alt="Drone aerial view of construction site progress">
+			</div>
+		</div>
+
+		<!-- Primavera scheduling -->
+		<div class="de-block" style="background:#f5f4f0">
+			<div class="de-block-grid de-reverse">
+				<img src="assets/images/project_management/004.jpg" alt="Primavera P6 project scheduling dashboard">
+				<div>
+					<h3>Project Scheduling Using Primavera</h3>
+					<p>Delta Engineering plays a critical role in the successful delivery of complex projects. As experts in project controls, our responsibilities span monitoring costs and schedules to managing risks from start to finish — comparing progress against contractual expectations, scope, performance criteria, and milestones at every phase, from preconstruction to closeout. Some of what our construction project controls consultants bring to your next project:</p>
+					<ul class="de-block-list">
+						<li>Project Planning</li>
+						<li>Schedule Development, Oversight, Reporting &amp; Analysis</li>
+						<li>Cost Estimating &amp; Analysis</li>
+						<li>Value Engineering</li>
+						<li>Budget Management</li>
 					</ul>
-				</div><!-- Container /- -->
-			</div><!-- Gallery Section -->
-		
-			
-			<!-- About Section -->
-			<div class="about-section container-fluid no-left-padding no-right-padding" style="padding-top:0px">
-				<!-- Container -->
-				<div class="container">
-					<div class="section-header" style="display:none">
-						<h3 style="text-transform:none">Project Management</h3>
-					</div>
-					<div class="row">
-					
-						<div class="col-md-12 col-sm-12 col-xs-12">
-							<div class="about-content">
-							`	<h4 style="text-transform:none">Project Scheduling Using Primavera</h4>
-								<p>Delta Engineering plays a critical role in the successful delivery of complex projects. As experts in project controls, our responsibilities span the gamut of a project—from monitoring costs and schedules to managing risks of all kinds from start to finish. Project control experts bring a comprehensive suite of skills and extensive field experience to the job site. We help project teams and management determine how far a project has progressed at any given time regarding schedule, cost, productivity, and risk and compare against contractual expectations, scope, performance criteria & milestones. Controls can be applied to all phases of a project, from preconstruction to closeout. Here are just some of the services our construction project controls consultants can bring to your next project:</p>
-								<ul style="text-align:left;list-style-position:outside; padding-left:0;margin-left:18px;padding-bottom:25px;line-height:25px">
-									<li style="margin-top:-28px;"><font color="#1e1e1e">Project Planning</font></li>
-									<li><font color="#1e1e1e">Schedule Development, Oversight, Reporting & Analysis</font></li>
-									<li><font color="#1e1e1e">Cost Estimating & Analysis</font></li>
-									<li><font color="#1e1e1e">Value Engineering</font></li>
-									<li><font color="#1e1e1e">Budget Management</font></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-1 col-sm-12 col-xs-12">
-						</div>							
-					</div>
-				</div><!-- Container /- -->
-			</div><!-- About Section -->		
-		
-			<!-- Gallery Section -->
-			<div class="gallery-section gallery-section1 container-fluid no-left-padding no-right-padding" style="padding-top:0px;padding-bottom:0px">
-				<!-- Container -->
-				<div class="container">
-					<ul class="portfolio-list no-left-padding">
-						<li class="col-md-12 col-sm-12 col-xs-12">
+				</div>
+			</div>
+		</div>
 
-								<img src="assets/images/project_management/004.jpg" alt="gallery" width="100%">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/project_management/004.jpg"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-								<br><br>
-						</li>
-					</ul>
-				</div><!-- Container /- -->
-			</div><!-- Gallery Section -->
-			
-			
-			<!-- About Section -->
-			<div class="about-section container-fluid no-left-padding no-right-padding" style="padding-top:0px;">
-				<!-- Container -->
-				<div class="container">
-					<div class="section-header" style="display:none">
-						<h3 style="text-transform:none">Project Management</h3>
-					</div>
-					<div class="row">
-					
-						<div class="col-md-12 col-sm-12 col-xs-12">
-							<div class="about-content">				
-								<h4 style="text-transform:none">Design, BOQ Preparing Stage Monitoring</h4>
-								<p>Delta Engineering’s customized design data management and tracking system allows all stake holders to work, upload, monitor the data at various level of the project. Delta Engineering’s data storage and communication system provides all stake holder for storing their working data as well communicating the changes, new details to all team members.</p>
-							</div>
-						</div>
-						<div class="col-md-1 col-sm-12 col-xs-12">
-						</div>							
-						
-					</div>
-				</div><!-- Container /- -->
-			</div><!-- About Section -->
-			
-			
-			
-		
-			<!-- Gallery Section -->
-			<div class="gallery-section gallery-section1 container-fluid no-left-padding no-right-padding" style="padding-top:0px;">
-				<!-- Container -->
-				<div class="container">
-					<ul class="portfolio-list no-left-padding">
-						<li class="col-md-6 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/project_management/005.jpg" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/project_management/005.jpg"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-						</li>
+		<!-- Design / BOQ monitoring -->
+		<div class="de-block">
+			<div class="de-block-grid">
+				<div>
+					<h3>Design, BOQ Preparing Stage Monitoring</h3>
+					<p>Delta Engineering's customized design data management and tracking system allows all stakeholders to work, upload, and monitor data at every level of the project. Our data storage and communication system gives every stakeholder a place to store working data and communicate changes and new details to the whole team.</p>
+				</div>
+				<img src="assets/images/project_management/005.jpg" alt="3D BIM design model for BOQ preparation">
+			</div>
+		</div>
 
-						<li class="col-md-6 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/project_management/006.jpg" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/project_management/006.jpg"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-						</li>
-					</ul>
-				</div><!-- Container /- -->
-			</div><!-- Gallery Section -->
-			
-		</main>
-	</div>
-		
+		<!-- Supporting gallery -->
+		<div class="de-gallery">
+			<div class="de-gallery-grid de-gallery-2">
+				<div class="de-gallery-item">
+					<img src="assets/images/project_management/003.jpg" alt="Project management field work">
+				</div>
+				<div class="de-gallery-item">
+					<img src="assets/images/project_management/006.jpg" alt="Cloud-based project folder structure">
+					<div class="de-gallery-cap">Cloud-based design &amp; document tracking</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- CTA band -->
+		<div class="de-cta-band">
+			<div class="de-cta-band-inner">
+				<div>
+					<h2>Need a project managed end-to-end?</h2>
+					<p>(416) 573-1573 &nbsp;&middot;&nbsp; palak@deltaengineering.ca</p>
+				</div>
+				<a href="contact_us.php" class="de-btn-primary">Request a Consultation</a>
+			</div>
+		</div>
+
+	</main>
+
 	<?php
 	include 'footer.php';
 	?>

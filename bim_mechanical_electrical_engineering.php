@@ -25,174 +25,101 @@
 	<?php
 	include 'header.php';
 	?>
-		
-	<div class="main-container">
-		<main>
-		
-			<!-- About Section -->
-			<div class="about-section container-fluid no-left-padding no-right-padding">
-				<!-- Container -->
-				<div class="container">
-					<div class="section-header">
-						<h3 style="text-transform:none">Building Information Modelling (BIM)</h3>
+
+	<main>
+
+		<!-- Banner -->
+		<div class="de-banner de-blueprint-bg">
+			<div class="de-banner-inner">
+				<div class="de-crumbs"><a href="index.php">Home</a> / <span class="cur">BIM, Mechanical &amp; Electrical Engineering</span></div>
+				<h1>BIM, Mechanical &amp; Electrical Engineering</h1>
+				<p>Drone-based 3D mapping, clash-free BIM modelling, and mechanical &amp; electrical design coordinated with architects and MEP teams from concept to handover.</p>
+			</div>
+		</div>
+
+		<!-- BIM intro -->
+		<div class="de-intro">
+			<div class="de-intro-grid">
+				<div class="de-intro-copy">
+					<p>Building Information Modelling, or BIM, is the foundation of the digital transformation Delta Engineering brings to optimize performance and minimize cost using advanced mapping technology. We leverage BIM to create and manage information on a construction project throughout its life cycle — a coordinated digital description of every aspect of the built asset, developed using data captured by LIDAR, combining information-rich 3D models with structured data from design through handover.</p>
+					<p>We provide a unique integrated solution: first 3D-mapping the plot by drone, then integrating a clash-free BIM model on terrain — making it easy for construction teams to communicate details across disciplines, in coordination with architects and other stakeholders.</p>
+					<div class="de-intro-stats">
+						<div class="de-stat"><div class="n">1,000+</div><div class="l">Buildings Engineered</div></div>
+						<div class="de-stat"><div class="n">10M+</div><div class="l">Sq. Ft. Delivered</div></div>
+						<div class="de-stat"><div class="n">40+</div><div class="l">Years in the GTA</div></div>
 					</div>
-					<div class="row">
-						<div class="col-md-1 col-sm-12 col-xs-12">
-						</div>
-						<div class="col-md-5 col-sm-12 col-xs-12">
-							<div class="about-content">
-								<img alt="blog" src="assets/images/bim.jpg" width="100%" style="border-radius:10px"><br><br>
-							</div>
-						</div>
-						
-						<div class="col-md-5 col-sm-12 col-xs-12">
-							<div class="about-content">
-								<p>Building Information Modelling, or BIM, is the foundation of digital transformation promised by Delta Engineering to optimize performance and minimize cost of advanced mapping technology used by the company. Delta Engineering leverages BIM to create and manage information on a construction project throughout its life cycle. As a part of this process, a coordinated digital description of every aspect of the built asset is developed using the data captured by LIDAR (refer to images below). This description includes a combination of information-rich 3D models and associated structured data that forms the backbone for constructions management, development consulting and site design. It covers everything from product, execution to handover information.</p>
-								
-								<p>Delta Engineering provides unique integrated solution first by 3D Mapping the plot by using Drone and integrate BIM clash free model on terrain which enable the construction industry people ease in communicating the details to various discipline team members. Delta Engineering’s unique integrated mapping and BIM service provides very effective project management solution. We provide detailed architectural and engineering services in coordination with architects and other stake holders.</p>							
-								<p><b>Our services include:</b></p>
-								<ul style="text-align:left;list-style-position:outside; padding-left:0;margin-left:18px;padding-bottom:25px;line-height:25px">
-									<li style="margin-top:-28px;"><font color="#1e1e1e">Master planning and detailing</font></li>
-									<li><font color="#1e1e1e">Architectural and interior detailing</font></li>
-									<li><font color="#1e1e1e">MEP design detailing and providing coordinated working drawings</font></li>
-									<li><font color="#1e1e1e">Heating and cooling design detailing working drawings</font></li>
-									<li><font color="#1e1e1e">BIM modeling and providing clash free solution / working drawings</font></li>
-								</ul>
-								
-							</div>
-						</div>
-						<div class="col-md-1 col-sm-12 col-xs-12">
-						</div>							
-						
+				</div>
+				<img src="assets/images/bim.jpg" alt="Building Information Modelling (BIM)">
+			</div>
+		</div>
+
+		<!-- BIM services spec -->
+		<div class="de-spec">
+			<div class="de-spec-inner">
+				<div class="de-section-eyebrow" style="color:#7fa0d9">Our BIM Services</div>
+				<h2>What we design and coordinate.</h2>
+				<div class="de-spec-grid">
+					<div>
+						<div class="de-spec-row"><span class="de-spec-tick">01</span><p>Master planning and detailing</p></div>
+						<div class="de-spec-row"><span class="de-spec-tick">02</span><p>Architectural and interior detailing</p></div>
+						<div class="de-spec-row"><span class="de-spec-tick">03</span><p>MEP design detailing and coordinated working drawings</p></div>
 					</div>
-				</div><!-- Container /- -->
-			</div><!-- About Section -->
-			
-		
-			<!-- Gallery Section -->
-			<div class="gallery-section gallery-section1 container-fluid no-left-padding no-right-padding" style="padding-top:0px;padding-bottom:0px">
-				<!-- Container -->
-				<div class="container">
-					<ul class="portfolio-list no-left-padding">
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/bim/001.jpg" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/bim/001.jpg"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-							<center><h5>Building Information Modeling</h5></center><br>
-						</li>
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/bim/002.jpg" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/bim/002.jpg"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-							<center><h5>Structural Detailing</h5></center><br>
-						</li>
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/bim/003.jpg" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/bim/003.jpg"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-							<center><h5>Architectural Detailing</h5></center><br>
-						</li>
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/bim/004.jpg" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/bim/004.jpg"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-							<center><h5>Structural Detailing</h5></center><br>
-						</li>
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/bim/005.jpg" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/bim/005.jpg"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-							<center><h5>MEP detailing and BIM</h5></center><br>
-						</li>
-						<li class="col-md-4 col-sm-12 col-xs-12">
-							<div class="content-image-block">
-								<img src="assets/images/bim/006.jpg" alt="gallery">
-								<div class="content-block-hover">
-									<a class="zoom-in" href="assets/images/bim/006.jpg"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-								</div>
-							</div>
-							<center><h5>MEP detailing and BIM</h5></center><br>
-						</li>
-					</ul>
-				</div><!-- Container /- -->
-			</div><!-- Gallery Section -->
-		
-			
-			<!-- About Section -->
-			<div class="about-section container-fluid no-left-padding no-right-padding" style="padding-top:40px;">
-				<!-- Container -->
-				<div class="container">
-					<div class="section-header">
-						<h3 style="text-transform:none">Mechanical Engineering</h3>
+					<div>
+						<div class="de-spec-row"><span class="de-spec-tick">04</span><p>Heating and cooling design detailing working drawings</p></div>
+						<div class="de-spec-row"><span class="de-spec-tick">05</span><p>BIM modeling and clash-free solutions / working drawings</p></div>
 					</div>
-					<div class="row">
-						<div class="col-md-1 col-sm-12 col-xs-12">
-						</div>
-						<div class="col-md-5 col-sm-12 col-xs-12">
-							<div class="about-content">
-								<img alt="blog" src="assets/images/slider/04.jpg" width="100%" style="border-radius:10px"><br><br>
-							</div>
-						</div>
-						
-						<div class="col-md-5 col-sm-12 col-xs-12">
-							<div class="about-content">
-								<p>Spiraling product costs and margin pressures are challenging the mechanical engineering industry to reinvent itself. Looking beyond the traditional approach to engineering, intensifying focus on R&D, leveraging new technologies, and enabling faster, better, and more cost-effective product development is imperative to remain competitive.</p>								
-							</div>
-						</div>
-						<div class="col-md-1 col-sm-12 col-xs-12">
-						</div>							
-						
-					</div>
-				</div><!-- Container /- -->
-			</div><!-- About Section -->
-		
-			
-			
-			<!-- About Section -->
-			<div class="about-section container-fluid no-left-padding no-right-padding" style="padding-bottom:60px">
-				<!-- Container -->
-				<div class="container">
-					<div class="section-header">
-						<h3 style="text-transform:none">Electrical Engineering</h3>
-					</div>
-					<div class="row">
-						<div class="col-md-1 col-sm-12 col-xs-12">
-						</div>
-						<div class="col-md-5 col-sm-12 col-xs-12">
-							<div class="about-content">
-								<img alt="blog" src="assets/images/slider/05.jpg" width="100%" style="border-radius:10px"><br><br>
-							</div>
-						</div>
-						
-						<div class="col-md-5 col-sm-12 col-xs-12">
-							<div class="about-content">
-								<p>Designing and laying out the right electrical system is not an easy job, as it takes weeks of research and analysis. Any lapse in understanding and implementation makes the system vulnerable to failure. Delta Engineering’s electrical engineering services help you accomplish the desired results at affordable rates. Electrical engineering services at Delta Engineering are intended to help you design and modify your state-of-the-art product. Our electrical design services also help you keep your systems efficient, reliable, safe, and up-to-date. Our electrical engineering services ensure complete adherence to industry standards.</p>								
-							</div>
-						</div>
-						<div class="col-md-1 col-sm-12 col-xs-12">
-						</div>							
-						
-					</div>
-				</div><!-- Container /- -->
-			</div><!-- About Section -->
-		</main>
-	</div>
-		
+				</div>
+			</div>
+		</div>
+
+		<!-- BIM gallery -->
+		<div class="de-gallery" style="padding-top:56px">
+			<div class="de-gallery-grid">
+				<div class="de-gallery-item"><img src="assets/images/bim/001.jpg" alt="Building Information Modeling"><div class="de-gallery-cap">Building Information Modeling</div></div>
+				<div class="de-gallery-item"><img src="assets/images/bim/002.jpg" alt="Structural Detailing"><div class="de-gallery-cap">Structural Detailing</div></div>
+				<div class="de-gallery-item"><img src="assets/images/bim/003.jpg" alt="Architectural Detailing"><div class="de-gallery-cap">Architectural Detailing</div></div>
+				<div class="de-gallery-item"><img src="assets/images/bim/004.jpg" alt="Structural Detailing"><div class="de-gallery-cap">Structural Detailing</div></div>
+				<div class="de-gallery-item"><img src="assets/images/bim/005.jpg" alt="MEP detailing and BIM"><div class="de-gallery-cap">MEP Detailing and BIM</div></div>
+				<div class="de-gallery-item"><img src="assets/images/bim/006.jpg" alt="MEP detailing and BIM"><div class="de-gallery-cap">MEP Detailing and BIM</div></div>
+			</div>
+		</div>
+
+		<!-- Mechanical -->
+		<div class="de-block">
+			<div class="de-block-grid">
+				<div>
+					<h3>Mechanical Engineering</h3>
+					<p>Spiraling product costs and margin pressures are challenging the mechanical engineering industry to reinvent itself. Looking beyond the traditional approach to engineering, intensifying focus on R&amp;D, leveraging new technologies, and enabling faster, better, and more cost-effective product development is imperative to remain competitive.</p>
+				</div>
+				<img src="assets/images/slider/04.jpg" alt="Mechanical engineering design work">
+			</div>
+		</div>
+
+		<!-- Electrical -->
+		<div class="de-block" style="background:#f5f4f0">
+			<div class="de-block-grid de-reverse">
+				<img src="assets/images/slider/05.jpg" alt="Electrical engineering design work">
+				<div>
+					<h3>Electrical Engineering</h3>
+					<p>Designing and laying out the right electrical system is not an easy job — it takes weeks of research and analysis, and any lapse in understanding or implementation makes the system vulnerable to failure. Delta Engineering's electrical engineering services help you accomplish the desired results at affordable rates, whether you're designing or modifying a state-of-the-art system.</p>
+					<p>Our electrical design services help keep your systems efficient, reliable, safe, and up-to-date, with complete adherence to industry standards.</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- CTA band -->
+		<div class="de-cta-band">
+			<div class="de-cta-band-inner">
+				<div>
+					<h2>Need BIM, mechanical, or electrical support?</h2>
+					<p>(416) 573-1573 &nbsp;&middot;&nbsp; palak@deltaengineering.ca</p>
+				</div>
+				<a href="contact_us.php" class="de-btn-primary">Request a Consultation</a>
+			</div>
+		</div>
+
+	</main>
+
 	<?php
 	include 'footer.php';
 	?>
