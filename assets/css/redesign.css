@@ -95,8 +95,8 @@
 }
 .de-btn-primary { background: var(--de-accent); color: #fff; padding: 14px 24px; border: 1.5px solid var(--de-accent); }
 .de-btn-primary:hover { background: #a94a1e; border-color: #a94a1e; }
-.de-btn-outline { border: 1.5px solid var(--de-brand); color: var(--de-brand); padding: 12.5px 20px; }
-.de-btn-outline:hover { background: var(--de-line-soft); }
+.de-btn-outline { border: 1.5px solid var(--de-brand); color: var(--de-brand); padding: 12.5px 20px; transition: background 0.15s, color 0.15s; }
+.de-btn-outline:hover { background: var(--de-brand); color: #fff; }
 .de-stat-rail { border-left: 1.5px solid #1f439333; padding-left: 24px; display: flex; flex-direction: column; gap: 26px; padding-top: 4px; }
 .de-stat .n { font-family: "IBM Plex Mono", monospace; font-size: 30px; font-weight: 600; color: var(--de-brand); font-variant-numeric: tabular-nums; }
 .de-stat .l { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.07em; color: #5a6478; margin-top: 3px; }
@@ -325,6 +325,49 @@
 .de-photo-item.de-photo-wide .content-image-block { height: 360px; }
 .de-photo-cap { text-align: center; font-size: 14px; font-weight: 600; color: #2b364e; margin-top: 12px; line-height: 1.4; }
 .de-photo-cap span { display: block; font-weight: 400; font-size: 12.5px; color: #7a8296; margin-top: 2px; font-family: "IBM Plex Mono", monospace; }
+
+/* Replace the old theme's 3D rotateX flip + Font Awesome search glyph with a
+   plain fade + subtle zoom, and a clean stroke-icon button matching the rest
+   of the site's iconography. Same specificity as elements.css, loaded after
+   it, so this wins without touching the shared content-image-block markup
+   (still needed for the Magnific Popup lightbox hook). */
+.gallery-section .content-image-block img { transition: transform 0.45s ease; }
+.gallery-section .content-image-block:hover img { transform: scale(1.045); }
+.gallery-section .content-image-block::before {
+	background-color: rgba(16, 26, 48, 0.78);
+	transform: none;
+	transition: opacity 0.25s ease;
+}
+.gallery-section .content-image-block:hover::before {
+	transform: none;
+}
+.gallery-section .content-block-hover {
+	top: 0; height: 100%;
+	display: flex; align-items: center; justify-content: center;
+	transform: none;
+}
+.gallery-section .content-image-block:hover .content-block-hover {
+	top: 0;
+	transform: none;
+}
+.gallery-section .content-block-hover a {
+	display: flex; align-items: center; justify-content: center;
+	width: 48px; height: 48px; margin: 0;
+	border: 1.5px solid rgba(255, 255, 255, 0.55); border-radius: 50%;
+	transition: border-color 0.2s, background 0.2s;
+}
+.gallery-section .content-block-hover a:hover {
+	border-color: #fff; background: rgba(255, 255, 255, 0.08);
+}
+.gallery-section .content-block-hover a i {
+	display: none;
+}
+.gallery-section .content-block-hover a::before {
+	content: "";
+	width: 19px; height: 19px;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1.6' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M21 21l-4.35-4.35'/%3E%3C/svg%3E");
+	background-size: contain; background-repeat: no-repeat;
+}
 
 /* ---------- responsive ---------- */
 @media (max-width: 991px) {
