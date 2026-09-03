@@ -106,6 +106,14 @@
 .de-btn-outline:hover { background: var(--de-brand); color: #fff; }
 .de-stat-rail { border-left: 1.5px solid #1f439333; padding-left: 24px; display: flex; flex-direction: column; gap: 26px; padding-top: 4px; }
 .de-stat .n { font-family: "IBM Plex Mono", monospace; font-size: 30px; font-weight: 600; color: var(--de-brand); font-variant-numeric: tabular-nums; }
+/* Dimension-line tick under each stat, echoing a measurement annotation on a drawing */
+.de-stat .n::after {
+	content: ""; display: block; width: 30px; height: 6px; margin: 7px 0 1px; opacity: 0.55;
+	background:
+		linear-gradient(var(--de-brand), var(--de-brand)) left center/1.5px 6px no-repeat,
+		linear-gradient(var(--de-brand), var(--de-brand)) right center/1.5px 6px no-repeat,
+		linear-gradient(var(--de-brand), var(--de-brand)) center/100% 1.5px no-repeat;
+}
 .de-stat .l { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.07em; color: #5a6478; margin-top: 3px; }
 
 /* ---------- proof strip ---------- */
@@ -176,6 +184,16 @@
 .de-proj-grid { max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 1fr 1fr; gap: 22px; }
 .de-proj-card { position: relative; border-radius: 4px; overflow: hidden; background: var(--de-ink); }
 .de-proj-card img { width: 100%; height: 380px; object-fit: cover; display: block; opacity: 0.92; }
+/* Corner registration marks, like crop marks on a drawing sheet framing the photo */
+.de-proj-card::after {
+	content: ""; position: absolute; inset: 6px; pointer-events: none; opacity: 0.75;
+	background-image:
+		linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#fff, #fff),
+		linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#fff, #fff);
+	background-size: 10px 1.5px, 1.5px 10px, 10px 1.5px, 1.5px 10px, 10px 1.5px, 1.5px 10px, 10px 1.5px, 1.5px 10px;
+	background-position: top left, top left, top right, top right, bottom left, bottom left, bottom right, bottom right;
+	background-repeat: no-repeat;
+}
 .de-proj-tag {
 	position: absolute; top: 14px; left: 14px;
 	font-family: "IBM Plex Mono", monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase;
