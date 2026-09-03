@@ -2,5 +2,6 @@ User-agent: *
 Disallow: /mailer/
 Disallow: /cgi-bin/
 Disallow: /message_success.php
+Disallow: /mailCorporate.php
 
 Sitemap: https://www.delta-engineering.ca/sitemap.xml

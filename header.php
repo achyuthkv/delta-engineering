@@ -1,4 +1,32 @@
-﻿	<!-- Favicon (Delta Engineering "E" mark) -->
+﻿	<!-- Twitter Card (falls back to the per-page og:title / og:description / og:image above) -->
+	<meta name="twitter:card" content="summary_large_image">
+
+	<!-- Structured data: local business identity for search engines -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "ProfessionalService",
+		"name": "Delta Engineering Services",
+		"description": "Structural, civil, and infrastructure engineering firm serving the Greater Toronto Area since 1985.",
+		"url": "https://www.delta-engineering.ca/",
+		"logo": "https://www.delta-engineering.ca/assets/images/logo.png",
+		"image": "https://www.delta-engineering.ca/assets/images/logo.png",
+		"telephone": "+1-416-573-1573",
+		"email": "palak@deltaengineering.ca",
+		"foundingDate": "1985",
+		"address": {
+			"@type": "PostalAddress",
+			"streetAddress": "204-4211 Sheppard Ave. E.",
+			"addressLocality": "Scarborough",
+			"addressRegion": "ON",
+			"postalCode": "M1S 5H5",
+			"addressCountry": "CA"
+		},
+		"areaServed": "Greater Toronto Area"
+	}
+	</script>
+
+	<!-- Favicon (Delta Engineering "E" mark) -->
 	<link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">

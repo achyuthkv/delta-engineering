@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://www.delta-engineering.ca/">
     <meta property="og:image" content="https://www.delta-engineering.ca/assets/images/logo.png">
 
-	<title>Home | Delta Engineering Services</title>
+	<title>Delta Engineering Services | Structural &amp; Civil Engineering, Toronto</title>
 
 	<?php
 	include 'header.php';
