@@ -92,7 +92,7 @@
 
 <div class="de-root">
 	<header class="de-nav de-blueprint-bg">
-		<a href="index.php" class="de-nav-logo"><img src="assets/images/logo.png" alt="Delta Engineering Services" width="170"></a>
+		<a href="index.php" class="de-nav-logo"><img src="assets/images/logo.png" alt="Delta Engineering Services"></a>
 		<button type="button" class="de-nav-toggle" id="deNavToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="deNavLinks">
 			<span></span><span></span><span></span>
 		</button>

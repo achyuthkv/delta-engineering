@@ -50,14 +50,27 @@
 
 		<!-- Proof strip -->
 		<div class="de-proof-strip">
-			<div class="de-proof-row">
-				<span><b>40+ years</b> in the Greater Toronto Area</span>
-				<span class="de-proof-sep">/</span>
-				<span>Offices in <b>Canada</b>, <b>Oman</b> &amp; <b>India</b></span>
-				<span class="de-proof-sep">/</span>
-				<span>Founded by <b>Dave (Devender) Arora</b>, 1985</span>
-				<span class="de-proof-sep">/</span>
-				<span>Incorporated <b>1987</b></span>
+			<div class="de-proof-track">
+				<div class="de-proof-row">
+					<span><b>40+ years</b> in the Greater Toronto Area</span>
+					<span class="de-proof-sep">/</span>
+					<span>Offices in <b>Canada</b>, <b>Oman</b> &amp; <b>India</b></span>
+					<span class="de-proof-sep">/</span>
+					<span>Founded by <b>Dave (Devender) Arora</b>, 1985</span>
+					<span class="de-proof-sep">/</span>
+					<span>Incorporated <b>1987</b></span>
+					<span class="de-proof-sep">/</span>
+				</div>
+				<div class="de-proof-row" aria-hidden="true">
+					<span><b>40+ years</b> in the Greater Toronto Area</span>
+					<span class="de-proof-sep">/</span>
+					<span>Offices in <b>Canada</b>, <b>Oman</b> &amp; <b>India</b></span>
+					<span class="de-proof-sep">/</span>
+					<span>Founded by <b>Dave (Devender) Arora</b>, 1985</span>
+					<span class="de-proof-sep">/</span>
+					<span>Incorporated <b>1987</b></span>
+					<span class="de-proof-sep">/</span>
+				</div>
 			</div>
 		</div>
 
