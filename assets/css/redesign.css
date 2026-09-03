@@ -73,6 +73,11 @@
 	background: var(--de-ink); color: #fff; padding: 11px 18px; border-radius: 3px;
 	white-space: nowrap;
 }
+/* .de-nav-links > a has higher specificity than .de-nav-cta alone (the phone
+   button lives inside .de-nav-links), so without this it silently wins and
+   repaints the CTA text/icon back to dark navy on the CTA's own dark background. */
+.de-nav-links > a.de-nav-cta,
+.de-nav-links > a.de-nav-cta:hover { color: #fff; }
 .de-nav-cta svg { width: 15px; height: 15px; flex-shrink: 0; }
 
 /* ---------- hero ---------- */
