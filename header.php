@@ -1,33 +1,4 @@
-﻿<?php
-/*
- * Delta Engineering Services — Header
- */
-?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="utf-8">
-
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<meta name="description"
-		content="Structural, civil, and infrastructure engineering firm serving the Greater Toronto Area since 1985.">
-	<meta name="author" content="Delta Engineering Services">
-
-	<link rel="canonical" href="https://www.delta-engineering.ca/">
-
-	<!-- Open Graph -->
-	<meta property="og:type" content="website">
-	<meta property="og:site_name" content="Delta Engineering Services">
-	<meta property="og:title" content="Delta Engineering Services | Structural &amp; Civil Engineering, Toronto">
-	<meta property="og:description"
-		content="Structural, civil, and infrastructure engineering across the Greater Toronto Area, with over 30 years and 1,000+ completed projects.">
-	<meta property="og:url" content="https://www.delta-engineering.ca/">
-	<meta property="og:image" content="https://www.delta-engineering.ca/assets/images/logo.png">
-
-	<!-- Twitter Card -->
+﻿	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image">
 
 	<!-- Structured data -->
