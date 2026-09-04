@@ -27,7 +27,7 @@
 	</script>
 
 	<!-- Favicon -->
-	<link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="assets/images/favicon-large.ico">
 	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
 	<link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
@@ -313,6 +313,7 @@
 					</a>
 
 					<div class="de-nav-dropdown-menu">
+						<a href="index.php" title="Canada">Canada</a>
 						<a href="oman_engineering_services.php" title="Oman">Oman</a>
 						<a href="india_engineering_services.php" title="India">India</a>
 					</div>
