@@ -57,8 +57,8 @@
 					<p>Our India office is based at Dev Arced, New Shahibaug, Nana Chiloda, Ahmedabad, Gujarat. We're in the early stages of building out a dedicated project portfolio for this office — our documented work in India so far includes a proposed housing development in Srinagar, viewable in our <a href="gallery_international_projects.php">international gallery</a>.</p>
 					<p>The same structural, civil, infrastructure, BIM/MEP, and project management disciplines we deliver from our Canada and Oman offices are available to India-based clients. If you have a project in mind, we'd like to hear about it.</p>
 					<div class="de-intro-stats">
-						<div class="de-stat"><div class="n">1,000+</div><div class="l">Buildings Engineered</div></div>
-						<div class="de-stat"><div class="n">10M+</div><div class="l">Sq. Ft. Delivered</div></div>
+						<div class="de-stat"><div class="n">1</div><div class="l">Documented India Project</div></div>
+						<div class="de-stat"><div class="n">5</div><div class="l">Core Disciplines Offered</div></div>
 					</div>
 				</div>
 				<img src="assets/images/gallery_international/006.png" alt="Proposed housing development, Srinagar, India">

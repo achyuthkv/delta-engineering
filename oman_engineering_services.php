@@ -57,8 +57,8 @@
 					<p>Delta Engineering Services has provided structural and civil engineering design support in Oman since establishing an association with Al Hashar Engineering, working alongside their local team on developments across Muscat and the wider Sultanate.</p>
 					<p>The portfolio spans commercial and retail work — including a Nissan car showroom and the Izz Galleria mall in Salalah — hospitality projects such as a Sheraton property, residential master planning for chalets and sea-facing villas, cold storage facilities in Sohar, a souq development in Nizwa, and a mosque development delivered as PMC for SBGH.</p>
 					<div class="de-intro-stats">
-						<div class="de-stat"><div class="n">1,000+</div><div class="l">Buildings Engineered</div></div>
-						<div class="de-stat"><div class="n">10M+</div><div class="l">Sq. Ft. Delivered</div></div>
+						<div class="de-stat"><div class="n">13</div><div class="l">Documented Oman Projects</div></div>
+						<div class="de-stat"><div class="n">6</div><div class="l">Project Categories</div></div>
 					</div>
 				</div>
 				<img src="assets/images/gallery_international/001.png" alt="Al Hashar Group multi-level car parking, Oman">
