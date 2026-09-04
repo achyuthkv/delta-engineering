@@ -9,7 +9,7 @@
 			<p>204-4211 Sheppard Ave. E.<br>Scarborough, ON M1S 5H5</p>
 		</div>
 		<div>
-			<h5>Oman</h5>
+			<h5><a href="oman_engineering_services.php" style="color:inherit">Oman</a></h5>
 			<p>In association with<br>Al Hashar Engineering<br>PO Box 28, PC-114<br>Tel: (968) 9466 6640</p>
 		</div>
 		<div>

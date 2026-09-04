@@ -241,11 +241,13 @@
 .de-crumbs .cur { color: var(--de-brand); }
 .de-banner h1 { font-size: 38px; margin: 0 0 12px; color: #0d1626; text-wrap: balance; }
 .de-banner p { font-size: 15.5px; line-height: 1.6; color: var(--de-ink-soft); max-width: 620px; margin: 0; }
+.de-banner p a { color: var(--de-brand); text-decoration: underline; text-underline-offset: 2px; }
 
 .de-intro { padding: 0 40px 80px; }
 .de-intro-grid { max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
 .de-intro-grid img { width: 100%; border-radius: 4px; display: block; }
 .de-intro-copy p { font-size: 15.5px; line-height: 1.75; color: #364059; margin: 0 0 18px; }
+.de-intro-copy p a { color: var(--de-brand); text-decoration: underline; text-underline-offset: 2px; }
 .de-intro-stats { display: flex; gap: 28px; margin-top: 24px; border-top: 1px solid var(--de-line); padding-top: 22px; flex-wrap: wrap; }
 .de-intro-stats .n { font-family: "IBM Plex Mono", monospace; font-size: 22px; font-weight: 600; color: var(--de-brand); }
 .de-intro-stats .l { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: #5a6478; margin-top: 2px; }

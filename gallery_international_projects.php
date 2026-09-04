@@ -32,7 +32,7 @@
 			<div class="de-banner-inner">
 				<div class="de-crumbs"><a href="index.php">Home</a> / <span class="cur">International Projects</span></div>
 				<h1>International Projects</h1>
-				<p>A photo record of completed engineering work internationally, including our Oman and India offices.</p>
+				<p>A photo record of completed engineering work internationally, including our <a href="oman_engineering_services.php">Oman</a> and India offices.</p>
 			</div>
 		</div>
 
