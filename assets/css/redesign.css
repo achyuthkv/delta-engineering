@@ -51,11 +51,17 @@
 	display: inline-flex; align-items: center; gap: 5px;
 }
 .de-nav-links > a:hover { color: var(--de-brand); }
-.de-nav-dropdown { position: relative; }
+/* padding-bottom (not the dropdown-menu's margin-top) creates the visual
+   gap below the toggle, because :hover is only tracked over an element's
+   own box — a gap on the child's margin sits outside that box and briefly
+   hands the pointer to whatever's underneath, closing the menu before the
+   mouse reaches it. Keeping the gap as padding on the always-hoverable
+   parent keeps the hover chain unbroken while the pointer crosses it. */
+.de-nav-dropdown { position: relative; padding-bottom: 12px; }
 .de-nav-dropdown-toggle { display: inline-flex; align-items: center; gap: 5px; color: #2b364e; font-weight: 500; font-size: 14.5px; }
 .de-nav-dropdown-toggle svg { width: 9px; height: 9px; }
 .de-nav-dropdown-menu {
-	display: none; position: absolute; top: 100%; left: 0; margin-top: 12px;
+	display: none; position: absolute; top: 100%; left: 0;
 	background: #fff; border: 1px solid var(--de-line); border-radius: 4px;
 	box-shadow: 0 12px 28px rgba(16, 26, 48, 0.12);
 	min-width: 260px; padding: 8px; z-index: 40;
@@ -434,6 +440,7 @@
 	}
 	.de-nav-links.is-open { display: flex; }
 	.de-nav-links > a, .de-nav-dropdown { width: 100%; }
+	.de-nav-dropdown { padding-bottom: 0; }
 	.de-nav-dropdown-menu { position: static; box-shadow: none; border: none; margin-top: 4px; padding-left: 12px; display: none; }
 	.de-nav-dropdown.is-open .de-nav-dropdown-menu { display: block; }
 	.de-nav-links .de-nav-cta { justify-content: center; margin-top: 10px; }
