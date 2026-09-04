@@ -84,6 +84,71 @@
 			</div>
 		</div>
 
+		<!-- Office at a glance -->
+		<section class="de-about de-section">
+			<div class="de-about-grid">
+				<div>
+					<div class="de-section-eyebrow">The India Office</div>
+					<h2>How we operate in India.</h2>
+					<p class="de-about-copy">We're in the early stages of building out our India office and its project portfolio. <em>The details below are placeholders and will be updated as this office grows.</em></p>
+					<a href="contact_us.php" class="de-about-link">Start a project in India <svg viewBox="0 0 12 12" fill="none"><path d="M2 6h8m0 0L6 2m4 4L6 10" stroke="currentColor" stroke-width="1.4"/></svg></a>
+				</div>
+				<div class="de-about-diagram">
+					<div class="de-diagram-row"><span class="k">Based in</span><span class="v">Ahmedabad, Gujarat</span></div>
+					<div class="de-diagram-row"><span class="k">Time zone</span><span class="v">~9.5&ndash;10.5 hrs ahead of Toronto</span></div>
+					<div class="de-diagram-row"><span class="k">Documented projects</span><span class="v">1 (Srinagar)*</span></div>
+					<div class="de-diagram-row"><span class="k">Typical response</span><span class="v">1 business day*</span></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- FAQ -->
+		<div class="de-section">
+			<div class="de-section-head">
+				<div class="de-section-eyebrow">India FAQ</div>
+				<h2>Working with our India office.</h2>
+			</div>
+			<div class="de-accordion" id="indiaFaq">
+
+				<div class="de-accordion-item panel">
+					<h3><a role="button" data-toggle="collapse" data-parent="#indiaFaq" href="#indiafaq1" aria-expanded="true" class="de-accordion-toggle">Is your India office taking on new client projects? <svg class="chev" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></a></h3>
+					<div id="indiafaq1" class="collapse in de-accordion-body" role="tabpanel">
+						<div class="de-accordion-body-inner">
+							<p>Yes &mdash; reach out through our contact form and we'll coordinate the right point of contact for your project. <em>Placeholder &mdash; to be confirmed as the office grows.</em></p>
+						</div>
+					</div>
+				</div>
+
+				<div class="de-accordion-item panel">
+					<h3><a role="button" data-toggle="collapse" data-parent="#indiaFaq" href="#indiafaq2" aria-expanded="false" class="de-accordion-toggle collapsed">What engineering standards do you follow for India projects? <svg class="chev" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></a></h3>
+					<div id="indiafaq2" class="collapse de-accordion-body" role="tabpanel">
+						<div class="de-accordion-body-inner">
+							<p>We align with applicable local building codes and coordinate with regional consultants as needed. <em>Placeholder &mdash; to be expanded with specifics.</em></p>
+						</div>
+					</div>
+				</div>
+
+				<div class="de-accordion-item panel">
+					<h3><a role="button" data-toggle="collapse" data-parent="#indiaFaq" href="#indiafaq3" aria-expanded="false" class="de-accordion-toggle collapsed">Do you have completed projects in India? <svg class="chev" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></a></h3>
+					<div id="indiafaq3" class="collapse de-accordion-body" role="tabpanel">
+						<div class="de-accordion-body-inner">
+							<p>Our documented India work so far is a proposed housing development in Srinagar &mdash; see it in the <a href="gallery_international_projects.php">international gallery</a>. More will be added as the portfolio grows.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="de-accordion-item panel">
+					<h3><a role="button" data-toggle="collapse" data-parent="#indiaFaq" href="#indiafaq4" aria-expanded="false" class="de-accordion-toggle collapsed">How can I start a project with your India office? <svg class="chev" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></a></h3>
+					<div id="indiafaq4" class="collapse de-accordion-body" role="tabpanel">
+						<div class="de-accordion-body-inner">
+							<p><a href="contact_us.php">Get in touch</a> with a brief description of the project and we'll follow up.</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
 		<!-- CTA band -->
 		<div class="de-cta-band">
 			<div class="de-cta-band-inner">

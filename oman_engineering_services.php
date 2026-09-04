@@ -86,6 +86,72 @@
 			</div>
 		</div>
 
+		<!-- Office at a glance -->
+		<section class="de-about de-section">
+			<div class="de-about-grid">
+				<div>
+					<div class="de-section-eyebrow">The Oman Office</div>
+					<h2>How we operate in Oman.</h2>
+					<p class="de-about-copy">Design work for Oman projects is coordinated between our Toronto office and Al Hashar Engineering's team in Muscat, so every drawing set follows the same review process and documentation standard as our Canada projects. <em>(Response times and staffing details below are placeholders — to be confirmed.)</em></p>
+					<a href="contact_us.php" class="de-about-link">Start a project in Oman <svg viewBox="0 0 12 12" fill="none"><path d="M2 6h8m0 0L6 2m4 4L6 10" stroke="currentColor" stroke-width="1.4"/></svg></a>
+				</div>
+				<div class="de-about-diagram">
+					<div class="de-diagram-row"><span class="k">Partner</span><span class="v">Al Hashar Engineering</span></div>
+					<div class="de-diagram-row"><span class="k">Based in</span><span class="v">Muscat, Oman</span></div>
+					<div class="de-diagram-row"><span class="k">Time zone</span><span class="v">~8&ndash;9 hrs ahead of Toronto</span></div>
+					<div class="de-diagram-row"><span class="k">Primary sectors</span><span class="v">Hospitality, Retail, Residential</span></div>
+					<div class="de-diagram-row"><span class="k">Typical response</span><span class="v">1 business day*</span></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- FAQ -->
+		<div class="de-section">
+			<div class="de-section-head">
+				<div class="de-section-eyebrow">Oman FAQ</div>
+				<h2>Working with our Oman office.</h2>
+			</div>
+			<div class="de-accordion" id="omanFaq">
+
+				<div class="de-accordion-item panel">
+					<h3><a role="button" data-toggle="collapse" data-parent="#omanFaq" href="#omanfaq1" aria-expanded="true" class="de-accordion-toggle">Is Delta Engineering licensed to practice in Oman? <svg class="chev" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></a></h3>
+					<div id="omanfaq1" class="collapse in de-accordion-body" role="tabpanel">
+						<div class="de-accordion-body-inner">
+							<p>We operate in Oman in association with Al Hashar Engineering, who handle local registration and regulatory coordination. <em>Placeholder — full licensing details to be confirmed.</em></p>
+						</div>
+					</div>
+				</div>
+
+				<div class="de-accordion-item panel">
+					<h3><a role="button" data-toggle="collapse" data-parent="#omanFaq" href="#omanfaq2" aria-expanded="false" class="de-accordion-toggle collapsed">How do you coordinate design work between Toronto and Muscat? <svg class="chev" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></a></h3>
+					<div id="omanfaq2" class="collapse de-accordion-body" role="tabpanel">
+						<div class="de-accordion-body-inner">
+							<p>Our Toronto design team works directly with Al Hashar Engineering's local staff, with drawing review and sign-off following the same process used on our Canada projects. <em>Placeholder — to be expanded with specifics on tools and cadence.</em></p>
+						</div>
+					</div>
+				</div>
+
+				<div class="de-accordion-item panel">
+					<h3><a role="button" data-toggle="collapse" data-parent="#omanFaq" href="#omanfaq3" aria-expanded="false" class="de-accordion-toggle collapsed">What types of projects do you typically deliver in Oman? <svg class="chev" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></a></h3>
+					<div id="omanfaq3" class="collapse de-accordion-body" role="tabpanel">
+						<div class="de-accordion-body-inner">
+							<p>Mostly commercial and retail, hospitality, and residential master planning &mdash; see the project types listed above and the <a href="gallery_international_projects.php">Oman gallery</a> for examples.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="de-accordion-item panel">
+					<h3><a role="button" data-toggle="collapse" data-parent="#omanFaq" href="#omanfaq4" aria-expanded="false" class="de-accordion-toggle collapsed">Can I get a proposal for my project in Oman? <svg class="chev" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></a></h3>
+					<div id="omanfaq4" class="collapse de-accordion-body" role="tabpanel">
+						<div class="de-accordion-body-inner">
+							<p>Yes &mdash; <a href="contact_us.php">get in touch</a> with a brief description of the project and we'll follow up.</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
 		<!-- CTA band -->
 		<div class="de-cta-band">
 			<div class="de-cta-band-inner">
