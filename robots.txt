@@ -3,5 +3,6 @@ Disallow: /mailer/
 Disallow: /cgi-bin/
 Disallow: /message_success.php
 Disallow: /mailCorporate.php
+Disallow: /admin/
 
 Sitemap: https://www.delta-engineering.ca/sitemap.xml

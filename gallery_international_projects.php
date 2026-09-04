@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
 <!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
 <!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
@@ -24,6 +24,45 @@
 
 	<?php
 	include 'header.php';
+
+	// Photos are managed through /admin/gallery.php (office = oman / india).
+	$deOmanPhotos = [];
+	$deIndiaPhotos = [];
+	try {
+		require_once __DIR__ . '/admin/includes/db.php';
+		$stmt = de_db()->prepare(
+			"SELECT image_path, alt_text, title, location FROM gallery_photos
+			 WHERE office = ? AND is_published = 1
+			 ORDER BY sort_order, id"
+		);
+		$stmt->execute(['oman']);
+		$deOmanPhotos = $stmt->fetchAll();
+		$stmt->execute(['india']);
+		$deIndiaPhotos = $stmt->fetchAll();
+	} catch (Throwable $e) {
+		$deOmanPhotos = [];
+		$deIndiaPhotos = [];
+	}
+
+	function de_render_photo_grid(array $photos): void {
+		foreach ($photos as $photo) {
+			$path = htmlspecialchars($photo['image_path'], ENT_QUOTES, 'UTF-8');
+			$alt = htmlspecialchars($photo['alt_text'], ENT_QUOTES, 'UTF-8');
+			$title = htmlspecialchars($photo['title'], ENT_QUOTES, 'UTF-8');
+			$location = htmlspecialchars($photo['location'], ENT_QUOTES, 'UTF-8');
+			echo <<<HTML
+			<div class="de-photo-item">
+				<div class="content-image-block">
+					<img src="{$path}" alt="{$alt}">
+					<div class="content-block-hover">
+						<a class="zoom-in" href="{$path}"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
+					</div>
+				</div>
+				<div class="de-photo-cap">{$title}<span>{$location}</span></div>
+			</div>
+			HTML;
+		}
+	}
 	?>
 	<main>
 
@@ -42,244 +81,28 @@
 				<h2>Delivered with Al Hashar Engineering.</h2>
 				<p class="de-section-sub">Commercial, hospitality, residential, and master-planning work across Muscat, Salalah, Sohar, and Nizwa. See the <a href="oman_engineering_services.php">Oman services overview</a>.</p>
 			</div>
+			<?php if (!$deOmanPhotos): ?>
+				<p style="text-align:center;color:#6c7690">Gallery is temporarily unavailable.</p>
+			<?php else: ?>
 			<div class="gallery-section de-photo-grid">
-				<div class="de-photo-item">
-					<div class="content-image-block">
-						<img src="assets/images/gallery_international/001.png" alt="Al Hashar Group - Multi-level Car Parking Oman">
-						<div class="content-block-hover">
-							<a class="zoom-in" href="assets/images/gallery_international/001.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-						</div>
-					</div>
-					<div class="de-photo-cap">Al Hashar Group - Multi-level Car Parking<span>Oman</span></div>
-				</div>
-				<div class="de-photo-item">
-					<div class="content-image-block">
-						<img src="assets/images/gallery_international/002.png" alt="AOL – Fiber Optica Cable Manufacturing Facility Jabal Ali Freezone">
-						<div class="content-block-hover">
-							<a class="zoom-in" href="assets/images/gallery_international/002.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-						</div>
-					</div>
-					<div class="de-photo-cap">AOL – Fiber Optica Cable Manufacturing Facility<span>Jabal Ali Freezone</span></div>
-				</div>
-				<div class="de-photo-item">
-					<div class="content-image-block">
-						<img src="assets/images/gallery_international/003.png" alt="Al Hashar Group - Nissan Car Showroom Oman">
-						<div class="content-block-hover">
-							<a class="zoom-in" href="assets/images/gallery_international/003.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-						</div>
-					</div>
-					<div class="de-photo-cap">Al Hashar Group - Nissan Car Showroom<span>Oman</span></div>
-				</div>
-				<div class="de-photo-item">
-					<div class="content-image-block">
-						<img src="assets/images/gallery_international/004.png" alt="Al Hashar Group - Nissan Car Showroom Oman">
-						<div class="content-block-hover">
-							<a class="zoom-in" href="assets/images/gallery_international/004.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-						</div>
-					</div>
-					<div class="de-photo-cap">Al Hashar Group - Nissan Car Showroom<span>Oman</span></div>
-				</div>
-				<div class="de-photo-item">
-					<div class="content-image-block">
-						<img src="assets/images/gallery_international/005.png" alt="Master Planning For 35 Chalet Ras Al Madarka, Oman">
-						<div class="content-block-hover">
-							<a class="zoom-in" href="assets/images/gallery_international/005.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-						</div>
-					</div>
-					<div class="de-photo-cap">Master Planning For 35 Chalet<span>Ras Al Madarka, Oman</span></div>
-				</div>
-				<div class="de-photo-item">
-					<div class="content-image-block">
-						<img src="assets/images/gallery_international/007.png" alt="Proposed Sea Facing Villa Oman">
-						<div class="content-block-hover">
-							<a class="zoom-in" href="assets/images/gallery_international/007.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-						</div>
-					</div>
-					<div class="de-photo-cap">Proposed Sea Facing Villa<span>Oman</span></div>
-				</div>
-				<div class="de-photo-item">
-					<div class="content-image-block">
-						<img src="assets/images/gallery_international/008.png" alt="Proposed Sea Facing Villa Oman">
-						<div class="content-block-hover">
-							<a class="zoom-in" href="assets/images/gallery_international/008.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-						</div>
-					</div>
-					<div class="de-photo-cap">Proposed Sea Facing Villa<span>Oman</span></div>
-				</div>
-				<div class="de-photo-item">
-					<div class="content-image-block">
-						<img src="assets/images/gallery_international/009.png" alt="Proposed Sea Facing Villa Oman">
-						<div class="content-block-hover">
-							<a class="zoom-in" href="assets/images/gallery_international/009.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-						</div>
-					</div>
-					<div class="de-photo-cap">Proposed Sea Facing Villa<span>Oman</span></div>
-				</div>
-				<div class="de-photo-item">
-					<div class="content-image-block">
-						<img src="assets/images/gallery_international/010.png" alt="Proposed Master Plan For Commercial Project Oman">
-						<div class="content-block-hover">
-							<a class="zoom-in" href="assets/images/gallery_international/010.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-						</div>
-					</div>
-					<div class="de-photo-cap">Proposed Master Plan For Commercial Project<span>Oman</span></div>
-				</div>
-				<div class="de-photo-item">
-					<div class="content-image-block">
-						<img src="assets/images/gallery_international/011.png" alt="Mall For Izz Galleria Salalah, Oman">
-						<div class="content-block-hover">
-							<a class="zoom-in" href="assets/images/gallery_international/011.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-						</div>
-					</div>
-					<div class="de-photo-cap">Mall For Izz Galleria<span>Salalah, Oman</span></div>
-				</div>
-				<div class="de-photo-item">
-					<div class="content-image-block">
-						<img src="assets/images/gallery_international/012.png" alt="Proposed Mixed Use Development Muscat, Oman">
-						<div class="content-block-hover">
-							<a class="zoom-in" href="assets/images/gallery_international/012.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-						</div>
-					</div>
-					<div class="de-photo-cap">Proposed Mixed Use Development<span>Muscat, Oman</span></div>
-				</div>
-				<div class="de-photo-item">
-					<div class="content-image-block">
-						<img src="assets/images/gallery_international/013.png" alt="Proposed Housing Project Oman">
-						<div class="content-block-hover">
-							<a class="zoom-in" href="assets/images/gallery_international/013.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-						</div>
-					</div>
-					<div class="de-photo-cap">Proposed Housing Project<span>Oman</span></div>
-				</div>
-				<div class="de-photo-item">
-					<div class="content-image-block">
-						<img src="assets/images/gallery_international/014.png" alt="Proposed Cold Storage Sohar">
-						<div class="content-block-hover">
-							<a class="zoom-in" href="assets/images/gallery_international/014.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-						</div>
-					</div>
-					<div class="de-photo-cap">Proposed Cold Storage<span>Sohar</span></div>
-				</div>
-				<div class="de-photo-item">
-					<div class="content-image-block">
-						<img src="assets/images/gallery_international/015.png" alt="Proposed Cold Storage Sohar">
-						<div class="content-block-hover">
-							<a class="zoom-in" href="assets/images/gallery_international/015.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-						</div>
-					</div>
-					<div class="de-photo-cap">Proposed Cold Storage<span>Sohar</span></div>
-				</div>
-				<div class="de-photo-item">
-					<div class="content-image-block">
-						<img src="assets/images/gallery_international/016.png" alt="Proposed Souq Development Nizwa">
-						<div class="content-block-hover">
-							<a class="zoom-in" href="assets/images/gallery_international/016.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-						</div>
-					</div>
-					<div class="de-photo-cap">Proposed Souq Development<span>Nizwa</span></div>
-				</div>
-				<div class="de-photo-item">
-					<div class="content-image-block">
-						<img src="assets/images/gallery_international/017.png" alt="Proposed Souq Development Nizwa">
-						<div class="content-block-hover">
-							<a class="zoom-in" href="assets/images/gallery_international/017.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-						</div>
-					</div>
-					<div class="de-photo-cap">Proposed Souq Development<span>Nizwa</span></div>
-				</div>
-				<div class="de-photo-item">
-					<div class="content-image-block">
-						<img src="assets/images/gallery_international/018.png" alt="Proposed Souq Development Nizwa">
-						<div class="content-block-hover">
-							<a class="zoom-in" href="assets/images/gallery_international/018.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-						</div>
-					</div>
-					<div class="de-photo-cap">Proposed Souq Development<span>Nizwa</span></div>
-				</div>
-				<div class="de-photo-item">
-					<div class="content-image-block">
-						<img src="assets/images/gallery_international/019.png" alt="Sheraton Oman">
-						<div class="content-block-hover">
-							<a class="zoom-in" href="assets/images/gallery_international/019.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-						</div>
-					</div>
-					<div class="de-photo-cap">Sheraton<span>Oman</span></div>
-				</div>
-				<div class="de-photo-item">
-					<div class="content-image-block">
-						<img src="assets/images/gallery_international/020.png" alt="Sheraton Oman">
-						<div class="content-block-hover">
-							<a class="zoom-in" href="assets/images/gallery_international/020.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-						</div>
-					</div>
-					<div class="de-photo-cap">Sheraton<span>Oman</span></div>
-				</div>
-				<div class="de-photo-item">
-					<div class="content-image-block">
-						<img src="assets/images/gallery_international/021.png" alt="Sheraton Oman">
-						<div class="content-block-hover">
-							<a class="zoom-in" href="assets/images/gallery_international/021.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-						</div>
-					</div>
-					<div class="de-photo-cap">Sheraton<span>Oman</span></div>
-				</div>
-				<div class="de-photo-item">
-					<div class="content-image-block">
-						<img src="assets/images/gallery_international/022.png" alt="Interior Work for Proposed Office Building Qurm">
-						<div class="content-block-hover">
-							<a class="zoom-in" href="assets/images/gallery_international/022.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-						</div>
-					</div>
-					<div class="de-photo-cap">Interior Work for Proposed Office Building<span>Qurm</span></div>
-				</div>
-				<div class="de-photo-item">
-					<div class="content-image-block">
-						<img src="assets/images/gallery_international/023.png" alt="Interior Work for Proposed Office Building Qurm">
-						<div class="content-block-hover">
-							<a class="zoom-in" href="assets/images/gallery_international/023.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-						</div>
-					</div>
-					<div class="de-photo-cap">Interior Work for Proposed Office Building<span>Qurm</span></div>
-				</div>
-				<div class="de-photo-item">
-					<div class="content-image-block">
-						<img src="assets/images/gallery_international/024.png" alt="Interior Work for Proposed Office Building Qurm">
-						<div class="content-block-hover">
-							<a class="zoom-in" href="assets/images/gallery_international/024.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-						</div>
-					</div>
-					<div class="de-photo-cap">Interior Work for Proposed Office Building<span>Qurm</span></div>
-				</div>
-				<div class="de-photo-item">
-					<div class="content-image-block">
-						<img src="assets/images/gallery_international/025.png" alt="Mosque Development Al-hail For SBGH - PMC">
-						<div class="content-block-hover">
-							<a class="zoom-in" href="assets/images/gallery_international/025.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-						</div>
-					</div>
-					<div class="de-photo-cap">Mosque Development<span>Al-hail For SBGH - PMC</span></div>
-				</div>
-
+				<?php de_render_photo_grid($deOmanPhotos); ?>
 			</div>
+			<?php endif; ?>
 		</div>
 
 		<div class="de-section">
 			<div class="de-section-head">
 				<div class="de-section-eyebrow">India</div>
 				<h2>India.</h2>
-				<p class="de-section-sub">Our India project archive is still being built out — see the <a href="india_engineering_services.php">India office overview</a> for more.</p>
+				<p class="de-section-sub">Our India project archive is still being built out &mdash; see the <a href="india_engineering_services.php">India office overview</a> for more.</p>
 			</div>
+			<?php if (!$deIndiaPhotos): ?>
+				<p style="text-align:center;color:#6c7690">No photos published yet.</p>
+			<?php else: ?>
 			<div class="gallery-section de-photo-grid">
-				<div class="de-photo-item">
-					<div class="content-image-block">
-						<img src="assets/images/gallery_international/006.png" alt="Proposed Housing Project – GD  Housing Srinagar">
-						<div class="content-block-hover">
-							<a class="zoom-in" href="assets/images/gallery_international/006.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-						</div>
-					</div>
-					<div class="de-photo-cap">Proposed Housing Project – GD  Housing<span>Srinagar</span></div>
-				</div>
+				<?php de_render_photo_grid($deIndiaPhotos); ?>
 			</div>
+			<?php endif; ?>
 		</div>
 
 		<!-- CTA band -->

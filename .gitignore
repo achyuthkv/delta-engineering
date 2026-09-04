@@ -2,4 +2,7 @@ error_log
 *.log
 mailer/config-credentials.php
 mailer/mailCorporate-credentials.php
+admin/db-credentials.php
+assets/images/gallery_uploads/*
+!assets/images/gallery_uploads/.gitkeep
 .DS_Store
