@@ -37,6 +37,11 @@
 		</div>
 
 		<div class="de-section">
+			<div class="de-section-head">
+				<div class="de-section-eyebrow">Oman</div>
+				<h2>Delivered with Al Hashar Engineering.</h2>
+				<p class="de-section-sub">Commercial, hospitality, residential, and master-planning work across Muscat, Salalah, Sohar, and Nizwa. See the <a href="oman_engineering_services.php">Oman services overview</a>.</p>
+			</div>
 			<div class="gallery-section de-photo-grid">
 				<div class="de-photo-item">
 					<div class="content-image-block">
@@ -82,15 +87,6 @@
 						</div>
 					</div>
 					<div class="de-photo-cap">Master Planning For 35 Chalet<span>Ras Al Madarka, Oman</span></div>
-				</div>
-				<div class="de-photo-item">
-					<div class="content-image-block">
-						<img src="assets/images/gallery_international/006.png" alt="Proposed Housing Project – GD  Housing Srinagar">
-						<div class="content-block-hover">
-							<a class="zoom-in" href="assets/images/gallery_international/006.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-						</div>
-					</div>
-					<div class="de-photo-cap">Proposed Housing Project – GD  Housing<span>Srinagar</span></div>
 				</div>
 				<div class="de-photo-item">
 					<div class="content-image-block">
@@ -264,6 +260,25 @@
 					<div class="de-photo-cap">Mosque Development<span>Al-hail For SBGH - PMC</span></div>
 				</div>
 
+			</div>
+		</div>
+
+		<div class="de-section">
+			<div class="de-section-head">
+				<div class="de-section-eyebrow">India</div>
+				<h2>India.</h2>
+				<p class="de-section-sub">Our India project archive is still being built out — see the <a href="india_engineering_services.php">India office overview</a> for more.</p>
+			</div>
+			<div class="gallery-section de-photo-grid">
+				<div class="de-photo-item">
+					<div class="content-image-block">
+						<img src="assets/images/gallery_international/006.png" alt="Proposed Housing Project – GD  Housing Srinagar">
+						<div class="content-block-hover">
+							<a class="zoom-in" href="assets/images/gallery_international/006.png"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
+						</div>
+					</div>
+					<div class="de-photo-cap">Proposed Housing Project – GD  Housing<span>Srinagar</span></div>
+				</div>
 			</div>
 		</div>
 

@@ -31,6 +31,7 @@
 		<div class="de-banner de-blueprint-bg">
 			<div class="de-banner-inner">
 				<div class="de-crumbs"><a href="index.php">Home</a> / <span class="cur">Canada Projects</span></div>
+				<div class="de-eyebrow">Canada &middot; Greater Toronto Area</div>
 				<h1>Canada Projects</h1>
 				<p>A photo record of completed structural and civil engineering work across Canada, spanning industrial buildings, temples, and custom homes.</p>
 			</div>

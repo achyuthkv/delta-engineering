@@ -13,7 +13,7 @@
 			<p>In association with<br>Al Hashar Engineering<br>PO Box 28, PC-114<br>Tel: (968) 9466 6640</p>
 		</div>
 		<div>
-			<h5>India</h5>
+			<h5><a href="india_engineering_services.php" style="color:inherit">India</a></h5>
 			<p>Dev Arced, New Shahibaug<br>Nana Chiloda, Ahmedabad<br>Gujarat</p>
 			<h5 style="margin-top:20px">Contact</h5>
 			<p><a href="tel:+14165731573">(416) 573-1573</a><br><a href="mailto:palak@deltaengineering.ca">palak@deltaengineering.ca</a></p>

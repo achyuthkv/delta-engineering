@@ -147,6 +147,7 @@
 }
 .de-section h2 { font-size: 32px; line-height: 1.14; margin: 0 0 12px; color: #0d1626; text-wrap: balance; }
 .de-section-sub { font-size: 15.5px; line-height: 1.6; color: var(--de-ink-soft); max-width: 520px; }
+.de-section-sub a { color: var(--de-brand); text-decoration: underline; text-underline-offset: 2px; }
 
 /* ---------- services ---------- */
 .de-services-grid { max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
