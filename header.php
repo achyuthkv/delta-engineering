@@ -304,6 +304,20 @@
 					</div>
 				</div>
 
+				<div class="de-nav-dropdown" id="deLocationsDropdown">
+					<a href="#" class="de-nav-dropdown-toggle" title="Locations">
+						Locations
+						<svg viewBox="0 0 10 10" fill="none" aria-hidden="true">
+							<path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.4" />
+						</svg>
+					</a>
+
+					<div class="de-nav-dropdown-menu">
+						<a href="oman_engineering_services.php" title="Oman">Oman</a>
+						<a href="india_engineering_services.php" title="India">India</a>
+					</div>
+				</div>
+
 				<a href="about_us.php" title="About">About</a>
 				<a href="contact_us.php" title="Contact">Contact</a>
 
@@ -331,7 +345,7 @@
 					});
 				}
 
-				['deServicesDropdown', 'deGalleryDropdown'].forEach(function (id) {
+				['deServicesDropdown', 'deGalleryDropdown', 'deLocationsDropdown'].forEach(function (id) {
 					var dd = document.getElementById(id);
 					if (!dd) return;
 
