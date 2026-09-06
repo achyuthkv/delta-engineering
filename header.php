@@ -177,61 +177,12 @@
 			}
 		}
 
-		/* =========================================
-   DESKTOP DROPDOWN — OPEN ON HOVER
-   ========================================= */
-		@media only screen and (min-width: 768px) {
-
-			.de-nav-dropdown {
-				position: relative;
-			}
-
-			/* Hide dropdown by default */
-			.de-nav-dropdown-menu {
-				display: none;
-				position: absolute;
-				top: 100%;
-				left: 0;
-				z-index: 9999;
-			}
-
-			/* Show dropdown when hovering over Services/Gallery */
-			.de-nav-dropdown:hover .de-nav-dropdown-menu {
-				display: block;
-			}
-
-			/* Keep dropdown open while moving mouse
-	   from the parent link into the submenu */
-			.de-nav-dropdown-menu:hover {
-				display: block;
-			}
-
-			/* Dropdown links */
-			.de-nav-dropdown-menu a {
-				display: block;
-				white-space: nowrap;
-			}
-
-			/* Prevent the dropdown toggle itself from changing appearance */
-			.de-nav-dropdown:hover>.de-nav-dropdown-toggle {
-				color: inherit;
-			}
-		}
-
-
-		/* =========================================
-		MOBILE DROPDOWN — CLICK TO OPEN
-		========================================= */
-		@media only screen and (max-width: 767px) {
-
-			.de-nav-dropdown-menu {
-				display: none;
-			}
-
-			.de-nav-dropdown.is-open .de-nav-dropdown-menu {
-				display: block;
-			}
-		}
+		/* Dropdown open/close behavior (desktop hover + mobile click-to-open)
+		   lives entirely in assets/css/redesign.css -- a duplicate copy used
+		   to live here too, with a subtly different margin/padding setup,
+		   and the two disagreeing was what caused the submenu to close
+		   mid-hover before a click could land. Don't re-add rules for
+		   .de-nav-dropdown-menu here; edit redesign.css instead. */
 	</style>
 
 	<!--[if lt IE 9]>

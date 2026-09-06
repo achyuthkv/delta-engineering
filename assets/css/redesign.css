@@ -54,11 +54,17 @@
 .de-nav-dropdown { position: relative; }
 .de-nav-dropdown-toggle { display: inline-flex; align-items: center; gap: 5px; color: #2b364e; font-weight: 500; font-size: 14.5px; }
 .de-nav-dropdown-toggle svg { width: 9px; height: 9px; }
+/* top:100% with no margin keeps the menu's own box flush against the
+   toggle link, so the mouse never crosses a gap that belongs to neither
+   element while moving from the link into the menu -- a margin-top gap
+   there was previously closing the menu mid-hover, before a click could
+   land on a submenu item. The old visual gap is recreated with padding-top
+   instead, which is still inside the hoverable box. */
 .de-nav-dropdown-menu {
-	display: none; position: absolute; top: 100%; left: 0; margin-top: 12px;
+	display: none; position: absolute; top: 100%; left: 0;
 	background: #fff; border: 1px solid var(--de-line); border-radius: 4px;
 	box-shadow: 0 12px 28px rgba(16, 26, 48, 0.12);
-	min-width: 260px; padding: 8px; z-index: 40;
+	min-width: 260px; padding: 20px 8px 8px; z-index: 200;
 }
 .de-nav-dropdown:hover .de-nav-dropdown-menu,
 .de-nav-dropdown:focus-within .de-nav-dropdown-menu { display: block; }
