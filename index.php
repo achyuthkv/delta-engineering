@@ -79,10 +79,17 @@
 		<section class="de-section de-blueprint-bg">
 			<div class="de-section-head">
 				<div class="de-section-eyebrow">What We Do</div>
-				<h2>Five disciplines, one firm.</h2>
+				<h2>Six disciplines, one firm.</h2>
 				<p class="de-section-sub">From foundation to handover — engineering and project delivery under one roof.</p>
 			</div>
 			<div class="de-services-grid">
+
+				<div class="de-svc-card">
+					<div class="de-svc-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="1" stroke="currentColor" stroke-width="1.6"/><path d="M4 10h16M10 4v16" stroke="currentColor" stroke-width="1.6"/></svg></div>
+					<h3>Architectural Services</h3>
+					<p>Design development, permit drawings, and renovation planning, coordinated with our structural and civil engineering teams.</p>
+					<a href="architectural_services.php" class="de-svc-link">Learn more <svg viewBox="0 0 12 12" fill="none"><path d="M2 6h8m0 0L6 2m4 4L6 10" stroke="currentColor" stroke-width="1.4"/></svg></a>
+				</div>
 
 				<div class="de-svc-card">
 					<div class="de-svc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 21V9l8-5 8 5v12" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 21v-7h6v7M4 21h16" stroke="currentColor" stroke-width="1.6"/></svg></div>
@@ -119,10 +126,12 @@
 					<a href="project_management.php" class="de-svc-link">Learn more <svg viewBox="0 0 12 12" fill="none"><path d="M2 6h8m0 0L6 2m4 4L6 10" stroke="currentColor" stroke-width="1.4"/></svg></a>
 				</div>
 
-				<div class="de-svc-card" style="background:#101a30;border-color:#101a30;">
-					<h3 style="color:#fff">Have a project in mind?</h3>
-					<p style="color:#b9c2d6">Tell us the scope — we'll tell you what it takes to build it right.</p>
-					<a href="contact_us.php" class="de-btn-primary" style="align-self:flex-start">Get in Touch</a>
+				<div class="de-svc-card de-svc-card-cta" style="background:#101a30;border-color:#101a30;">
+					<div>
+						<h3 style="color:#fff">Have a project in mind?</h3>
+						<p style="color:#b9c2d6">Tell us the scope — we'll tell you what it takes to build it right.</p>
+					</div>
+					<a href="contact_us.php" class="de-btn-primary" style="align-self:center;flex-shrink:0">Get in Touch</a>
 				</div>
 
 			</div>

@@ -55,10 +55,10 @@
 			<div class="de-intro-grid">
 				<div class="de-intro-copy">
 					<p>Our India office is based at Dev Arced, New Shahibaug, Nana Chiloda, Ahmedabad, Gujarat. We're in the early stages of building out a dedicated project portfolio for this office — our documented work in India so far includes a proposed housing development in Srinagar, viewable in our <a href="gallery_international_projects.php">international gallery</a>.</p>
-					<p>The same structural, civil, infrastructure, BIM/MEP, and project management disciplines we deliver from our Canada office are available to India-based clients. If you have a project in mind, we'd like to hear about it.</p>
+					<p>The same architectural, structural, civil, infrastructure, BIM/MEP, and project management disciplines we deliver from our Canada office are available to India-based clients. If you have a project in mind, we'd like to hear about it.</p>
 					<div class="de-intro-stats">
 						<div class="de-stat"><div class="n">1</div><div class="l">Documented India Project</div></div>
-						<div class="de-stat"><div class="n">5</div><div class="l">Core Disciplines Offered</div></div>
+						<div class="de-stat"><div class="n">6</div><div class="l">Core Disciplines Offered</div></div>
 					</div>
 				</div>
 				<img src="assets/images/gallery_international/006.png" alt="Proposed housing development, Srinagar, India">
@@ -72,13 +72,14 @@
 				<h2>Available to India-based clients.</h2>
 				<div class="de-spec-grid">
 					<div>
-						<div class="de-spec-row"><span class="de-spec-tick">01</span><p><a href="structural_engineering.php" style="color:inherit">Structural Engineering</a></p></div>
-						<div class="de-spec-row"><span class="de-spec-tick">02</span><p><a href="civil_engineering.php" style="color:inherit">Civil Engineering</a></p></div>
-						<div class="de-spec-row"><span class="de-spec-tick">03</span><p><a href="infrastructure_and_municipal_engineering.php" style="color:inherit">Infrastructure &amp; Municipal Engineering</a></p></div>
+						<div class="de-spec-row"><span class="de-spec-tick">01</span><p><a href="architectural_services.php" style="color:inherit">Architectural Services</a></p></div>
+						<div class="de-spec-row"><span class="de-spec-tick">02</span><p><a href="structural_engineering.php" style="color:inherit">Structural Engineering</a></p></div>
+						<div class="de-spec-row"><span class="de-spec-tick">03</span><p><a href="civil_engineering.php" style="color:inherit">Civil Engineering</a></p></div>
 					</div>
 					<div>
-						<div class="de-spec-row"><span class="de-spec-tick">04</span><p><a href="bim_mechanical_electrical_engineering.php" style="color:inherit">BIM, Mechanical &amp; Electrical Engineering</a></p></div>
-						<div class="de-spec-row"><span class="de-spec-tick">05</span><p><a href="project_management.php" style="color:inherit">Project Management</a></p></div>
+						<div class="de-spec-row"><span class="de-spec-tick">04</span><p><a href="infrastructure_and_municipal_engineering.php" style="color:inherit">Infrastructure &amp; Municipal Engineering</a></p></div>
+						<div class="de-spec-row"><span class="de-spec-tick">05</span><p><a href="bim_mechanical_electrical_engineering.php" style="color:inherit">BIM, Mechanical &amp; Electrical Engineering</a></p></div>
+						<div class="de-spec-row"><span class="de-spec-tick">06</span><p><a href="project_management.php" style="color:inherit">Project Management</a></p></div>
 					</div>
 				</div>
 			</div>

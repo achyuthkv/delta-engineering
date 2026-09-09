@@ -226,6 +226,7 @@
 					</a>
 
 					<div class="de-nav-dropdown-menu">
+						<a href="architectural_services.php" title="Architectural Services">Architectural Services</a>
 						<a href="structural_engineering.php" title="Structural Engineering">Structural Engineering</a>
 						<a href="civil_engineering.php" title="Civil Engineering">Civil Engineering</a>
 						<a href="infrastructure_and_municipal_engineering.php"
