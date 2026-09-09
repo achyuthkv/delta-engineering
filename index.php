@@ -76,7 +76,7 @@
 		</div>
 
 		<!-- Services -->
-		<section class="de-section">
+		<section class="de-section de-blueprint-bg">
 			<div class="de-section-head">
 				<div class="de-section-eyebrow">What We Do</div>
 				<h2>Five disciplines, one firm.</h2>
