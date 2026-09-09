@@ -12,6 +12,7 @@
 
     <meta name="description" content="Structural and civil engineering services in Oman, delivered in association with Al Hashar Engineering — commercial, hospitality, residential, and master-planning projects across Muscat, Salalah, Sohar, and Nizwa.">
     <meta name="author" content="Delta Engineering Services">
+    <meta name="robots" content="noindex, nofollow">
     <link rel="canonical" href="https://www.delta-engineering.ca/oman_engineering_services.php">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Delta Engineering Services">
@@ -157,7 +158,7 @@
 			<div class="de-cta-band-inner">
 				<div>
 					<h2>Have a project in Oman?</h2>
-					<p>(968) 9466 6640 (Oman, via Al Hashar Engineering) &nbsp;&middot;&nbsp; palak@deltaengineering.ca</p>
+					<p>(968) 9466 6640 (Oman, via Al Hashar Engineering) &nbsp;&middot;&nbsp; info@delta-engineering.ca</p>
 				</div>
 				<a href="contact_us.php" class="de-btn-primary">Request a Consultation</a>
 			</div>

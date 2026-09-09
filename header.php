@@ -12,7 +12,7 @@
 		"logo": "https://www.delta-engineering.ca/assets/images/logo.png",
 		"image": "https://www.delta-engineering.ca/assets/images/logo.png",
 		"telephone": "+1-416-573-1573",
-		"email": "palak@deltaengineering.ca",
+		"email": "info@delta-engineering.ca",
 		"foundingDate": "1985",
 		"address": {
 			"@type": "PostalAddress",
@@ -265,7 +265,6 @@
 
 					<div class="de-nav-dropdown-menu">
 						<a href="index.php" title="Canada">Canada</a>
-						<a href="oman_engineering_services.php" title="Oman">Oman</a>
 						<a href="india_engineering_services.php" title="India">India</a>
 					</div>
 				</div>

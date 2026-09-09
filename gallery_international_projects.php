@@ -110,7 +110,7 @@
 			<div class="de-cta-band-inner">
 				<div>
 					<h2>Working internationally too?</h2>
-					<p>(416) 573-1573 &nbsp;&middot;&nbsp; palak@deltaengineering.ca</p>
+					<p>(416) 573-1573 &nbsp;&middot;&nbsp; (437) 986-3858 &nbsp;&middot;&nbsp; info@delta-engineering.ca</p>
 				</div>
 				<a href="contact_us.php" class="de-btn-primary">Request a Consultation</a>
 			</div>

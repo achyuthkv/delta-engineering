@@ -41,8 +41,8 @@
 		<div class="de-intro">
 			<div class="de-intro-grid">
 				<div class="de-intro-copy">
-					<p>Delta Engineering was founded by <b>Dave (Devender) Arora</b> in 1985 and incorporated in 1987. We have proudly delivered design and engineering services for over 1,000 building projects in the Greater Toronto Area, covering more than 10 million sq&nbsp;ft of building space across a variety of projects over four decades since inception.</p>
-					<p>We think differently, and at times recommend alternate design solutions for our projects — a mindset that's carried us from a single founder to a firm with offices across Canada, <a href="oman_engineering_services.php">Oman</a>, and <a href="india_engineering_services.php">India</a>.</p>
+					<p>Delta Engineering was founded by <b>Dave (Devender) Arora</b> in 1985 and incorporated in 1987. Delta was taken over by <b>Mr. Ramesh Savaliya</b> in 2023. We have proudly delivered design and engineering services for over 1,000 building projects in the Greater Toronto Area, covering more than 10 million sq&nbsp;ft of building space across a variety of projects over four decades since inception.</p>
+					<p>We think differently, and at times recommend alternate design solutions for our projects — a mindset that's carried us from a single founder to a firm with offices across Canada and <a href="india_engineering_services.php">India</a>.</p>
 					<div class="de-intro-stats">
 						<div class="de-stat"><div class="n">1985</div><div class="l">Founded</div></div>
 						<div class="de-stat"><div class="n">1,000+</div><div class="l">Projects Delivered</div></div>
@@ -82,7 +82,7 @@
 			<div class="de-cta-band-inner">
 				<div>
 					<h2>Want to work with us?</h2>
-					<p>(416) 573-1573 &nbsp;&middot;&nbsp; palak@deltaengineering.ca</p>
+					<p>(416) 573-1573 &nbsp;&middot;&nbsp; (437) 986-3858 &nbsp;&middot;&nbsp; info@delta-engineering.ca</p>
 				</div>
 				<a href="contact_us.php" class="de-btn-primary">Request a Consultation</a>
 			</div>

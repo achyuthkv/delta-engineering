@@ -55,7 +55,7 @@
 				<div class="de-proof-row">
 					<span><b>40+ years</b> in the Greater Toronto Area</span>
 					<span class="de-proof-sep">/</span>
-					<span>Offices in <b>Canada</b>, <b>Oman</b> &amp; <b>India</b></span>
+					<span>Offices in <b>Canada</b> &amp; <b>India</b></span>
 					<span class="de-proof-sep">/</span>
 					<span>Founded by <b>Dave (Devender) Arora</b>, 1985</span>
 					<span class="de-proof-sep">/</span>
@@ -65,7 +65,7 @@
 				<div class="de-proof-row" aria-hidden="true">
 					<span><b>40+ years</b> in the Greater Toronto Area</span>
 					<span class="de-proof-sep">/</span>
-					<span>Offices in <b>Canada</b>, <b>Oman</b> &amp; <b>India</b></span>
+					<span>Offices in <b>Canada</b> &amp; <b>India</b></span>
 					<span class="de-proof-sep">/</span>
 					<span>Founded by <b>Dave (Devender) Arora</b>, 1985</span>
 					<span class="de-proof-sep">/</span>
@@ -142,7 +142,7 @@
 					<div class="de-diagram-row"><span class="k">Incorporated</span><span class="v">1987</span></div>
 					<div class="de-diagram-row"><span class="k">Projects delivered</span><span class="v">1,000+</span></div>
 					<div class="de-diagram-row"><span class="k">Built space</span><span class="v">10M+ sq. ft.</span></div>
-					<div class="de-diagram-row"><span class="k">Regions served</span><span class="v">Canada &middot; Oman &middot; India</span></div>
+					<div class="de-diagram-row"><span class="k">Regions served</span><span class="v">Canada &middot; India</span></div>
 				</div>
 			</div>
 		</section>
@@ -186,7 +186,7 @@
 			<div class="de-cta-band-inner">
 				<div>
 					<h2>Let's talk about your next project.</h2>
-					<p>(416) 573-1573 &nbsp;&middot;&nbsp; palak@deltaengineering.ca</p>
+					<p>(416) 573-1573 &nbsp;&middot;&nbsp; (437) 986-3858 &nbsp;&middot;&nbsp; info@delta-engineering.ca</p>
 				</div>
 				<a href="contact_us.php" class="de-btn-primary">Request a Consultation</a>
 			</div>
