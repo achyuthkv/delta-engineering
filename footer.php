@@ -15,8 +15,12 @@
 			<p style="margin-top:10px">Bangalore, Karnataka<br><em style="opacity:.7">(address to be confirmed)</em></p>
 		</div>
 		<div>
-			<h5>Contact</h5>
+			<h5>Contact<?= $deLoc === 'india' ? ' &mdash; India' : ' &mdash; Canada' ?></h5>
+			<?php if ($deLoc === 'india'): ?>
+			<p>+91 XX-XXXX-XXXX <em style="opacity:.7">(to be confirmed)</em><br><a href="mailto:info@delta-engineering.ca">info@delta-engineering.ca</a></p>
+			<?php else: ?>
 			<p><a href="tel:+14165731573">(416) 573-1573</a><br><a href="tel:+14379863858">(437) 986-3858</a><br><a href="mailto:info@delta-engineering.ca">info@delta-engineering.ca</a></p>
+			<?php endif; ?>
 		</div>
 	</div>
 	<div class="de-foot-bottom">
