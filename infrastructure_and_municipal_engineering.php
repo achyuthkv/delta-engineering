@@ -38,10 +38,10 @@
 	<?php
 	include 'header.php';
 
-	// Each service page supports ?loc=india alongside the Canada default,
-	// so a single URL can be shared (WhatsApp, campaigns) that lands a
-	// visitor on this discipline's India-specific proof and contact context.
-	$deLoc = (($_GET['loc'] ?? '') === 'india') ? 'india' : 'canada';
+	// $deLoc (canada/india) comes from includes/location.php, resolved
+	// inside header.php -- see that file for how ?loc= and the de_loc
+	// cookie interact. This page's own contribution is which discipline
+	// to pull "Featured Projects" for.
 	$deDiscipline = 'infrastructure';
 	$deFeatured = [];
 	try {
@@ -64,10 +64,6 @@
 		<div class="de-banner de-blueprint-bg">
 			<div class="de-banner-inner">
 				<div class="de-crumbs"><a href="index.php">Home</a> / <span class="cur">Infrastructure &amp; Municipal Engineering</span></div>
-				<div class="de-loc-switch" role="tablist" aria-label="Choose office location">
-					<a href="?loc=canada" class="<?= $deLoc === 'canada' ? 'active' : '' ?>">Canada</a>
-					<a href="?loc=india" class="<?= $deLoc === 'india' ? 'active' : '' ?>">India</a>
-				</div>
 				<h1>Infrastructure &amp; Municipal Engineering in the GTA</h1>
 				<p>Working with municipalities and local governments across the GTA — roadway design, water and sewer systems, and capital improvement planning delivered as an extension of your own staff.</p>
 			</div>

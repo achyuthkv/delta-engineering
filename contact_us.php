@@ -83,7 +83,7 @@
 
 				<div class="de-form-card">
 					<h3>Send us a message</h3>
-					<p>Tell us about your project and we'll get back to you shortly.</p>
+					<p>Tell us about your project and we'll get back to you shortly. <?= $deLoc === 'india' ? 'Defaulted below to our India office &mdash; change it if that\'s not right.' : 'Defaulted below to our Canada office &mdash; change it if that\'s not right.' ?></p>
 					<?php
 					$action=$_REQUEST['action'] ?? '';
 					if ($action=="")    /* display the contact form */
@@ -91,6 +91,13 @@
 						?>
 						<form id="frmMain" action="" method="POST">
 							<input type="hidden" name="action" value="submit">
+							<div class="de-form-field">
+								<label for="office">Office*</label>
+								<select name="office" id="office">
+									<option value="canada" <?= $deLoc === 'canada' ? 'selected' : '' ?>>Canada</option>
+									<option value="india" <?= $deLoc === 'india' ? 'selected' : '' ?>>India</option>
+								</select>
+							</div>
 							<div class="de-form-field">
 								<label for="name">Name*</label>
 								<input type="text" name="name" id="name" required>
@@ -112,14 +119,20 @@
 						$name=$_REQUEST['name'] ?? '';
 						$email=$_REQUEST['email'] ?? '';
 						$message=$_REQUEST['message'] ?? '';
+						$office=($_REQUEST['office'] ?? '') === 'india' ? 'India' : 'Canada';
 						if (($name=="")||($email=="")||($message==""))
 							{
 							echo '<p class="de-form-result">All fields are required, please fill <a href="contact_us.php">the form</a> again.</p>';
 							}
 						else{
 							$from="From: $name<$email>\r\nReturn-path: $email";
-							$subject="Message sent using your contact form";
-							mail("info@delta-engineering.ca", $subject, $message, $from);
+							$subject="New enquiry ($office office) via contact form";
+							// Everything still lands in one shared inbox today -- tagging
+							// the office here (rather than routing to a separate address)
+							// lets whoever reads it triage by office until a dedicated
+							// India inbox exists.
+							$body="Office: $office\r\n\r\n$message";
+							mail("info@delta-engineering.ca", $subject, $body, $from);
 							echo '<p class="de-form-result">Email sent! Thank you for reaching out — we\'ll be in touch shortly.</p>';
 							}
 						}

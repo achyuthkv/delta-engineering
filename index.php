@@ -88,42 +88,42 @@
 					<div class="de-svc-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="1" stroke="currentColor" stroke-width="1.6"/><path d="M4 10h16M10 4v16" stroke="currentColor" stroke-width="1.6"/></svg></div>
 					<h3>Architectural Services</h3>
 					<p>Design development, permit drawings, and renovation planning, coordinated with our structural and civil engineering teams.</p>
-					<a href="architectural_services.php" class="de-svc-link">Learn more <svg viewBox="0 0 12 12" fill="none"><path d="M2 6h8m0 0L6 2m4 4L6 10" stroke="currentColor" stroke-width="1.4"/></svg></a>
+					<a href="architectural_services.php?loc=<?= $deLoc ?>" class="de-svc-link">Learn more <svg viewBox="0 0 12 12" fill="none"><path d="M2 6h8m0 0L6 2m4 4L6 10" stroke="currentColor" stroke-width="1.4"/></svg></a>
 				</div>
 
 				<div class="de-svc-card">
 					<div class="de-svc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 21V9l8-5 8 5v12" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 21v-7h6v7M4 21h16" stroke="currentColor" stroke-width="1.6"/></svg></div>
 					<h3>Structural Engineering</h3>
 					<p>Design, analysis, and construction support for industrial, commercial, and residential buildings across the GTA.</p>
-					<a href="structural_engineering.php" class="de-svc-link">Learn more <svg viewBox="0 0 12 12" fill="none"><path d="M2 6h8m0 0L6 2m4 4L6 10" stroke="currentColor" stroke-width="1.4"/></svg></a>
+					<a href="structural_engineering.php?loc=<?= $deLoc ?>" class="de-svc-link">Learn more <svg viewBox="0 0 12 12" fill="none"><path d="M2 6h8m0 0L6 2m4 4L6 10" stroke="currentColor" stroke-width="1.4"/></svg></a>
 				</div>
 
 				<div class="de-svc-card">
 					<div class="de-svc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M3 20c3-1 4-4 5-8s2-7 5-8c-1 4-1 7 0 11s3 4 5 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="7" cy="12" r="1.3" fill="currentColor"/><circle cx="17" cy="8" r="1.3" fill="currentColor"/></svg></div>
 					<h3>Civil Engineering</h3>
 					<p>Planning, design, and distribution systems for construction projects, from site layout to transportation.</p>
-					<a href="civil_engineering.php" class="de-svc-link">Learn more <svg viewBox="0 0 12 12" fill="none"><path d="M2 6h8m0 0L6 2m4 4L6 10" stroke="currentColor" stroke-width="1.4"/></svg></a>
+					<a href="civil_engineering.php?loc=<?= $deLoc ?>" class="de-svc-link">Learn more <svg viewBox="0 0 12 12" fill="none"><path d="M2 6h8m0 0L6 2m4 4L6 10" stroke="currentColor" stroke-width="1.4"/></svg></a>
 				</div>
 
 				<div class="de-svc-card">
 					<div class="de-svc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3s6 6.8 6 11a6 6 0 1 1-12 0c0-4.2 6-11 6-11Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
 					<h3>Infrastructure &amp; Municipal</h3>
 					<p>Roadway design, water and sewer systems, and capital improvement planning for municipalities.</p>
-					<a href="infrastructure_and_municipal_engineering.php" class="de-svc-link">Learn more <svg viewBox="0 0 12 12" fill="none"><path d="M2 6h8m0 0L6 2m4 4L6 10" stroke="currentColor" stroke-width="1.4"/></svg></a>
+					<a href="infrastructure_and_municipal_engineering.php?loc=<?= $deLoc ?>" class="de-svc-link">Learn more <svg viewBox="0 0 12 12" fill="none"><path d="M2 6h8m0 0L6 2m4 4L6 10" stroke="currentColor" stroke-width="1.4"/></svg></a>
 				</div>
 
 				<div class="de-svc-card">
 					<div class="de-svc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
 					<h3>BIM, Mechanical &amp; Electrical</h3>
 					<p>Drone-based 3D mapping and clash-free BIM modelling coordinated with architects and MEP teams.</p>
-					<a href="bim_mechanical_electrical_engineering.php" class="de-svc-link">Learn more <svg viewBox="0 0 12 12" fill="none"><path d="M2 6h8m0 0L6 2m4 4L6 10" stroke="currentColor" stroke-width="1.4"/></svg></a>
+					<a href="bim_mechanical_electrical_engineering.php?loc=<?= $deLoc ?>" class="de-svc-link">Learn more <svg viewBox="0 0 12 12" fill="none"><path d="M2 6h8m0 0L6 2m4 4L6 10" stroke="currentColor" stroke-width="1.4"/></svg></a>
 				</div>
 
 				<div class="de-svc-card">
 					<div class="de-svc-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="5" y="4" width="14" height="17" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="M9 3.5h6v2H9z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.5 11.5l2 2 4-4.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 16h7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
 					<h3>Project Management</h3>
 					<p>Design development, construction management, and cloud-based project tracking from concept to handover.</p>
-					<a href="project_management.php" class="de-svc-link">Learn more <svg viewBox="0 0 12 12" fill="none"><path d="M2 6h8m0 0L6 2m4 4L6 10" stroke="currentColor" stroke-width="1.4"/></svg></a>
+					<a href="project_management.php?loc=<?= $deLoc ?>" class="de-svc-link">Learn more <svg viewBox="0 0 12 12" fill="none"><path d="M2 6h8m0 0L6 2m4 4L6 10" stroke="currentColor" stroke-width="1.4"/></svg></a>
 				</div>
 
 				<div class="de-svc-card de-svc-card-cta" style="background:#101a30;border-color:#101a30;">
@@ -194,7 +194,7 @@
 		<div class="de-cta-band">
 			<div class="de-cta-band-inner">
 				<div>
-					<h2>Let's talk about your next project.</h2>
+					<h2><?= $deLoc === 'india' ? 'Have a project in India?' : "Let's talk about your next project." ?></h2>
 					<p>(416) 573-1573 &nbsp;&middot;&nbsp; (437) 986-3858 &nbsp;&middot;&nbsp; info@delta-engineering.ca</p>
 				</div>
 				<a href="contact_us.php" class="de-btn-primary">Request a Consultation</a>

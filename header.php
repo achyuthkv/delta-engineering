@@ -1,4 +1,5 @@
-﻿	<!-- Twitter Card -->
+﻿	<?php require_once __DIR__ . '/includes/location.php'; ?>
+	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image">
 
 	<!-- Structured data -->
@@ -192,6 +193,20 @@
 
 <body data-offset="200" data-spy="scroll" data-target=".ow-navigation">
 
+	<script>
+		// Remember an explicit ?loc= choice (header switcher, or a shared
+		// location link) so it carries across ordinary navigation that
+		// doesn't itself repeat the query string. Read server-side via
+		// $_COOKIE in includes/location.php.
+		(function () {
+			var params = new URLSearchParams(location.search);
+			var loc = params.get('loc');
+			if (loc === 'canada' || loc === 'india') {
+				document.cookie = 'de_loc=' + loc + ';path=/;max-age=15552000';
+			}
+		})();
+	</script>
+
 	<!-- WhatsApp floating button -->
 	<a href="https://wa.me/+14165799787?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20engineering%20services"
 		class="float" target="_blank" rel="noopener" aria-label="WhatsApp">
@@ -258,15 +273,21 @@
 
 				<div class="de-nav-dropdown" id="deLocationsDropdown">
 					<a href="#" class="de-nav-dropdown-toggle" title="Locations">
-						Locations
+						<?= $deLoc === 'india' ? 'India' : 'Canada' ?>
 						<svg viewBox="0 0 10 10" fill="none" aria-hidden="true">
 							<path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.4" />
 						</svg>
 					</a>
 
 					<div class="de-nav-dropdown-menu">
-						<a href="index.php" title="Canada">Canada</a>
-						<a href="india_engineering_services.php" title="India">India</a>
+						<div class="de-nav-loc-label">Viewing site as</div>
+						<div class="de-loc-switch">
+							<a href="?loc=canada" class="<?= $deLoc === 'canada' ? 'active' : '' ?>">Canada</a>
+							<a href="?loc=india" class="<?= $deLoc === 'india' ? 'active' : '' ?>">India</a>
+						</div>
+						<div class="de-nav-loc-sep"></div>
+						<a href="index.php?loc=canada" title="Canada">Canada Office Overview</a>
+						<a href="india_engineering_services.php?loc=india" title="India">India Office Overview</a>
 					</div>
 				</div>
 

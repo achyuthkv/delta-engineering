@@ -298,12 +298,14 @@
 .de-spec-tick { font-family: "IBM Plex Mono", monospace; font-size: 12px; color: #7fa0d9; padding-top: 2px; }
 .de-spec-row p { margin: 0; font-size: 14.5px; line-height: 1.5; color: #dbe1ee; }
 
-/* ---------- location switch (service pages: ?loc=canada / ?loc=india) ---------- */
-.de-loc-switch { display: inline-flex; border: 1.5px solid var(--de-line); border-radius: 999px; padding: 3px; gap: 2px; margin: 18px 0 0; }
-.de-loc-switch a { padding: 6px 18px; border-radius: 999px; font-size: 12.5px; font-weight: 600; color: #5a6478; text-decoration: none; transition: background 0.15s, color 0.15s; }
-.de-loc-switch a:hover { color: var(--de-brand); }
+/* ---------- location switch (header nav: ?loc=canada / ?loc=india, site-wide) ---------- */
+.de-nav-loc-label { padding: 10px 14px 0; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: #8a92a6; }
+.de-loc-switch { display: inline-flex; border: 1.5px solid var(--de-line); border-radius: 999px; padding: 3px; gap: 2px; margin: 8px 14px 6px; }
+.de-loc-switch a { display: inline-flex; padding: 6px 18px; border-radius: 999px; font-size: 12.5px; font-weight: 600; color: #5a6478; text-decoration: none; transition: background 0.15s, color 0.15s; }
+.de-loc-switch a:hover { background: none; color: var(--de-brand); }
 .de-loc-switch a.active { background: var(--de-ink); color: #fff; }
 .de-loc-switch a.active:hover { color: #fff; }
+.de-nav-loc-sep { height: 1px; background: var(--de-line); margin: 4px 14px 8px; }
 
 /* ---------- featured projects (location-scoped proof, per discipline) ---------- */
 .de-proj-feat { padding: 72px 40px; }
@@ -332,12 +334,12 @@
 .de-form-card > p { font-size: 14.5px; color: var(--de-ink-soft); margin: 0 0 24px; line-height: 1.55; }
 .de-form-field { margin-bottom: 18px; }
 .de-form-field label { display: block; font-size: 12.5px; font-weight: 600; color: #2b364e; margin-bottom: 7px; }
-.de-form-field input, .de-form-field textarea {
+.de-form-field input, .de-form-field textarea, .de-form-field select {
 	width: 100%; border: 1.5px solid #d8d4c6; border-radius: 3px; padding: 12px 14px;
 	font-family: "Public Sans", sans-serif; font-size: 14.5px; color: var(--de-ink);
 	background: var(--de-paper); resize: vertical;
 }
-.de-form-field input:focus, .de-form-field textarea:focus { outline: none; border-color: var(--de-brand); background: #fff; }
+.de-form-field input:focus, .de-form-field textarea:focus, .de-form-field select:focus { outline: none; border-color: var(--de-brand); background: #fff; }
 .de-form-submit {
 	background: var(--de-accent); color: #fff; font-weight: 600; font-size: 14.5px;
 	padding: 14px 28px; border-radius: 3px; border: none; cursor: pointer; font-family: "Public Sans", sans-serif;
