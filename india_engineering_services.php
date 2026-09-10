@@ -54,7 +54,7 @@
 		<div class="de-intro">
 			<div class="de-intro-grid">
 				<div class="de-intro-copy">
-					<p>We operate two offices in India: Dev Arced, New Shahibaug, Nana Chiloda, Ahmedabad, Gujarat, and a second office in Bangalore, Karnataka <em>(address to be confirmed)</em>. We're in the early stages of building out a dedicated project portfolio for these offices — our documented work in India so far includes a proposed housing development in Srinagar, viewable in our <a href="gallery_international_projects.php">international gallery</a>.</p>
+					<p>We operate two offices in India: Dev Arced, New Shahibaug, Nana Chiloda, Ahmedabad, Gujarat, and a second office in Bangalore, Karnataka <em>(address to be confirmed)</em>. We're in the early stages of building out a dedicated project portfolio for these offices — our documented work in India so far includes a proposed housing development in Srinagar, viewable in our <a href="gallery_international_projects.php">India gallery</a>.</p>
 					<p>The same architectural, structural, civil, infrastructure, BIM/MEP, and project management disciplines we deliver from our Canada office are available to India-based clients. If you have a project in mind, we'd like to hear about it.</p>
 					<div class="de-intro-stats">
 						<div class="de-stat"><div class="n">1</div><div class="l">Documented India Project</div></div>
@@ -133,7 +133,7 @@
 					<h3><a role="button" data-toggle="collapse" data-parent="#indiaFaq" href="#indiafaq3" aria-expanded="false" class="de-accordion-toggle collapsed">Do you have completed projects in India? <svg class="chev" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></a></h3>
 					<div id="indiafaq3" class="collapse de-accordion-body" role="tabpanel">
 						<div class="de-accordion-body-inner">
-							<p>Our documented India work so far is a proposed housing development in Srinagar &mdash; see it in the <a href="gallery_international_projects.php">international gallery</a>. More will be added as the portfolio grows.</p>
+							<p>Our documented India work so far is a proposed housing development in Srinagar &mdash; see it in the <a href="gallery_international_projects.php">India gallery</a>. More will be added as the portfolio grows.</p>
 						</div>
 					</div>
 				</div>

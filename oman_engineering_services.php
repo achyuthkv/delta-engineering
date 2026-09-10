@@ -83,7 +83,7 @@
 						<div class="de-spec-row"><span class="de-spec-tick">06</span><p>Institutional &amp; Religious — Office Interiors, Mosque Development</p></div>
 					</div>
 				</div>
-				<p style="margin-top:28px"><a href="gallery_international_projects.php" class="de-svc-link">View the Oman &amp; international project gallery <svg viewBox="0 0 12 12" fill="none"><path d="M2 6h8m0 0L6 2m4 4L6 10" stroke="currentColor" stroke-width="1.4"/></svg></a></p>
+				<p style="margin-top:28px"><a href="gallery_international_projects.php" class="de-svc-link">View the Oman project archive <svg viewBox="0 0 12 12" fill="none"><path d="M2 6h8m0 0L6 2m4 4L6 10" stroke="currentColor" stroke-width="1.4"/></svg></a></p>
 			</div>
 		</div>
 
@@ -136,7 +136,7 @@
 					<h3><a role="button" data-toggle="collapse" data-parent="#omanFaq" href="#omanfaq3" aria-expanded="false" class="de-accordion-toggle collapsed">What types of projects do you typically deliver in Oman? <svg class="chev" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></a></h3>
 					<div id="omanfaq3" class="collapse de-accordion-body" role="tabpanel">
 						<div class="de-accordion-body-inner">
-							<p>Mostly commercial and retail, hospitality, and residential master planning &mdash; see the project types listed above and the <a href="gallery_international_projects.php">Oman gallery</a> for examples.</p>
+							<p>Mostly commercial and retail, hospitality, and residential master planning &mdash; see the project types listed above and the <a href="gallery_international_projects.php">Oman project archive</a> for examples.</p>
 						</div>
 					</div>
 				</div>

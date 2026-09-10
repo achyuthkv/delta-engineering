@@ -34,7 +34,7 @@
 		$rows = de_db()->query(
 			"SELECT category, description, sort_order, id
 			 FROM projects
-			 WHERE is_published = 1
+			 WHERE is_published = 1 AND office = 'canada'
 			 ORDER BY category, sort_order, id"
 		)->fetchAll();
 
@@ -62,7 +62,7 @@
 				<div class="de-crumbs"><a href="index.php">Home</a> / <span class="cur">Projects</span></div>
 				<div class="de-eyebrow">Canada &middot; Greater Toronto Area</div>
 				<h1>Projects</h1>
-				<p>A record of what we've built across the Greater Toronto Area, organized by the kind of work, spanning four decades since 1985. For our Oman portfolio, see the <a href="gallery_international_projects.php">international gallery</a>.</p>
+				<p>A record of what we've built across the Greater Toronto Area, organized by the kind of work, spanning four decades since 1985. For our India work, see the <a href="gallery_international_projects.php">India gallery</a>.</p>
 			</div>
 		</div>
 

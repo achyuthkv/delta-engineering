@@ -10,17 +10,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="Photo gallery of Delta Engineering Services' completed engineering projects internationally, including Oman and India.">
+    <meta name="description" content="Photo gallery of Delta Engineering Services' completed engineering projects at our India office, including past international work in Oman.">
     <meta name="author" content="Delta Engineering Services">
     <link rel="canonical" href="https://www.delta-engineering.ca/gallery_international_projects.php">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Delta Engineering Services">
-    <meta property="og:title" content="Gallery - International Projects | Delta Engineering Services">
-    <meta property="og:description" content="Completed engineering projects internationally, including Oman and India.">
+    <meta property="og:title" content="Gallery - India Projects | Delta Engineering Services">
+    <meta property="og:description" content="Completed engineering projects at our India office, including past international work in Oman.">
     <meta property="og:url" content="https://www.delta-engineering.ca/gallery_international_projects.php">
     <meta property="og:image" content="https://www.delta-engineering.ca/assets/images/logo.png">
 
-	<title>Gallery - International Projects | Delta Engineering Services</title>
+	<title>Gallery - India Projects | Delta Engineering Services</title>
 
 	<?php
 	include 'header.php';
@@ -69,25 +69,10 @@
 		<!-- Banner -->
 		<div class="de-banner de-blueprint-bg">
 			<div class="de-banner-inner">
-				<div class="de-crumbs"><a href="index.php">Home</a> / <span class="cur">International Projects</span></div>
-				<h1>International Projects</h1>
-				<p>A photo record of completed engineering work internationally, including our <a href="oman_engineering_services.php">Oman</a> and India offices.</p>
+				<div class="de-crumbs"><a href="index.php">Home</a> / <span class="cur">India Projects</span></div>
+				<h1>India Projects</h1>
+				<p>A photo record of completed engineering work at our <a href="india_engineering_services.php">India office</a>, plus past international project work in Oman.</p>
 			</div>
-		</div>
-
-		<div class="de-section">
-			<div class="de-section-head">
-				<div class="de-section-eyebrow">Oman</div>
-				<h2>Delivered with Al Hashar Engineering.</h2>
-				<p class="de-section-sub">Commercial, hospitality, residential, and master-planning work across Muscat, Salalah, Sohar, and Nizwa. See the <a href="oman_engineering_services.php">Oman services overview</a>.</p>
-			</div>
-			<?php if (!$deOmanPhotos): ?>
-				<p style="text-align:center;color:#6c7690">Gallery is temporarily unavailable.</p>
-			<?php else: ?>
-			<div class="gallery-section de-photo-grid">
-				<?php de_render_photo_grid($deOmanPhotos); ?>
-			</div>
-			<?php endif; ?>
 		</div>
 
 		<div class="de-section">
@@ -105,11 +90,26 @@
 			<?php endif; ?>
 		</div>
 
+		<div class="de-section">
+			<div class="de-section-head">
+				<div class="de-section-eyebrow">Oman &mdash; Past International Work</div>
+				<h2>Delivered with Al Hashar Engineering.</h2>
+				<p class="de-section-sub">Commercial, hospitality, residential, and master-planning work completed across Muscat, Salalah, Sohar, and Nizwa before we consolidated to Canada and India. See the <a href="oman_engineering_services.php">Oman project archive</a>.</p>
+			</div>
+			<?php if (!$deOmanPhotos): ?>
+				<p style="text-align:center;color:#6c7690">Gallery is temporarily unavailable.</p>
+			<?php else: ?>
+			<div class="gallery-section de-photo-grid">
+				<?php de_render_photo_grid($deOmanPhotos); ?>
+			</div>
+			<?php endif; ?>
+		</div>
+
 		<!-- CTA band -->
 		<div class="de-cta-band">
 			<div class="de-cta-band-inner">
 				<div>
-					<h2>Working internationally too?</h2>
+					<h2>Have a project in India?</h2>
 					<p>(416) 573-1573 &nbsp;&middot;&nbsp; (437) 986-3858 &nbsp;&middot;&nbsp; info@delta-engineering.ca</p>
 				</div>
 				<a href="contact_us.php" class="de-btn-primary">Request a Consultation</a>
