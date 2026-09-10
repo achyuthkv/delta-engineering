@@ -12,6 +12,7 @@
 		<div>
 			<h5><a href="india_engineering_services.php" style="color:inherit">India</a></h5>
 			<p>Dev Arced, New Shahibaug<br>Nana Chiloda, Ahmedabad<br>Gujarat</p>
+			<p style="margin-top:10px">Bangalore, Karnataka<br><em style="opacity:.7">(address to be confirmed)</em></p>
 		</div>
 		<div>
 			<h5>Contact</h5>

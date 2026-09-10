@@ -10,13 +10,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="Delta Engineering Services maintains an office in Ahmedabad, Gujarat, extending structural and civil engineering capabilities to projects in India.">
+    <meta name="description" content="Delta Engineering Services maintains offices in Ahmedabad, Gujarat and Bangalore, Karnataka, extending structural and civil engineering capabilities to projects in India.">
     <meta name="author" content="Delta Engineering Services">
     <link rel="canonical" href="https://www.delta-engineering.ca/india_engineering_services.php">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Delta Engineering Services">
     <meta property="og:title" content="Structural &amp; Civil Engineering Services in India | Delta Engineering">
-    <meta property="og:description" content="Delta Engineering Services maintains an office in Ahmedabad, Gujarat, extending structural and civil engineering capabilities to projects in India.">
+    <meta property="og:description" content="Delta Engineering Services maintains offices in Ahmedabad, Gujarat and Bangalore, Karnataka, extending structural and civil engineering capabilities to projects in India.">
     <meta property="og:url" content="https://www.delta-engineering.ca/india_engineering_services.php">
     <meta property="og:image" content="https://www.delta-engineering.ca/assets/images/logo.png">
 
@@ -26,7 +26,7 @@
 		"@type": "Service",
 		"serviceType": "Structural and Civil Engineering",
 		"name": "Structural & Civil Engineering Services in India",
-		"description": "Delta Engineering Services maintains an office in Ahmedabad, Gujarat, extending structural and civil engineering capabilities to projects in India.",
+		"description": "Delta Engineering Services maintains offices in Ahmedabad, Gujarat and Bangalore, Karnataka, extending structural and civil engineering capabilities to projects in India.",
 		"provider": { "@type": "ProfessionalService", "name": "Delta Engineering Services", "url": "https://www.delta-engineering.ca/" },
 		"areaServed": "India",
 		"url": "https://www.delta-engineering.ca/india_engineering_services.php"
@@ -46,7 +46,7 @@
 			<div class="de-banner-inner">
 				<div class="de-crumbs"><a href="index.php">Home</a> / <span class="cur">India</span></div>
 				<h1>Structural &amp; Civil Engineering Services in India</h1>
-				<p>Delta Engineering Services maintains an office in Ahmedabad, Gujarat, extending our structural and civil engineering capabilities to projects across India.</p>
+				<p>Delta Engineering Services maintains offices in Ahmedabad, Gujarat and Bangalore, Karnataka, extending our structural and civil engineering capabilities to projects across India.</p>
 			</div>
 		</div>
 
@@ -54,7 +54,7 @@
 		<div class="de-intro">
 			<div class="de-intro-grid">
 				<div class="de-intro-copy">
-					<p>Our India office is based at Dev Arced, New Shahibaug, Nana Chiloda, Ahmedabad, Gujarat. We're in the early stages of building out a dedicated project portfolio for this office — our documented work in India so far includes a proposed housing development in Srinagar, viewable in our <a href="gallery_international_projects.php">international gallery</a>.</p>
+					<p>We operate two offices in India: Dev Arced, New Shahibaug, Nana Chiloda, Ahmedabad, Gujarat, and a second office in Bangalore, Karnataka <em>(address to be confirmed)</em>. We're in the early stages of building out a dedicated project portfolio for these offices — our documented work in India so far includes a proposed housing development in Srinagar, viewable in our <a href="gallery_international_projects.php">international gallery</a>.</p>
 					<p>The same architectural, structural, civil, infrastructure, BIM/MEP, and project management disciplines we deliver from our Canada office are available to India-based clients. If you have a project in mind, we'd like to hear about it.</p>
 					<div class="de-intro-stats">
 						<div class="de-stat"><div class="n">1</div><div class="l">Documented India Project</div></div>
@@ -72,14 +72,14 @@
 				<h2>Available to India-based clients.</h2>
 				<div class="de-spec-grid">
 					<div>
-						<div class="de-spec-row"><span class="de-spec-tick">01</span><p><a href="architectural_services.php" style="color:inherit">Architectural Services</a></p></div>
-						<div class="de-spec-row"><span class="de-spec-tick">02</span><p><a href="structural_engineering.php" style="color:inherit">Structural Engineering</a></p></div>
-						<div class="de-spec-row"><span class="de-spec-tick">03</span><p><a href="civil_engineering.php" style="color:inherit">Civil Engineering</a></p></div>
+						<div class="de-spec-row"><span class="de-spec-tick">01</span><p><a href="architectural_services.php?loc=india" style="color:inherit">Architectural Services</a></p></div>
+						<div class="de-spec-row"><span class="de-spec-tick">02</span><p><a href="structural_engineering.php?loc=india" style="color:inherit">Structural Engineering</a></p></div>
+						<div class="de-spec-row"><span class="de-spec-tick">03</span><p><a href="civil_engineering.php?loc=india" style="color:inherit">Civil Engineering</a></p></div>
 					</div>
 					<div>
-						<div class="de-spec-row"><span class="de-spec-tick">04</span><p><a href="infrastructure_and_municipal_engineering.php" style="color:inherit">Infrastructure &amp; Municipal Engineering</a></p></div>
-						<div class="de-spec-row"><span class="de-spec-tick">05</span><p><a href="bim_mechanical_electrical_engineering.php" style="color:inherit">BIM, Mechanical &amp; Electrical Engineering</a></p></div>
-						<div class="de-spec-row"><span class="de-spec-tick">06</span><p><a href="project_management.php" style="color:inherit">Project Management</a></p></div>
+						<div class="de-spec-row"><span class="de-spec-tick">04</span><p><a href="infrastructure_and_municipal_engineering.php?loc=india" style="color:inherit">Infrastructure &amp; Municipal Engineering</a></p></div>
+						<div class="de-spec-row"><span class="de-spec-tick">05</span><p><a href="bim_mechanical_electrical_engineering.php?loc=india" style="color:inherit">BIM, Mechanical &amp; Electrical Engineering</a></p></div>
+						<div class="de-spec-row"><span class="de-spec-tick">06</span><p><a href="project_management.php?loc=india" style="color:inherit">Project Management</a></p></div>
 					</div>
 				</div>
 			</div>
@@ -95,7 +95,7 @@
 					<a href="contact_us.php" class="de-about-link">Start a project in India <svg viewBox="0 0 12 12" fill="none"><path d="M2 6h8m0 0L6 2m4 4L6 10" stroke="currentColor" stroke-width="1.4"/></svg></a>
 				</div>
 				<div class="de-about-diagram">
-					<div class="de-diagram-row"><span class="k">Based in</span><span class="v">Ahmedabad, Gujarat</span></div>
+					<div class="de-diagram-row"><span class="k">Based in</span><span class="v">Ahmedabad &amp; Bangalore</span></div>
 					<div class="de-diagram-row"><span class="k">Time zone</span><span class="v">~9.5&ndash;10.5 hrs ahead of Toronto</span></div>
 					<div class="de-diagram-row"><span class="k">Documented projects</span><span class="v">1 (Srinagar)*</span></div>
 					<div class="de-diagram-row"><span class="k">Typical response</span><span class="v">1 business day*</span></div>

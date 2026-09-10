@@ -74,8 +74,9 @@
 					<div class="de-contact-info-row">
 						<div class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18" stroke="currentColor" stroke-width="1.5"/></svg></div>
 						<div>
-							<div class="l">India</div>
+							<div class="l">India Offices</div>
 							<div class="v">Dev Arced, New Shahibaug, Nana Chiloda, Ahmedabad, Gujarat</div>
+							<div class="v" style="margin-top:8px">Bangalore, Karnataka <em style="opacity:.7">(address to be confirmed)</em></div>
 						</div>
 					</div>
 				</div>

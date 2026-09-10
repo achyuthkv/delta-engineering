@@ -14,15 +14,22 @@ CREATE TABLE IF NOT EXISTS admin_users (
 -- Projects" -- there's no separate categories table since the same free-form
 -- grouping the site already uses is all that's needed; the admin UI offers
 -- existing category names as suggestions to avoid accidental duplicates.
+-- "office" and "discipline" let each of the six service pages
+-- (structural_engineering.php etc.) pull a "Featured Projects" block
+-- scoped to the office/discipline a visitor landed on via ?loc=india,
+-- so a marketing link can point at proof of work for that location.
 CREATE TABLE IF NOT EXISTS projects (
 	id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	category VARCHAR(255) NOT NULL,
 	description TEXT NOT NULL,
+	office ENUM('canada','india') NOT NULL DEFAULT 'canada',
+	discipline ENUM('architectural','structural','civil','infrastructure','bim_mep','project_management') NOT NULL DEFAULT 'structural',
 	sort_order INT NOT NULL DEFAULT 0,
 	is_published TINYINT(1) NOT NULL DEFAULT 1,
 	created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-	KEY idx_category_sort (category, sort_order)
+	KEY idx_category_sort (category, sort_order),
+	KEY idx_discipline_office_sort (discipline, office, sort_order)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- One row per photo across all three gallery pages (Canada / Oman / India).
