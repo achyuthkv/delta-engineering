@@ -52,7 +52,15 @@
 		<!-- Proof strip -->
 		<div class="de-proof-strip">
 			<div class="de-proof-track">
-				<div class="de-proof-row">
+				<?php
+				// Repeated 10x (not just duplicated once) so the combined
+				// content always exceeds double the widest realistic screen
+				// width -- with only one copy, a big monitor shows both
+				// copies plus trailing blank space at once, which breaks the
+				// infinite-scroll illusion. Only the first copy is announced
+				// to screen readers; the rest are decorative repeats.
+				for ($i = 0; $i < 10; $i++): ?>
+				<div class="de-proof-row"<?= $i > 0 ? ' aria-hidden="true"' : '' ?>>
 					<span><b>40+ years</b> in the Greater Toronto Area</span>
 					<span class="de-proof-sep">/</span>
 					<span>Offices in <b>Canada</b> &amp; <b>India</b></span>
@@ -62,16 +70,7 @@
 					<span>Incorporated <b>1987</b></span>
 					<span class="de-proof-sep">/</span>
 				</div>
-				<div class="de-proof-row" aria-hidden="true">
-					<span><b>40+ years</b> in the Greater Toronto Area</span>
-					<span class="de-proof-sep">/</span>
-					<span>Offices in <b>Canada</b> &amp; <b>India</b></span>
-					<span class="de-proof-sep">/</span>
-					<span>Founded by <b>Dave (Devender) Arora</b>, 1985</span>
-					<span class="de-proof-sep">/</span>
-					<span>Incorporated <b>1987</b></span>
-					<span class="de-proof-sep">/</span>
-				</div>
+				<?php endfor; ?>
 			</div>
 		</div>
 

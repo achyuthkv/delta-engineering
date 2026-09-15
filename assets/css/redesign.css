@@ -123,12 +123,14 @@
 .de-stat .l { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.07em; color: #5a6478; margin-top: 3px; }
 
 /* ---------- proof strip ---------- */
-/* A continuous right-to-left marquee: two identical copies of the row sit
-   side by side in a track twice the viewport's width; animating the track
-   from translateX(0) to translateX(-50%) moves content leftward -- text
-   enters from the right and exits left, the readable direction for LTR
-   text -- and loops seamlessly the instant the second copy lines up with
-   the first. */
+/* A continuous right-to-left marquee: 10 identical copies of the row sit
+   side by side in one long track -- enough copies that the combined width
+   comfortably exceeds double the widest realistic screen, so there's never
+   a moment where trailing blank space is visible. Animating the track from
+   translateX(0) to translateX(-10%) (one row's width, i.e. 1/10th of the
+   full track) moves content leftward -- text enters from the right and
+   exits left, the readable direction for LTR text -- and loops seamlessly
+   the instant each copy lines up with the next identical one. */
 .de-proof-strip { background: var(--de-ink); color: #eef1f6; padding: 18px 0; overflow: hidden; }
 .de-proof-track { display: flex; width: max-content; animation: de-proof-scroll 26s linear infinite; }
 .de-proof-row {
@@ -140,7 +142,7 @@
 .de-proof-sep { color: #4a5573; }
 @keyframes de-proof-scroll {
 	from { transform: translateX(0); }
-	to { transform: translateX(-50%); }
+	to { transform: translateX(-10%); }
 }
 @media (prefers-reduced-motion: reduce) {
 	.de-proof-track { animation: none; }
