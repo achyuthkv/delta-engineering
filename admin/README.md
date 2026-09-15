@@ -51,7 +51,13 @@ footer) is still plain PHP/HTML, same as before.
 
 - **Add/edit/delete a project entry**: Admin → Projects. Each entry belongs
   to a category (the accordion heading) — pick an existing one from the
-  suggestions or type a new one to start a new accordion section.
+  suggestions or type a new one to start a new accordion section. The
+  Description field is a rich text editor (bold/italic/underline, headings,
+  bullet/numbered lists, block quotes, links) — whatever you format there
+  is exactly what renders on the public site. Content is sanitized against
+  an allowlist on save (see `admin/includes/sanitize.php`), so anything
+  outside that formatting set (scripts, embeds, styling attributes) is
+  stripped automatically rather than being able to break the page.
 - **Add/edit/delete a gallery photo**: Admin → Gallery. Choose which office
   (Canada / Oman / India) it belongs to — that's what determines which page
   and section it shows up on. Uploads are validated as real images (not

@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/includes/auth.php';
+require_once __DIR__ . '/includes/sanitize.php';
 de_require_login();
 
 $db = de_db();
@@ -31,13 +32,19 @@ if ($id) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	de_csrf_check();
 	$project['category'] = trim($_POST['category'] ?? '');
-	$project['description'] = trim($_POST['description'] ?? '');
+	// Sanitized here regardless of what the rich text editor's JS sent --
+	// that JS is just a convenience, not a security boundary. A request
+	// could always POST straight to this endpoint bypassing it entirely,
+	// so this allowlist pass is what actually keeps stored XSS out before
+	// the description is echoed unescaped on the public site.
+	$project['description'] = de_sanitize_html(trim($_POST['description'] ?? ''));
 	$project['office'] = array_key_exists($_POST['office'] ?? '', $offices) ? $_POST['office'] : 'canada';
 	$project['discipline'] = array_key_exists($_POST['discipline'] ?? '', $disciplines) ? $_POST['discipline'] : 'structural';
 	$project['sort_order'] = (int) ($_POST['sort_order'] ?? 0);
 	$project['is_published'] = isset($_POST['is_published']) ? 1 : 0;
 
-	if ($project['category'] === '' || $project['description'] === '') {
+	$descriptionIsBlank = trim(strip_tags($project['description'])) === '';
+	if ($project['category'] === '' || $descriptionIsBlank) {
 		$error = 'Category and description are both required.';
 	} else {
 		if ($id) {
@@ -78,9 +85,60 @@ require __DIR__ . '/includes/layout-top.php';
 		</datalist>
 		<div class="hint">Pick an existing category from the list, or type a new one to start a new accordion section.</div>
 
-		<label for="description">Description</label>
-		<textarea id="description" name="description" required rows="4"><?= htmlspecialchars($project['description'], ENT_QUOTES, 'UTF-8') ?></textarea>
-		<div class="hint">The full sentence shown as one bullet, e.g. "50,000 sqft Warehouse for JVC in Scarborough, Ont., Canada."</div>
+		<label for="descriptionEditor">Description</label>
+		<div class="de-rte">
+			<div class="de-rte-toolbar" role="toolbar" aria-label="Formatting">
+				<button type="button" data-cmd="bold" title="Bold"><b>B</b></button>
+				<button type="button" data-cmd="italic" title="Italic"><i>I</i></button>
+				<button type="button" data-cmd="underline" title="Underline"><u>U</u></button>
+				<span class="de-rte-sep"></span>
+				<button type="button" data-cmd="formatBlock" data-value="H2" title="Heading">H2</button>
+				<button type="button" data-cmd="formatBlock" data-value="H3" title="Subheading">H3</button>
+				<button type="button" data-cmd="formatBlock" data-value="P" title="Paragraph">&para;</button>
+				<span class="de-rte-sep"></span>
+				<button type="button" data-cmd="insertUnorderedList" title="Bullet list">&bull; List</button>
+				<button type="button" data-cmd="insertOrderedList" title="Numbered list">1. List</button>
+				<button type="button" data-cmd="formatBlock" data-value="BLOCKQUOTE" title="Quote">&ldquo; Quote</button>
+				<span class="de-rte-sep"></span>
+				<button type="button" data-cmd="createLink" title="Add link">Link</button>
+				<button type="button" data-cmd="unlink" title="Remove link">Unlink</button>
+			</div>
+			<div id="descriptionEditor" class="de-rte-editor" contenteditable="true"><?= $project['description'] ?></div>
+		</div>
+		<textarea id="description" name="description" style="display:none"></textarea>
+		<div class="hint">Formatted text shown as one entry, e.g. "50,000 sqft Warehouse for JVC in Scarborough, Ont., Canada." Bold, links, headings, and lists are supported.</div>
+
+		<script>
+			(function () {
+				var editor = document.getElementById('descriptionEditor');
+				var hidden = document.getElementById('description');
+				var toolbar = document.querySelector('.de-rte-toolbar');
+
+				function sync() { hidden.value = editor.innerHTML; }
+				sync();
+				editor.addEventListener('input', sync);
+
+				toolbar.addEventListener('click', function (e) {
+					var btn = e.target.closest('button[data-cmd]');
+					if (!btn) return;
+					e.preventDefault();
+					editor.focus();
+					var cmd = btn.dataset.cmd;
+					if (cmd === 'createLink') {
+						var url = window.prompt('Link URL (e.g. https://... or /gallery_canada_projects.php):');
+						if (!url) return;
+						document.execCommand(cmd, false, url);
+					} else if (cmd === 'formatBlock') {
+						document.execCommand(cmd, false, btn.dataset.value);
+					} else {
+						document.execCommand(cmd, false, null);
+					}
+					sync();
+				});
+
+				editor.closest('form').addEventListener('submit', sync);
+			})();
+		</script>
 
 		<div class="row">
 			<div>

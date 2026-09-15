@@ -57,7 +57,7 @@ require __DIR__ . '/includes/layout-top.php';
 			<?php foreach ($projects as $p): ?>
 				<tr class="<?= $p['is_published'] ? '' : 'unpublished' ?>">
 					<td><span class="de-admin-tag"><?= htmlspecialchars($p['category'], ENT_QUOTES, 'UTF-8') ?></span></td>
-					<td><?= htmlspecialchars(mb_strimwidth($p['description'], 0, 140, '…'), ENT_QUOTES, 'UTF-8') ?></td>
+					<td><?= htmlspecialchars(mb_strimwidth(trim(strip_tags($p['description'])), 0, 140, '…'), ENT_QUOTES, 'UTF-8') ?></td>
 					<td><span class="de-admin-tag"><?= htmlspecialchars(ucfirst($p['office']), ENT_QUOTES, 'UTF-8') ?></span> <span class="de-admin-tag"><?= htmlspecialchars(str_replace('_', ' ', $p['discipline']), ENT_QUOTES, 'UTF-8') ?></span></td>
 					<td><?= $p['is_published'] ? '' : '<span class="de-admin-tag">Hidden</span>' ?></td>
 					<td class="actions">

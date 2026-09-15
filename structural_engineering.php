@@ -128,7 +128,7 @@
 					<?php foreach ($deFeatured as $p): ?>
 						<div class="de-proj-card">
 							<div class="cat"><?= htmlspecialchars($p['category'], ENT_QUOTES, 'UTF-8') ?></div>
-							<p><?= htmlspecialchars($p['description'], ENT_QUOTES, 'UTF-8') ?></p>
+							<div class="de-proj-desc"><?= $p['description'] ?></div>
 						</div>
 					<?php endforeach; ?>
 				</div>

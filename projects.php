@@ -78,7 +78,7 @@
 						<div class="de-accordion-body-inner">
 							<ul class="de-accordion-list">
 								<?php foreach ($items as $description): ?>
-									<li><?= htmlspecialchars($description, ENT_QUOTES, 'UTF-8') ?></li>
+									<li><div class="de-accordion-desc"><?= $description ?></div></li>
 								<?php endforeach; ?>
 							</ul>
 						</div>
