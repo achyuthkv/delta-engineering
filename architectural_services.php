@@ -10,13 +10,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="Architectural services in Toronto and the Greater Toronto Area — design development, permit drawings, and renovation planning, coordinated with our structural and civil engineering teams.">
+    <meta name="description" content="Architectural services from Delta Engineering — design development, permit drawings, and renovation planning, coordinated with our structural and civil engineering teams across Canada and India.">
     <meta name="author" content="Delta Engineering Services">
     <link rel="canonical" href="https://www.delta-engineering.ca/architectural_services.php">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Delta Engineering Services">
-    <meta property="og:title" content="Architectural Services in Toronto &amp; the GTA | Delta Engineering">
-    <meta property="og:description" content="Design development, permit drawings, and renovation planning, coordinated with our structural and civil engineering teams across Toronto and the Greater Toronto Area.">
+    <meta property="og:title" content="Architectural Services | Delta Engineering — Canada &amp; India">
+    <meta property="og:description" content="Design development, permit drawings, and renovation planning, coordinated with our structural and civil engineering teams across Canada and India.">
     <meta property="og:url" content="https://www.delta-engineering.ca/architectural_services.php">
     <meta property="og:image" content="https://www.delta-engineering.ca/assets/images/logo.png">
 
@@ -26,14 +26,14 @@
 		"@type": "Service",
 		"serviceType": "Architectural Services",
 		"name": "Architectural Services",
-		"description": "Design development, permit drawings, and renovation planning, coordinated with our structural and civil engineering teams across Toronto and the Greater Toronto Area.",
+		"description": "Design development, permit drawings, and renovation planning, coordinated with our structural and civil engineering teams across Canada and India.",
 		"provider": { "@type": "ProfessionalService", "name": "Delta Engineering Services", "url": "https://www.delta-engineering.ca/" },
-		"areaServed": "Greater Toronto Area",
+		"areaServed": ["Greater Toronto Area", "India"],
 		"url": "https://www.delta-engineering.ca/architectural_services.php"
 	}
 	</script>
 
-	<title>Architectural Services in Toronto &amp; the GTA | Delta Engineering</title>
+	<title>Architectural Services | Delta Engineering — Canada &amp; India</title>
 
 	<?php
 	include 'header.php';
@@ -64,7 +64,7 @@
 		<div class="de-banner de-blueprint-bg">
 			<div class="de-banner-inner">
 				<div class="de-crumbs"><a href="index.php">Home</a> / <span class="cur">Architectural Services</span></div>
-				<h1>Architectural Services in Toronto &amp; the GTA</h1>
+				<h1><?= $deLoc === 'india' ? 'Architectural Services in India' : 'Architectural Services in Toronto &amp; the GTA' ?></h1>
 				<p>Design development, permit-ready drawings, and renovation planning — coordinated in-house with our structural and civil engineering teams from concept to construction.</p>
 			</div>
 		</div>
@@ -74,7 +74,11 @@
 			<div class="de-intro-grid">
 				<div class="de-intro-copy">
 					<p>Delta Engineering Services provides architectural design and drafting alongside our structural and civil engineering work, so architectural, structural, and MEP drawings are coordinated under one roof rather than passed between separate firms.</p>
-					<p>From early design development through permit-ready construction drawings, our architectural services support renovations, additions, and new buildings across the Greater Toronto Area.</p>
+					<?php if ($deLoc === 'canada'): ?>
+					<p>In Canada, we provide building design services for homes, residential buildings, offices, retail spaces, and certain industrial buildings, within our Professional Engineering and BCIN qualifications. For larger or more complex projects that require a Licensed Architect, we work closely with our associated Licensed Architect to provide complete and coordinated architectural and engineering solutions in accordance with local regulations.</p>
+					<?php else: ?>
+					<p>From early design development through permit-ready construction drawings, our architectural services support renovations, additions, and new buildings for clients in India, coordinated with local regulatory requirements on a project-by-project basis.</p>
+					<?php endif; ?>
 					<div class="de-intro-stats">
 					<?php if ($deLoc === 'canada'): ?>
 						<div class="de-stat"><div class="n">1,000+</div><div class="l">Buildings Engineered</div></div>
@@ -82,7 +86,7 @@
 						<div class="de-stat"><div class="n">40+</div><div class="l">Years in the GTA</div></div>
 					<?php else: ?>
 						<div class="de-stat"><div class="n"><?= count($deFeatured) ?></div><div class="l">Documented India Project<?= count($deFeatured) === 1 ? '' : 's' ?></div></div>
-						<div class="de-stat"><div class="n">2</div><div class="l">India Offices &mdash; Ahmedabad &amp; Bangalore</div></div>
+						<div class="de-stat"><div class="n">2</div><div class="l">India Offices &mdash; Ahmedabad &amp; Bengaluru</div></div>
 					<?php endif; ?>
 					</div>
 				</div>

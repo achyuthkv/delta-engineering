@@ -10,13 +10,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="Civil engineering services in Toronto and the Greater Toronto Area — planning, design, site development, and transportation systems for construction projects.">
+    <meta name="description" content="Civil engineering services from Delta Engineering — planning, design, site development, and transportation systems for construction projects across Canada and India.">
     <meta name="author" content="Delta Engineering Services">
     <link rel="canonical" href="https://www.delta-engineering.ca/civil_engineering.php">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Delta Engineering Services">
-    <meta property="og:title" content="Civil Engineering Services in Toronto &amp; the GTA | Delta Engineering">
-    <meta property="og:description" content="Planning, design, and transportation systems for construction projects across Toronto and the Greater Toronto Area.">
+    <meta property="og:title" content="Civil Engineering Services | Delta Engineering — Canada &amp; India">
+    <meta property="og:description" content="Planning, design, and transportation systems for construction projects across Canada and India.">
     <meta property="og:url" content="https://www.delta-engineering.ca/civil_engineering.php">
     <meta property="og:image" content="https://www.delta-engineering.ca/assets/images/logo.png">
 
@@ -26,14 +26,14 @@
 		"@type": "Service",
 		"serviceType": "Civil Engineering",
 		"name": "Civil Engineering Services",
-		"description": "Planning, design, and transportation systems for construction projects across Toronto and the Greater Toronto Area.",
+		"description": "Planning, design, and transportation systems for construction projects across Canada and India.",
 		"provider": { "@type": "ProfessionalService", "name": "Delta Engineering Services", "url": "https://www.delta-engineering.ca/" },
-		"areaServed": "Greater Toronto Area",
+		"areaServed": ["Greater Toronto Area", "India"],
 		"url": "https://www.delta-engineering.ca/civil_engineering.php"
 	}
 	</script>
 
-	<title>Civil Engineering Services in Toronto &amp; the GTA | Delta Engineering</title>
+	<title>Civil Engineering Services | Delta Engineering — Canada &amp; India</title>
 
 	<?php
 	include 'header.php';
@@ -64,8 +64,12 @@
 		<div class="de-banner de-blueprint-bg">
 			<div class="de-banner-inner">
 				<div class="de-crumbs"><a href="index.php">Home</a> / <span class="cur">Civil Engineering</span></div>
-				<h1>Civil Engineering Services in Toronto &amp; the GTA</h1>
+				<h1><?= $deLoc === 'india' ? 'Civil Engineering Services in India' : 'Civil Engineering Services in Toronto &amp; the GTA' ?></h1>
+				<?php if ($deLoc === 'india'): ?>
+				<p>Planning, design, and distribution systems for construction projects — from site layout to transportation, delivered through our India office with the same rigour behind four decades of civil engineering experience.</p>
+				<?php else: ?>
 				<p>Planning, design, and distribution systems for construction projects — from site layout to transportation, delivered with the same rigour behind 1,000+ GTA buildings since 1985.</p>
+				<?php endif; ?>
 			</div>
 		</div>
 
@@ -73,7 +77,7 @@
 		<div class="de-intro">
 			<div class="de-intro-grid">
 				<div class="de-intro-copy">
-					<p>Delta Engineering Services provides full-fledged civil engineering services to clients across the Greater Toronto Area and globally, from initial planning through to final construction documentation.</p>
+					<p>Delta Engineering Services provides full-fledged civil engineering services to clients across Canada, India, and beyond, from initial planning through to final construction documentation.</p>
 					<p>Our civil engineering solutions cover planning, design, transportation systems, and distribution systems — every aspect required to move a project from concept to construction.</p>
 					<div class="de-intro-stats">
 					<?php if ($deLoc === 'canada'): ?>
@@ -82,7 +86,7 @@
 						<div class="de-stat"><div class="n">40+</div><div class="l">Years in the GTA</div></div>
 					<?php else: ?>
 						<div class="de-stat"><div class="n"><?= count($deFeatured) ?></div><div class="l">Documented India Project<?= count($deFeatured) === 1 ? '' : 's' ?></div></div>
-						<div class="de-stat"><div class="n">2</div><div class="l">India Offices &mdash; Ahmedabad &amp; Bangalore</div></div>
+						<div class="de-stat"><div class="n">2</div><div class="l">India Offices &mdash; Ahmedabad &amp; Bengaluru</div></div>
 					<?php endif; ?>
 					</div>
 				</div>

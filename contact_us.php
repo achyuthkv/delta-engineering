@@ -76,7 +76,7 @@
 						<div>
 							<div class="l">India Offices</div>
 							<div class="v">Dev Arced, New Shahibaug, Nana Chiloda, Ahmedabad, Gujarat</div>
-							<div class="v" style="margin-top:8px">Bangalore, Karnataka <em style="opacity:.7">(address to be confirmed)</em></div>
+							<div class="v" style="margin-top:8px">JP 1 C/31, 2nd Floor, 6th Cross<br>LIC Colony, 3rd Block East, Jayanagar<br>Bengaluru 560011</div>
 						</div>
 					</div>
 				</div>

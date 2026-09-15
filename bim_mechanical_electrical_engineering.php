@@ -10,13 +10,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="BIM, mechanical, and electrical engineering services in Toronto — drone-based 3D mapping and clash-free BIM modelling for construction projects across the GTA.">
+    <meta name="description" content="BIM, mechanical, and electrical engineering services from Delta Engineering — drone-based 3D mapping and clash-free BIM modelling for construction projects across Canada and India.">
     <meta name="author" content="Delta Engineering Services">
     <link rel="canonical" href="https://www.delta-engineering.ca/bim_mechanical_electrical_engineering.php">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Delta Engineering Services">
-    <meta property="og:title" content="BIM, Mechanical &amp; Electrical Engineering in Toronto | Delta Engineering">
-    <meta property="og:description" content="Drone-based 3D mapping and clash-free BIM modelling for construction projects across Toronto and the GTA.">
+    <meta property="og:title" content="BIM, Mechanical &amp; Electrical Engineering | Delta Engineering — Canada &amp; India">
+    <meta property="og:description" content="Drone-based 3D mapping and clash-free BIM modelling for construction projects across Canada and India.">
     <meta property="og:url" content="https://www.delta-engineering.ca/bim_mechanical_electrical_engineering.php">
     <meta property="og:image" content="https://www.delta-engineering.ca/assets/images/logo.png">
 
@@ -26,14 +26,14 @@
 		"@type": "Service",
 		"serviceType": "BIM, Mechanical and Electrical Engineering",
 		"name": "BIM, Mechanical & Electrical Engineering Services",
-		"description": "Drone-based 3D mapping and clash-free BIM modelling for construction projects across Toronto and the GTA.",
+		"description": "Drone-based 3D mapping and clash-free BIM modelling for construction projects across Canada and India.",
 		"provider": { "@type": "ProfessionalService", "name": "Delta Engineering Services", "url": "https://www.delta-engineering.ca/" },
-		"areaServed": "Greater Toronto Area",
+		"areaServed": ["Greater Toronto Area", "India"],
 		"url": "https://www.delta-engineering.ca/bim_mechanical_electrical_engineering.php"
 	}
 	</script>
 
-	<title>BIM, Mechanical &amp; Electrical Engineering in Toronto | Delta Engineering</title>
+	<title>BIM, Mechanical &amp; Electrical Engineering | Delta Engineering — Canada &amp; India</title>
 
 	<?php
 	include 'header.php';
@@ -64,8 +64,12 @@
 		<div class="de-banner de-blueprint-bg">
 			<div class="de-banner-inner">
 				<div class="de-crumbs"><a href="index.php">Home</a> / <span class="cur">BIM, Mechanical &amp; Electrical Engineering</span></div>
-				<h1>BIM, Mechanical &amp; Electrical Engineering in Toronto &amp; the GTA</h1>
+				<h1><?= $deLoc === 'india' ? 'BIM, Mechanical &amp; Electrical Engineering in India' : 'BIM, Mechanical &amp; Electrical Engineering in Toronto &amp; the GTA' ?></h1>
+				<?php if ($deLoc === 'india'): ?>
+				<p>Drone-based 3D mapping, clash-free BIM modelling, and mechanical &amp; electrical design coordinated with architects and MEP teams from concept to handover, for projects in India.</p>
+				<?php else: ?>
 				<p>Drone-based 3D mapping, clash-free BIM modelling, and mechanical &amp; electrical design coordinated with architects and MEP teams from concept to handover, across Toronto and the Greater Toronto Area.</p>
+				<?php endif; ?>
 			</div>
 		</div>
 
@@ -82,7 +86,7 @@
 						<div class="de-stat"><div class="n">40+</div><div class="l">Years in the GTA</div></div>
 					<?php else: ?>
 						<div class="de-stat"><div class="n"><?= count($deFeatured) ?></div><div class="l">Documented India Project<?= count($deFeatured) === 1 ? '' : 's' ?></div></div>
-						<div class="de-stat"><div class="n">2</div><div class="l">India Offices &mdash; Ahmedabad &amp; Bangalore</div></div>
+						<div class="de-stat"><div class="n">2</div><div class="l">India Offices &mdash; Ahmedabad &amp; Bengaluru</div></div>
 					<?php endif; ?>
 					</div>
 				</div>

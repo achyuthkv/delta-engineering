@@ -10,13 +10,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="Construction project management services in Toronto and the GTA — design development, construction management, and cloud-based project tracking from concept to handover.">
+    <meta name="description" content="Construction project management services from Delta Engineering — design development, construction management, and cloud-based project tracking from concept to handover, across Canada and India.">
     <meta name="author" content="Delta Engineering Services">
     <link rel="canonical" href="https://www.delta-engineering.ca/project_management.php">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Delta Engineering Services">
-    <meta property="og:title" content="Construction Project Management in Toronto &amp; the GTA | Delta Engineering">
-    <meta property="og:description" content="Design development, construction management, and cloud-based project tracking from concept to handover, across Toronto and the Greater Toronto Area.">
+    <meta property="og:title" content="Construction Project Management | Delta Engineering — Canada &amp; India">
+    <meta property="og:description" content="Design development, construction management, and cloud-based project tracking from concept to handover, across Canada and India.">
     <meta property="og:url" content="https://www.delta-engineering.ca/project_management.php">
     <meta property="og:image" content="https://www.delta-engineering.ca/assets/images/logo.png">
 
@@ -26,14 +26,14 @@
 		"@type": "Service",
 		"serviceType": "Construction Project Management",
 		"name": "Construction Project Management Services",
-		"description": "Design development, construction management, and cloud-based project tracking from concept to handover, across Toronto and the Greater Toronto Area.",
+		"description": "Design development, construction management, and cloud-based project tracking from concept to handover, across Canada and India.",
 		"provider": { "@type": "ProfessionalService", "name": "Delta Engineering Services", "url": "https://www.delta-engineering.ca/" },
-		"areaServed": "Greater Toronto Area",
+		"areaServed": ["Greater Toronto Area", "India"],
 		"url": "https://www.delta-engineering.ca/project_management.php"
 	}
 	</script>
 
-	<title>Construction Project Management in Toronto &amp; the GTA | Delta Engineering</title>
+	<title>Construction Project Management | Delta Engineering — Canada &amp; India</title>
 
 	<?php
 	include 'header.php';
@@ -64,8 +64,12 @@
 		<div class="de-banner de-blueprint-bg">
 			<div class="de-banner-inner">
 				<div class="de-crumbs"><a href="index.php">Home</a> / <span class="cur">Project Management</span></div>
-				<h1>Construction Project Management in Toronto &amp; the GTA</h1>
+				<h1><?= $deLoc === 'india' ? 'Construction Project Management in India' : 'Construction Project Management in Toronto &amp; the GTA' ?></h1>
+				<?php if ($deLoc === 'india'): ?>
+				<p>Design development through construction and handover — with a cloud-based platform that keeps every stakeholder's data, schedule, and progress in one place, on projects across India.</p>
+				<?php else: ?>
 				<p>Design development through construction and handover — with a cloud-based platform that keeps every stakeholder's data, schedule, and progress in one place, on projects across Toronto and the GTA.</p>
+				<?php endif; ?>
 			</div>
 		</div>
 
@@ -82,7 +86,7 @@
 						<div class="de-stat"><div class="n">40+</div><div class="l">Years in the GTA</div></div>
 					<?php else: ?>
 						<div class="de-stat"><div class="n"><?= count($deFeatured) ?></div><div class="l">Documented India Project<?= count($deFeatured) === 1 ? '' : 's' ?></div></div>
-						<div class="de-stat"><div class="n">2</div><div class="l">India Offices &mdash; Ahmedabad &amp; Bangalore</div></div>
+						<div class="de-stat"><div class="n">2</div><div class="l">India Offices &mdash; Ahmedabad &amp; Bengaluru</div></div>
 					<?php endif; ?>
 					</div>
 				</div>

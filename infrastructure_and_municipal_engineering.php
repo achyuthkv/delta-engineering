@@ -10,13 +10,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="Infrastructure and municipal engineering services for GTA municipalities — roadway design, water and sewer systems, and capital improvement planning.">
+    <meta name="description" content="Infrastructure and municipal engineering services from Delta Engineering — roadway design, water and sewer systems, and capital improvement planning for municipalities in Canada and India.">
     <meta name="author" content="Delta Engineering Services">
     <link rel="canonical" href="https://www.delta-engineering.ca/infrastructure_and_municipal_engineering.php">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Delta Engineering Services">
-    <meta property="og:title" content="Infrastructure &amp; Municipal Engineering | Toronto &amp; the GTA | Delta Engineering">
-    <meta property="og:description" content="Roadway design, water and sewer systems, and capital improvement planning for municipalities across the Greater Toronto Area.">
+    <meta property="og:title" content="Infrastructure &amp; Municipal Engineering | Delta Engineering — Canada &amp; India">
+    <meta property="og:description" content="Roadway design, water and sewer systems, and capital improvement planning for municipalities across Canada and India.">
     <meta property="og:url" content="https://www.delta-engineering.ca/infrastructure_and_municipal_engineering.php">
     <meta property="og:image" content="https://www.delta-engineering.ca/assets/images/logo.png">
 
@@ -26,14 +26,14 @@
 		"@type": "Service",
 		"serviceType": "Infrastructure and Municipal Engineering",
 		"name": "Infrastructure & Municipal Engineering Services",
-		"description": "Roadway design, water and sewer systems, and capital improvement planning for municipalities across the Greater Toronto Area.",
+		"description": "Roadway design, water and sewer systems, and capital improvement planning for municipalities across Canada and India.",
 		"provider": { "@type": "ProfessionalService", "name": "Delta Engineering Services", "url": "https://www.delta-engineering.ca/" },
-		"areaServed": "Greater Toronto Area",
+		"areaServed": ["Greater Toronto Area", "India"],
 		"url": "https://www.delta-engineering.ca/infrastructure_and_municipal_engineering.php"
 	}
 	</script>
 
-	<title>Infrastructure &amp; Municipal Engineering | Toronto &amp; the GTA | Delta Engineering</title>
+	<title>Infrastructure &amp; Municipal Engineering | Delta Engineering — Canada &amp; India</title>
 
 	<?php
 	include 'header.php';
@@ -64,8 +64,12 @@
 		<div class="de-banner de-blueprint-bg">
 			<div class="de-banner-inner">
 				<div class="de-crumbs"><a href="index.php">Home</a> / <span class="cur">Infrastructure &amp; Municipal Engineering</span></div>
-				<h1>Infrastructure &amp; Municipal Engineering in the GTA</h1>
+				<h1><?= $deLoc === 'india' ? 'Infrastructure &amp; Municipal Engineering in India' : 'Infrastructure &amp; Municipal Engineering in the GTA' ?></h1>
+				<?php if ($deLoc === 'india'): ?>
+				<p>Working with municipalities and local governments in India — roadway design, water and sewer systems, and capital improvement planning delivered as an extension of your own staff.</p>
+				<?php else: ?>
 				<p>Working with municipalities and local governments across the GTA — roadway design, water and sewer systems, and capital improvement planning delivered as an extension of your own staff.</p>
+				<?php endif; ?>
 			</div>
 		</div>
 
@@ -73,7 +77,11 @@
 		<div class="de-intro">
 			<div class="de-intro-grid">
 				<div class="de-intro-copy">
+					<?php if ($deLoc === 'india'): ?>
+					<p>Delta Engineering Services offers infrastructure and municipal engineering support for local governments and communities in India, drawing on the same standards we apply working with municipalities across the Greater Toronto Area.</p>
+					<?php else: ?>
 					<p>Working with municipalities and local governments across the Greater Toronto Area, Delta Engineering Services understands the complex infrastructure needs of today's communities. We offer comprehensive services to help you meet these needs and accomplish your goals.</p>
+					<?php endif; ?>
 					<p>We foster relationships with our municipal clients and consider ourselves as an extension of their staff. Our communication, responsiveness, and attention to detail are what set us apart from other competitors.</p>
 					<div class="de-intro-stats">
 					<?php if ($deLoc === 'canada'): ?>
@@ -82,7 +90,7 @@
 						<div class="de-stat"><div class="n">40+</div><div class="l">Years in the GTA</div></div>
 					<?php else: ?>
 						<div class="de-stat"><div class="n"><?= count($deFeatured) ?></div><div class="l">Documented India Project<?= count($deFeatured) === 1 ? '' : 's' ?></div></div>
-						<div class="de-stat"><div class="n">2</div><div class="l">India Offices &mdash; Ahmedabad &amp; Bangalore</div></div>
+						<div class="de-stat"><div class="n">2</div><div class="l">India Offices &mdash; Ahmedabad &amp; Bengaluru</div></div>
 					<?php endif; ?>
 					</div>
 				</div>

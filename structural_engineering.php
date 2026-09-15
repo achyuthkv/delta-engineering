@@ -10,13 +10,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="Structural engineering services in Toronto and the GTA — design, analysis, and construction support for buildings, bridges, and structures since 1985.">
+    <meta name="description" content="Structural engineering services from Delta Engineering — design, analysis, and construction support for buildings, bridges, and structures across Canada and India, since 1985.">
     <meta name="author" content="Delta Engineering Services">
     <link rel="canonical" href="https://www.delta-engineering.ca/structural_engineering.php">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Delta Engineering Services">
-    <meta property="og:title" content="Structural Engineering Services in Toronto &amp; the GTA | Delta Engineering">
-    <meta property="og:description" content="Design, analysis, and construction support for buildings and structures across Toronto and the Greater Toronto Area, since 1985.">
+    <meta property="og:title" content="Structural Engineering Services | Delta Engineering — Canada &amp; India">
+    <meta property="og:description" content="Design, analysis, and construction support for buildings and structures across Canada and India, since 1985.">
     <meta property="og:url" content="https://www.delta-engineering.ca/structural_engineering.php">
     <meta property="og:image" content="https://www.delta-engineering.ca/assets/images/logo.png">
 
@@ -26,14 +26,14 @@
 		"@type": "Service",
 		"serviceType": "Structural Engineering",
 		"name": "Structural Engineering Services",
-		"description": "Design, analysis, and construction support for buildings, bridges, and structures across Toronto and the Greater Toronto Area.",
+		"description": "Design, analysis, and construction support for buildings, bridges, and structures across Canada and India.",
 		"provider": { "@type": "ProfessionalService", "name": "Delta Engineering Services", "url": "https://www.delta-engineering.ca/" },
-		"areaServed": "Greater Toronto Area",
+		"areaServed": ["Greater Toronto Area", "India"],
 		"url": "https://www.delta-engineering.ca/structural_engineering.php"
 	}
 	</script>
 
-	<title>Structural Engineering Services in Toronto &amp; the GTA | Delta Engineering</title>
+	<title>Structural Engineering Services | Delta Engineering — Canada &amp; India</title>
 
 	<?php
 	include 'header.php';
@@ -64,8 +64,12 @@
 		<div class="de-banner de-blueprint-bg">
 			<div class="de-banner-inner">
 				<div class="de-crumbs"><a href="index.php">Home</a> / <span class="cur">Structural Engineering</span></div>
-				<h1>Structural Engineering Services in Toronto &amp; the GTA</h1>
+				<h1><?= $deLoc === 'india' ? 'Structural Engineering Services in India' : 'Structural Engineering Services in Toronto &amp; the GTA' ?></h1>
+				<?php if ($deLoc === 'india'): ?>
+				<p>Design, analysis, and construction support that ensures buildings, bridges, and structures are safe, durable, and built to withstand real-world loads — delivered through our India office alongside four decades of structural engineering experience.</p>
+				<?php else: ?>
 				<p>Design, analysis, and construction support that ensures buildings, bridges, and structures are safe, durable, and built to withstand real-world loads — applied across 1,000+ projects in the GTA since 1985.</p>
+				<?php endif; ?>
 			</div>
 		</div>
 
@@ -74,7 +78,7 @@
 			<div class="de-intro-grid">
 				<div class="de-intro-copy">
 					<p>Structural engineering is a specialized field of engineering that focuses on the design, analysis, and construction of structures. It involves applying principles of physics and mathematics to ensure that buildings, bridges, dams, and other structures are safe, durable, and able to withstand various loads and environmental conditions.</p>
-					<p>Every structural drawing set we deliver has been through the same discipline that's carried Delta Engineering through four decades of GTA construction — from industrial plants to places of worship.</p>
+					<p>Every structural drawing set we deliver has been through the same discipline that's carried Delta Engineering through four decades of construction — from industrial plants to places of worship.</p>
 					<div class="de-intro-stats">
 					<?php if ($deLoc === 'canada'): ?>
 						<div class="de-stat"><div class="n">1,000+</div><div class="l">Buildings Engineered</div></div>
@@ -82,7 +86,7 @@
 						<div class="de-stat"><div class="n">40+</div><div class="l">Years in the GTA</div></div>
 					<?php else: ?>
 						<div class="de-stat"><div class="n"><?= count($deFeatured) ?></div><div class="l">Documented India Project<?= count($deFeatured) === 1 ? '' : 's' ?></div></div>
-						<div class="de-stat"><div class="n">2</div><div class="l">India Offices &mdash; Ahmedabad &amp; Bangalore</div></div>
+						<div class="de-stat"><div class="n">2</div><div class="l">India Offices &mdash; Ahmedabad &amp; Bengaluru</div></div>
 					<?php endif; ?>
 					</div>
 				</div>
