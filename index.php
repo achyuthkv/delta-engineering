@@ -69,6 +69,8 @@
 					<span class="de-proof-sep">/</span>
 					<span>Incorporated <b>1987</b></span>
 					<span class="de-proof-sep">/</span>
+					<span>Taken over by <b>Mr. Ramesh Savaliya</b>, 2023</span>
+					<span class="de-proof-sep">/</span>
 				</div>
 				<?php endfor; ?>
 			</div>
