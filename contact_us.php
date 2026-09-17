@@ -49,8 +49,12 @@
 						<div class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.4 21 3 13.6 3 4.6c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1.1L6.6 10.8Z" stroke="currentColor" stroke-width="1.5"/></svg></div>
 						<div>
 							<div class="l">Phone</div>
+							<?php if ($deLoc === 'india'): ?>
+							<span class="v">+91 XX-XXXX-XXXX <em style="opacity:.7">(to be confirmed)</em></span>
+							<?php else: ?>
 							<a class="v" href="tel:+14165731573">(416) 573-1573</a><br>
 							<a class="v" href="tel:+14379863858">(437) 986-3858</a>
+							<?php endif; ?>
 						</div>
 					</div>
 
@@ -62,15 +66,7 @@
 						</div>
 					</div>
 
-					<div class="de-contact-info-row">
-						<div class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3s6 6.8 6 11a6 6 0 1 1-12 0c0-4.2 6-11 6-11Z" stroke="currentColor" stroke-width="1.5"/></svg></div>
-						<div>
-							<div class="l">Canada Offices</div>
-							<div class="v">204-4211 Sheppard Ave. E.<br>Scarborough, ON M1S 5H5</div>
-							<div class="v" style="margin-top:8px">2482 Kentucky Derby Way<br>Oshawa, ON L1L 0R7</div>
-						</div>
-					</div>
-
+					<?php if ($deLoc === 'india'): ?>
 					<div class="de-contact-info-row">
 						<div class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18" stroke="currentColor" stroke-width="1.5"/></svg></div>
 						<div>
@@ -79,6 +75,16 @@
 							<div class="v" style="margin-top:8px">JP 1 C/31, 2nd Floor, 6th Cross<br>LIC Colony, 3rd Block East, Jayanagar<br>Bengaluru 560011</div>
 						</div>
 					</div>
+					<?php else: ?>
+					<div class="de-contact-info-row">
+						<div class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3s6 6.8 6 11a6 6 0 1 1-12 0c0-4.2 6-11 6-11Z" stroke="currentColor" stroke-width="1.5"/></svg></div>
+						<div>
+							<div class="l">Canada Offices</div>
+							<div class="v">204-4211 Sheppard Ave. E.<br>Scarborough, ON M1S 5H5</div>
+							<div class="v" style="margin-top:8px">2482 Kentucky Derby Way<br>Oshawa, ON L1L 0R7</div>
+						</div>
+					</div>
+					<?php endif; ?>
 				</div>
 
 				<div class="de-form-card">
