@@ -31,12 +31,14 @@
 	$deProjectGroups = [];
 	try {
 		require_once __DIR__ . '/admin/includes/db.php';
-		$rows = de_db()->query(
+		$stmt = de_db()->prepare(
 			"SELECT category, description, sort_order, id
 			 FROM projects
-			 WHERE is_published = 1 AND office = 'canada'
+			 WHERE is_published = 1 AND office = ?
 			 ORDER BY category, sort_order, id"
-		)->fetchAll();
+		);
+		$stmt->execute([$deLoc]);
+		$rows = $stmt->fetchAll();
 
 		// Preserve first-inserted category order (min id per category)
 		// rather than alphabetical, so the accordion reads the same as
@@ -60,9 +62,13 @@
 		<div class="de-banner de-blueprint-bg">
 			<div class="de-banner-inner">
 				<div class="de-crumbs"><a href="index.php">Home</a> / <span class="cur">Projects</span></div>
-				<div class="de-eyebrow">Canada &middot; Greater Toronto Area</div>
+				<div class="de-eyebrow"><?= $deLoc === 'india' ? 'India' : 'Canada &middot; Greater Toronto Area' ?></div>
 				<h1>Projects</h1>
+				<?php if ($deLoc === 'india'): ?>
+				<p>A record of what we've built in India, organized by the kind of work. For photos, see the <a href="gallery_international_projects.php">India gallery</a>.</p>
+				<?php else: ?>
 				<p>A record of what we've built across the Greater Toronto Area, organized by the kind of work, spanning four decades since 1985. For our India work, see the <a href="gallery_international_projects.php">India gallery</a>.</p>
+				<?php endif; ?>
 			</div>
 		</div>
 
@@ -93,7 +99,7 @@
 		<div class="de-cta-band">
 			<div class="de-cta-band-inner">
 				<div>
-					<h2>See something like your project?</h2>
+					<h2><?= $deLoc === 'india' ? 'Have a project in India?' : 'See something like your project?' ?></h2>
 					<p>(416) 573-1573 &nbsp;&middot;&nbsp; (437) 986-3858 &nbsp;&middot;&nbsp; info@delta-engineering.ca</p>
 				</div>
 				<a href="contact_us.php" class="de-btn-primary">Request a Consultation</a>
