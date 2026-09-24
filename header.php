@@ -35,6 +35,10 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png?v=2">
 	<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png?v=2">
 	<link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png?v=2">
+	<!-- Root-relative /favicon.png -- some browsers and tools probe this
+	     path directly regardless of the <link> tags above; having it live
+	     at the domain root is a belt-and-suspenders fallback. -->
+	<link rel="icon" type="image/png" href="/favicon.png?v=2">
 
 	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
