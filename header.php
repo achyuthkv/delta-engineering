@@ -27,11 +27,14 @@
 	}
 	</script>
 
-	<!-- Favicon -->
-	<link rel="icon" type="image/x-icon" href="assets/images/favicon-large.ico">
-	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+	<!-- Favicon -- versioned query string so GoDaddy's edge cache (and
+	     browsers) treat this as a new URL instead of serving whatever it
+	     cached under the old, unversioned path. Bump ?v= if it ever needs
+	     to be forced to refresh again. -->
+	<link rel="icon" type="image/x-icon" href="assets/images/favicon-large.ico?v=2">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png?v=2">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png?v=2">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png?v=2">
 
 	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
