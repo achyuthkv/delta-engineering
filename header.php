@@ -207,15 +207,12 @@
 		})();
 	</script>
 
-	<?php if ($deLoc !== 'india'): ?>
-	<!-- WhatsApp floating button -- no real India WhatsApp number exists
-	     yet, so this hides entirely in India context rather than link to a
-	     number that doesn't reach anyone or silently reroute to Canada. -->
-	<a href="https://wa.me/+14165799787?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20engineering%20services"
+	<?php $deWaNumber = $deLoc === 'india' ? '+917259405511' : '+14165799787'; ?>
+	<!-- WhatsApp floating button -- number switches with location context. -->
+	<a href="https://wa.me/<?= $deWaNumber ?>?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20engineering%20services"
 		class="float" target="_blank" rel="noopener" aria-label="WhatsApp">
 		<i class="fa fa-whatsapp my-float"></i>
 	</a>
-	<?php endif; ?>
 
 	<div class="de-root">
 
@@ -298,13 +295,13 @@
 				<a href="contact_us.php" title="Contact">Contact</a>
 
 				<?php if ($deLoc === 'india'): ?>
-				<a href="contact_us.php" title="Contact Us" class="de-nav-cta">
+				<a href="tel:+917259405511" title="Call +91 72594 05511" class="de-nav-cta">
 					<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
 						<path
 							d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.4 21 3 13.6 3 4.6c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1.1L6.6 10.8Z"
 							stroke="currentColor" stroke-width="1.5" />
 					</svg>
-					<span class="de-nav-cta-text">Contact Us</span>
+					<span class="de-nav-cta-text">+91 72594 05511</span>
 				</a>
 				<?php else: ?>
 				<a href="tel:+14165731573" title="Call (416) 573-1573" class="de-nav-cta">

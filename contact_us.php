@@ -50,7 +50,7 @@
 						<div>
 							<div class="l">Phone</div>
 							<?php if ($deLoc === 'india'): ?>
-							<span class="v">+91 XX-XXXX-XXXX <em style="opacity:.7">(to be confirmed)</em></span>
+							<a class="v" href="tel:+917259405511">+91 72594 05511</a>
 							<?php else: ?>
 							<a class="v" href="tel:+14165731573">(416) 573-1573</a><br>
 							<a class="v" href="tel:+14379863858">(437) 986-3858</a>

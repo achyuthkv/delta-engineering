@@ -37,6 +37,27 @@
 
 	<?php
 	include 'header.php';
+
+	// The intro copy, featured image, and stats used to be hand-written and
+	// drifted out of sync whenever the India gallery was updated through
+	// /admin/gallery.php. Pull straight from the same table the gallery
+	// page renders from, so this section always matches what's actually
+	// published there.
+	$deIndiaGalleryPhotos = [];
+	try {
+		require_once __DIR__ . '/admin/includes/db.php';
+		$stmt = de_db()->prepare(
+			"SELECT image_path, alt_text, title, location FROM gallery_photos
+			 WHERE office = 'india' AND is_published = 1
+			 ORDER BY sort_order, id"
+		);
+		$stmt->execute();
+		$deIndiaGalleryPhotos = $stmt->fetchAll();
+	} catch (Throwable $e) {
+		$deIndiaGalleryPhotos = [];
+	}
+	$deIndiaFeatured = $deIndiaGalleryPhotos[0] ?? null;
+	$deIndiaProjectCount = count($deIndiaGalleryPhotos);
 	?>
 
 	<main>
@@ -54,14 +75,24 @@
 		<div class="de-intro">
 			<div class="de-intro-grid">
 				<div class="de-intro-copy">
-					<p>We operate two offices in India: Dev Arced, New Shahibaug, Nana Chiloda, Ahmedabad, Gujarat, and a second office under Delta Engserve Pvt Ltd at JP 1 C/31, 2nd Floor, 6th Cross, LIC Colony, 3rd Block East, Jayanagar, Bengaluru 560011. We're in the early stages of building out a dedicated project portfolio for these offices — our documented work in India so far includes a proposed housing development in Srinagar, viewable in our <a href="gallery_international_projects.php">India gallery</a>.</p>
+					<p>We operate two offices in India: Dev Arced, New Shahibaug, Nana Chiloda, Ahmedabad, Gujarat, and a second office under Delta Engserve Pvt Ltd at JP 1 C/31, 2nd Floor, 6th Cross, LIC Colony, 3rd Block East, Jayanagar, Bengaluru 560011. We're in the early stages of building out a dedicated project portfolio for these offices —
+					<?php if ($deIndiaFeatured): ?>
+					our documented work in India so far includes <?= htmlspecialchars($deIndiaFeatured['title'], ENT_QUOTES, 'UTF-8') ?><?= $deIndiaFeatured['location'] ? ' in ' . htmlspecialchars($deIndiaFeatured['location'], ENT_QUOTES, 'UTF-8') : '' ?>, viewable in our <a href="gallery_international_projects.php">India gallery</a>.
+					<?php else: ?>
+					see our growing <a href="gallery_international_projects.php">India gallery</a> for the latest.
+					<?php endif; ?>
+					</p>
 					<p>The same architectural, structural, civil, infrastructure, BIM/MEP, and project management disciplines we deliver from our Canada office are available to India-based clients. If you have a project in mind, we'd like to hear about it.</p>
 					<div class="de-intro-stats">
-						<div class="de-stat"><div class="n">1</div><div class="l">Documented India Project</div></div>
+						<div class="de-stat"><div class="n"><?= $deIndiaProjectCount ?></div><div class="l">Documented India Project<?= $deIndiaProjectCount === 1 ? '' : 's' ?></div></div>
 						<div class="de-stat"><div class="n">6</div><div class="l">Core Disciplines Offered</div></div>
 					</div>
 				</div>
-				<img src="assets/images/gallery_international/006.png" alt="Proposed housing development, Srinagar, India">
+				<?php if ($deIndiaFeatured): ?>
+				<img src="<?= htmlspecialchars($deIndiaFeatured['image_path'], ENT_QUOTES, 'UTF-8') ?>" alt="<?= htmlspecialchars($deIndiaFeatured['alt_text'], ENT_QUOTES, 'UTF-8') ?>">
+				<?php else: ?>
+				<img src="assets/images/gallery_international/006.png" alt="Delta Engineering India office">
+				<?php endif; ?>
 			</div>
 		</div>
 
@@ -97,7 +128,7 @@
 				<div class="de-about-diagram">
 					<div class="de-diagram-row"><span class="k">Based in</span><span class="v">Ahmedabad &amp; Bengaluru</span></div>
 					<div class="de-diagram-row"><span class="k">Time zone</span><span class="v">~9.5&ndash;10.5 hrs ahead of Toronto</span></div>
-					<div class="de-diagram-row"><span class="k">Documented projects</span><span class="v">1 (Srinagar)*</span></div>
+					<div class="de-diagram-row"><span class="k">Documented projects</span><span class="v"><?= $deIndiaProjectCount ?><?= ($deIndiaFeatured && $deIndiaProjectCount === 1 && $deIndiaFeatured['location']) ? ' (' . htmlspecialchars($deIndiaFeatured['location'], ENT_QUOTES, 'UTF-8') . ')' : '' ?>*</span></div>
 					<div class="de-diagram-row"><span class="k">Typical response</span><span class="v">1 business day*</span></div>
 				</div>
 			</div>
@@ -133,7 +164,7 @@
 					<h3><a role="button" data-toggle="collapse" data-parent="#indiaFaq" href="#indiafaq3" aria-expanded="false" class="de-accordion-toggle collapsed">Do you have completed projects in India? <svg class="chev" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></a></h3>
 					<div id="indiafaq3" class="collapse de-accordion-body" role="tabpanel">
 						<div class="de-accordion-body-inner">
-							<p>Our documented India work so far is a proposed housing development in Srinagar &mdash; see it in the <a href="gallery_international_projects.php">India gallery</a>. More will be added as the portfolio grows.</p>
+							<p><?php if ($deIndiaFeatured): ?>Our documented India work so far includes <?= htmlspecialchars($deIndiaFeatured['title'], ENT_QUOTES, 'UTF-8') ?><?= $deIndiaFeatured['location'] ? ' in ' . htmlspecialchars($deIndiaFeatured['location'], ENT_QUOTES, 'UTF-8') : '' ?> &mdash; see it in the <a href="gallery_international_projects.php">India gallery</a>. More will be added as the portfolio grows.<?php else: ?>We're still building out our documented India project portfolio &mdash; check the <a href="gallery_international_projects.php">India gallery</a> for the latest.<?php endif; ?></p>
 						</div>
 					</div>
 				</div>
@@ -155,7 +186,7 @@
 			<div class="de-cta-band-inner">
 				<div>
 					<h2>Have a project in India?</h2>
-					<p>+91 XX-XXXX-XXXX <em style="opacity:.7">(to be confirmed)</em> &nbsp;&middot;&nbsp; info@delta-engineering.ca</p>
+					<p>+91 72594 05511 &nbsp;&middot;&nbsp; info@delta-engineering.ca</p>
 				</div>
 				<a href="contact_us.php" class="de-btn-primary">Request a Consultation</a>
 			</div>
