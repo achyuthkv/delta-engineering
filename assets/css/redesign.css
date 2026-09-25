@@ -250,6 +250,10 @@
 .de-footer p { font-size: 13.5px; line-height: 1.65; margin: 0 0 6px; color: #b9c2d6; }
 .de-footer a { color: #cfd7e8; }
 .de-footer a:hover { color: #fff; }
+.de-foot-addr { display: flex; align-items: flex-start; gap: 8px; text-decoration: none; font-size: 13.5px; line-height: 1.65; color: #b9c2d6; margin-bottom: 10px; }
+.de-foot-addr:last-of-type { margin-bottom: 0; }
+.de-foot-addr svg { width: 15px; height: 15px; flex: 0 0 15px; margin-top: 3px; }
+.de-foot-addr:hover { color: #fff; }
 .de-foot-bottom { max-width: 1240px; margin: 0 auto; display: flex; justify-content: space-between; padding-top: 22px; font-size: 12.5px; color: #6d7794; flex-wrap: wrap; gap: 10px; }
 .de-foot-bottom a { color: #8b96ac; margin-left: 18px; }
 
