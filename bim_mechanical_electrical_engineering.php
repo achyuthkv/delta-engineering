@@ -33,6 +33,17 @@
 	}
 	</script>
 
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [
+			{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.delta-engineering.ca/" },
+			{ "@type": "ListItem", "position": 2, "name": "BIM, Mechanical & Electrical Engineering", "item": "https://www.delta-engineering.ca/bim_mechanical_electrical_engineering.php" }
+		]
+	}
+	</script>
+
 	<title>BIM, Mechanical &amp; Electrical Engineering | Delta Engineering — Canada &amp; India</title>
 
 	<?php

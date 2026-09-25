@@ -14,6 +14,17 @@
     <meta name="author" content="Delta Engineering Services">
     <link rel="canonical" href="https://www.delta-engineering.ca/terms_and_conditions.php">
 
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [
+			{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.delta-engineering.ca/" },
+			{ "@type": "ListItem", "position": 2, "name": "Terms & Conditions", "item": "https://www.delta-engineering.ca/terms_and_conditions.php" }
+		]
+	}
+	</script>
+
 	<title>Terms & Conditions | Delta Engineering</title>
 
 	<?php

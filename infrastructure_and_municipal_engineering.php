@@ -33,6 +33,17 @@
 	}
 	</script>
 
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [
+			{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.delta-engineering.ca/" },
+			{ "@type": "ListItem", "position": 2, "name": "Infrastructure & Municipal Engineering", "item": "https://www.delta-engineering.ca/infrastructure_and_municipal_engineering.php" }
+		]
+	}
+	</script>
+
 	<title>Infrastructure &amp; Municipal Engineering | Delta Engineering — Canada &amp; India</title>
 
 	<?php

@@ -23,6 +23,11 @@
 			"postalCode": "M1S 5H5",
 			"addressCountry": "CA"
 		},
+		"geo": {
+			"@type": "GeoCoordinates",
+			"latitude": 43.784955,
+			"longitude": -79.277960
+		},
 		"areaServed": "Greater Toronto Area"
 	}
 	</script>

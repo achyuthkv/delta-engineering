@@ -33,6 +33,17 @@
 	}
 	</script>
 
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [
+			{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.delta-engineering.ca/" },
+			{ "@type": "ListItem", "position": 2, "name": "Architectural Services", "item": "https://www.delta-engineering.ca/architectural_services.php" }
+		]
+	}
+	</script>
+
 	<title>Architectural Services | Delta Engineering — Canada &amp; India</title>
 
 	<?php

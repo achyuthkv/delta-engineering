@@ -33,6 +33,17 @@
 	}
 	</script>
 
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [
+			{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.delta-engineering.ca/" },
+			{ "@type": "ListItem", "position": 2, "name": "India", "item": "https://www.delta-engineering.ca/india_engineering_services.php" }
+		]
+	}
+	</script>
+
 	<title>Structural &amp; Civil Engineering Services in India | Delta Engineering</title>
 
 	<?php
