@@ -33,9 +33,17 @@ CREATE TABLE IF NOT EXISTS projects (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- One row per photo across all three gallery pages (Canada / Oman / India).
+-- "project_id" is optional: a photo added from the Projects admin (rather
+-- than directly from the Gallery admin) is linked back to the project it
+-- illustrates, so a photo uploaded once shows up on the gallery page for
+-- that project's office automatically. ON DELETE SET NULL rather than
+-- CASCADE -- deleting the project entry (its text bullet point) shouldn't
+-- also delete the photo out from under the gallery; it just becomes an
+-- ordinary, unlinked gallery photo.
 CREATE TABLE IF NOT EXISTS gallery_photos (
 	id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	office ENUM('canada','oman','india') NOT NULL,
+	project_id INT UNSIGNED NULL,
 	image_path VARCHAR(500) NOT NULL,
 	alt_text VARCHAR(255) NOT NULL,
 	title VARCHAR(255) NOT NULL,
@@ -44,5 +52,7 @@ CREATE TABLE IF NOT EXISTS gallery_photos (
 	is_published TINYINT(1) NOT NULL DEFAULT 1,
 	created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-	KEY idx_office_sort (office, sort_order)
+	KEY idx_office_sort (office, sort_order),
+	KEY idx_project_id (project_id),
+	CONSTRAINT fk_gallery_photos_project FOREIGN KEY (project_id) REFERENCES projects(id) ON DELETE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

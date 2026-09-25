@@ -58,6 +58,15 @@ footer) is still plain PHP/HTML, same as before.
   an allowlist on save (see `admin/includes/sanitize.php`), so anything
   outside that formatting set (scripts, embeds, styling attributes) is
   stripped automatically rather than being able to break the page.
+- **Add photos to a project**: once a project is saved, a "Photos" section
+  appears on its edit page — upload a photo there (with a title and
+  location caption, same as the Gallery admin) and it's automatically
+  linked to that project's office, so it shows up on the Canada gallery or
+  India section of the international gallery without needing to add it a
+  second time through Admin → Gallery. Deleting the project entry itself
+  doesn't delete its photos — they just become ordinary, unlinked gallery
+  photos. (New projects need to be saved once before this section appears,
+  since a photo has to attach to an existing project id.)
 - **Add/edit/delete a gallery photo**: Admin → Gallery. Choose which office
   (Canada / Oman / India) it belongs to — that's what determines which page
   and section it shows up on. Uploads are validated as real images (not
@@ -66,6 +75,21 @@ footer) is still plain PHP/HTML, same as before.
   form. Hidden items stay in the database but won't render on the live site.
 - **Reordering**: the "Sort order" field controls display order (lower
   numbers first) within a category or office.
+
+## Upgrading an existing database
+
+If your database was set up before project photo attachments existed (see
+above), run this once to add the missing column — safe to run even if
+you're not sure, since it only adds something new rather than changing
+existing data:
+
+```
+mysql --default-character-set=utf8mb4 -u <cpanel_db_user> -p <cpanel_db_name> < admin/sql/migrate_add_project_photos.sql
+```
+
+Or via phpMyAdmin: your database → SQL tab → paste the contents of
+`admin/sql/migrate_add_project_photos.sql` → Go. A brand-new database set
+up from `schema.sql` already includes this and doesn't need it.
 
 ## If you lose the admin password
 
