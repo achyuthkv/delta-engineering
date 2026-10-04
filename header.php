@@ -202,17 +202,13 @@
 <body data-offset="200" data-spy="scroll" data-target=".ow-navigation">
 
 	<script>
-		// Remember an explicit ?loc= choice (header switcher, or a shared
-		// location link) so it carries across ordinary navigation that
-		// doesn't itself repeat the query string. Read server-side via
-		// $_COOKIE in includes/location.php.
-		(function () {
-			var params = new URLSearchParams(location.search);
-			var loc = params.get('loc');
-			if (loc === 'canada' || loc === 'india') {
-				document.cookie = 'de_loc=' + loc + ';path=/;max-age=15552000';
-			}
-		})();
+		// Sync the de_loc cookie to whatever includes/location.php just
+		// resolved (an explicit ?loc=, a previous cookie, or IP-based
+		// detection) -- PHP can't set cookies here itself since this runs
+		// well after HTML output has already started. Runs on every page
+		// load, so the choice carries across ordinary navigation and the
+		// cookie's 6-month lifetime keeps renewing for active visitors.
+		document.cookie = 'de_loc=<?= $deLoc ?>;path=/;max-age=15552000';
 	</script>
 
 	<?php $deWaNumber = $deLoc === 'india' ? '+917259405511' : '+14165799787'; ?>
