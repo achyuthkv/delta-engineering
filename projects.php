@@ -74,21 +74,13 @@
 			}
 		}
 
-		// Preserve first-inserted category order (min id per category)
-		// rather than alphabetical, so the accordion reads the same as
-		// it always has even though the grouping now happens in PHP.
-		//
 		// Within a category, photographed projects are split out into
 		// their own "photo" bucket rather than staying inline in the text
 		// list -- a building photo needs real size to actually be
 		// recognizable, and a thumbnail small enough to sit on a single
 		// text line isn't big enough for that. Order within each bucket
 		// still follows sort_order/id, same as before.
-		$firstSeen = [];
 		foreach ($rows as $row) {
-			if (!isset($firstSeen[$row['category']])) {
-				$firstSeen[$row['category']] = $row['id'];
-			}
 			$thumb = $deProjectThumbs[$row['id']] ?? null;
 			$bucket = $thumb ? 'photo' : 'text';
 			$deProjectGroups[$row['category']][$bucket][] = [
@@ -96,7 +88,7 @@
 				'thumb' => $thumb,
 			];
 		}
-		uksort($deProjectGroups, fn($a, $b) => $firstSeen[$a] <=> $firstSeen[$b]);
+		uksort($deProjectGroups, 'strcasecmp');
 	} catch (Throwable $e) {
 		$deProjectGroups = [];
 	}
