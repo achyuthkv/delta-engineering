@@ -9,7 +9,7 @@ $deLoc = $deLoc ?? 'canada';
 	<div class="de-foot-grid">
 		<div>
 			<img class="de-foot-logo" src="assets/images/logo.png" alt="Delta Engineering Services">
-			<p style="max-width:280px">Structural &amp; civil engineering across the Greater Toronto Area since 1985.</p>
+			<p style="max-width:280px">Structural &amp; civil engineering in Canada since 1985, and India since 2026.</p>
 		</div>
 		<div>
 			<h5>Canada</h5>
