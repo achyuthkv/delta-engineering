@@ -77,14 +77,23 @@
 		// Preserve first-inserted category order (min id per category)
 		// rather than alphabetical, so the accordion reads the same as
 		// it always has even though the grouping now happens in PHP.
+		//
+		// Within a category, photographed projects are split out into
+		// their own "photo" bucket rather than staying inline in the text
+		// list -- a building photo needs real size to actually be
+		// recognizable, and a thumbnail small enough to sit on a single
+		// text line isn't big enough for that. Order within each bucket
+		// still follows sort_order/id, same as before.
 		$firstSeen = [];
 		foreach ($rows as $row) {
 			if (!isset($firstSeen[$row['category']])) {
 				$firstSeen[$row['category']] = $row['id'];
 			}
-			$deProjectGroups[$row['category']][] = [
+			$thumb = $deProjectThumbs[$row['id']] ?? null;
+			$bucket = $thumb ? 'photo' : 'text';
+			$deProjectGroups[$row['category']][$bucket][] = [
 				'description' => $row['description'],
-				'thumb' => $deProjectThumbs[$row['id']] ?? null,
+				'thumb' => $thumb,
 			];
 		}
 		uksort($deProjectGroups, fn($a, $b) => $firstSeen[$a] <=> $firstSeen[$b]);
@@ -114,21 +123,31 @@
 				<p style="text-align:center;color:#6c7690">Project list is temporarily unavailable.</p>
 			<?php else: ?>
 			<div class="de-accordion" id="accordion">
-				<?php $i = 0; foreach ($deProjectGroups as $category => $items): $i++; $panelId = 'faqcontent' . $i; ?>
+				<?php $i = 0; foreach ($deProjectGroups as $category => $group): $i++; $panelId = 'faqcontent' . $i;
+					$photoItems = $group['photo'] ?? [];
+					$textItems = $group['text'] ?? [];
+				?>
 				<div class="de-accordion-item panel">
 					<h3><a role="button" data-toggle="collapse" data-parent="#accordion" href="#<?= $panelId ?>" aria-expanded="<?= $i === 1 ? 'true' : 'false' ?>" class="de-accordion-toggle<?= $i === 1 ? '' : ' collapsed' ?>"><?= htmlspecialchars($category, ENT_QUOTES, 'UTF-8') ?> <svg class="chev" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></a></h3>
 					<div id="<?= $panelId ?>" class="collapse<?= $i === 1 ? ' in' : '' ?> de-accordion-body" role="tabpanel">
 						<div class="de-accordion-body-inner">
+							<?php if ($photoItems): ?>
+							<div class="de-proj-photo-grid">
+								<?php foreach ($photoItems as $item): ?>
+								<figure class="de-proj-photo-card">
+									<img src="<?= htmlspecialchars($item['thumb']['image_path'], ENT_QUOTES, 'UTF-8') ?>" alt="<?= htmlspecialchars($item['thumb']['alt_text'], ENT_QUOTES, 'UTF-8') ?>" loading="lazy">
+									<figcaption><div class="de-proj-desc"><?= $item['description'] ?></div></figcaption>
+								</figure>
+								<?php endforeach; ?>
+							</div>
+							<?php endif; ?>
+							<?php if ($textItems): ?>
 							<ul class="de-accordion-list">
-								<?php foreach ($items as $item): ?>
-									<li<?= $item['thumb'] ? ' class="has-thumb"' : '' ?>>
-										<?php if ($item['thumb']): ?>
-										<img class="de-accordion-thumb" src="<?= htmlspecialchars($item['thumb']['image_path'], ENT_QUOTES, 'UTF-8') ?>" alt="<?= htmlspecialchars($item['thumb']['alt_text'], ENT_QUOTES, 'UTF-8') ?>" loading="lazy">
-										<?php endif; ?>
-										<div class="de-accordion-desc"><?= $item['description'] ?></div>
-									</li>
+								<?php foreach ($textItems as $item): ?>
+									<li><div class="de-accordion-desc"><?= $item['description'] ?></div></li>
 								<?php endforeach; ?>
 							</ul>
+							<?php endif; ?>
 						</div>
 					</div>
 				</div>

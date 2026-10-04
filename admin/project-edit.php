@@ -261,7 +261,7 @@ require __DIR__ . '/includes/layout-top.php';
 			<div>
 				<label for="sort_order">Sort order</label>
 				<input type="number" id="sort_order" name="sort_order" value="<?= (int) $project['sort_order'] ?>">
-				<div class="hint">Lower numbers appear first within the category.</div>
+				<div class="hint">Lower numbers appear first within the category -- among the photographed entries (shown as cards) and among the plain entries (shown as a list) separately, since those now display in two groups rather than one combined list.</div>
 			</div>
 			<div>
 				<label>
