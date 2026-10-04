@@ -1,4 +1,11 @@
-﻿<footer class="de-footer">
+﻿<?php
+// footer.php sits directly in the web root like any other page, so nothing
+// stops it from being requested on its own (bots/scanners do this) --
+// bypassing header.php, which is what normally sets $deLoc. Default it
+// here too so a direct hit renders the Canada content instead of warning.
+$deLoc = $deLoc ?? 'canada';
+?>
+<footer class="de-footer">
 	<div class="de-foot-grid">
 		<div>
 			<img class="de-foot-logo" src="assets/images/logo.png" alt="Delta Engineering Services">
