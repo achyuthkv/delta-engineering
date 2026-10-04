@@ -121,7 +121,7 @@
 						<div class="de-accordion-body-inner">
 							<ul class="de-accordion-list">
 								<?php foreach ($items as $item): ?>
-									<li>
+									<li<?= $item['thumb'] ? ' class="has-thumb"' : '' ?>>
 										<?php if ($item['thumb']): ?>
 										<img class="de-accordion-thumb" src="<?= htmlspecialchars($item['thumb']['image_path'], ENT_QUOTES, 'UTF-8') ?>" alt="<?= htmlspecialchars($item['thumb']['alt_text'], ENT_QUOTES, 'UTF-8') ?>" loading="lazy">
 										<?php endif; ?>
