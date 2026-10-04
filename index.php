@@ -65,6 +65,8 @@
 					<span class="de-proof-sep">/</span>
 					<span>Offices in <b>Canada</b> &amp; <b>India</b></span>
 					<span class="de-proof-sep">/</span>
+					<span>India office re-established by <b>Ravi Gopinath Sharma</b>, Jan 2026</span>
+					<span class="de-proof-sep">/</span>
 					<span>Founded by <b>Dave (Devender) Arora</b>, 1985</span>
 					<span class="de-proof-sep">/</span>
 					<span>Incorporated <b>1987</b></span>
@@ -144,7 +146,7 @@
 				<div>
 					<div class="de-section-eyebrow">Since 1985</div>
 					<h2>Built by engineers who think differently.</h2>
-					<p class="de-about-copy">Delta Engineering was founded by <b>Dave (Devender) Arora</b> in 1985 and incorporated in 1987. We've delivered design and engineering for over <b>1,000 building projects</b> in the Greater Toronto Area — covering more than <b>10 million sq&nbsp;ft</b> of building space over four decades. We think differently, and at times recommend alternate design solutions for our projects.</p>
+					<p class="de-about-copy">Delta Engineering was founded by <b>Dave (Devender) Arora</b> in 1985 and incorporated in 1987. We've delivered design and engineering for over <b>1,000 building projects</b> in the Greater Toronto Area — covering more than <b>10 million sq&nbsp;ft</b> of building space over four decades. We think differently, and at times recommend alternate design solutions for our projects. Our <a href="india_engineering_services.php">India office</a> was re-established by <b>Ravi Gopinath Sharma</b> in January 2026, building on completed projects across Gujarat and Bengaluru — approximately 5 million sq&nbsp;ft across 10 projects to date.</p>
 					<a href="about_us.php" class="de-about-link">Read our full story <svg viewBox="0 0 12 12" fill="none"><path d="M2 6h8m0 0L6 2m4 4L6 10" stroke="currentColor" stroke-width="1.4"/></svg></a>
 				</div>
 				<div class="de-about-diagram">
