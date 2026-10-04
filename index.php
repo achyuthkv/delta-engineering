@@ -35,7 +35,7 @@
 				<div>
 					<div class="de-eyebrow">Structural &amp; Civil Engineering — Toronto, ON</div>
 					<h1>Structural &amp; civil engineering, <em>precisely</em> executed.</h1>
-					<p class="de-hero-sub">Delta Engineering Services has designed and engineered 1,000+ buildings across the Greater Toronto Area since 1985 — over 10 million sq&nbsp;ft, one drawing set at a time.</p>
+					<p class="de-hero-sub">Delta Engineering Services has designed and engineered 1,000+ buildings across the Greater Toronto Area since 1985 — over 10 million sq&nbsp;ft — with projects across India since 2026, one drawing set at a time.</p>
 					<div class="de-cta-row">
 						<a href="contact_us.php" class="de-btn-primary">Request a Consultation</a>
 						<a href="projects.php" class="de-btn-outline">View Our Projects</a>
