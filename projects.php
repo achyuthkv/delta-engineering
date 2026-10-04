@@ -42,7 +42,8 @@
 	$deProjectGroups = [];
 	try {
 		require_once __DIR__ . '/admin/includes/db.php';
-		$stmt = de_db()->prepare(
+		$db = de_db();
+		$stmt = $db->prepare(
 			"SELECT category, description, sort_order, id
 			 FROM projects
 			 WHERE is_published = 1 AND office = ?
@@ -50,6 +51,28 @@
 		);
 		$stmt->execute([$deLoc]);
 		$rows = $stmt->fetchAll();
+
+		// One thumbnail per project -- the project's first published photo
+		// (lowest sort_order, then id), same photos attached via the
+		// "Photos" section on /admin/project-edit.php. A project can have
+		// several photos there for the full gallery pages; only the first
+		// shows inline here, so each accordion row stays a single line.
+		$deProjectThumbs = [];
+		$projectIds = array_column($rows, 'id');
+		if ($projectIds) {
+			$placeholders = implode(',', array_fill(0, count($projectIds), '?'));
+			$photoStmt = $db->prepare(
+				"SELECT project_id, image_path, alt_text FROM gallery_photos
+				 WHERE project_id IN ($placeholders) AND is_published = 1
+				 ORDER BY project_id, sort_order, id"
+			);
+			$photoStmt->execute($projectIds);
+			foreach ($photoStmt->fetchAll() as $photoRow) {
+				if (!isset($deProjectThumbs[$photoRow['project_id']])) {
+					$deProjectThumbs[$photoRow['project_id']] = $photoRow;
+				}
+			}
+		}
 
 		// Preserve first-inserted category order (min id per category)
 		// rather than alphabetical, so the accordion reads the same as
@@ -59,7 +82,10 @@
 			if (!isset($firstSeen[$row['category']])) {
 				$firstSeen[$row['category']] = $row['id'];
 			}
-			$deProjectGroups[$row['category']][] = $row['description'];
+			$deProjectGroups[$row['category']][] = [
+				'description' => $row['description'],
+				'thumb' => $deProjectThumbs[$row['id']] ?? null,
+			];
 		}
 		uksort($deProjectGroups, fn($a, $b) => $firstSeen[$a] <=> $firstSeen[$b]);
 	} catch (Throwable $e) {
@@ -94,8 +120,13 @@
 					<div id="<?= $panelId ?>" class="collapse<?= $i === 1 ? ' in' : '' ?> de-accordion-body" role="tabpanel">
 						<div class="de-accordion-body-inner">
 							<ul class="de-accordion-list">
-								<?php foreach ($items as $description): ?>
-									<li><div class="de-accordion-desc"><?= $description ?></div></li>
+								<?php foreach ($items as $item): ?>
+									<li>
+										<?php if ($item['thumb']): ?>
+										<img class="de-accordion-thumb" src="<?= htmlspecialchars($item['thumb']['image_path'], ENT_QUOTES, 'UTF-8') ?>" alt="<?= htmlspecialchars($item['thumb']['alt_text'], ENT_QUOTES, 'UTF-8') ?>" loading="lazy">
+										<?php endif; ?>
+										<div class="de-accordion-desc"><?= $item['description'] ?></div>
+									</li>
 								<?php endforeach; ?>
 							</ul>
 						</div>

@@ -283,7 +283,7 @@ require __DIR__ . '/includes/layout-top.php';
 	<?php if (!$id): ?>
 		<p class="de-admin-sub">Save this project first — then you can attach photos to it here.</p>
 	<?php else: ?>
-		<p class="de-admin-sub">Shown on the <?= $project['office'] === 'india' ? '<a href="../gallery_international_projects.php" target="_blank">India gallery</a>' : '<a href="../gallery_canada_projects.php" target="_blank">Canada gallery</a>' ?>, alongside every other photo for that office.</p>
+		<p class="de-admin-sub">Shown on the <?= $project['office'] === 'india' ? '<a href="../gallery_international_projects.php" target="_blank">India gallery</a>' : '<a href="../gallery_canada_projects.php" target="_blank">Canada gallery</a>' ?>, alongside every other photo for that office. The first photo (by sort order) also appears as a thumbnail next to this project on the public <a href="../projects.php" target="_blank">Projects page</a>.</p>
 
 		<?php if ($photoError): ?>
 			<div class="de-admin-flash error"><?= htmlspecialchars($photoError, ENT_QUOTES, 'UTF-8') ?></div>
