@@ -87,8 +87,8 @@
 .de-nav-cta svg { width: 15px; height: 15px; flex-shrink: 0; }
 
 /* ---------- hero ---------- */
-.de-hero { padding: 64px 40px 0; }
-.de-hero-grid { display: grid; grid-template-columns: 1fr 280px; gap: 40px; max-width: 1240px; margin: 0 auto; padding-bottom: 56px; }
+.de-hero { padding: 64px 40px 0; overflow: hidden; }
+.de-hero-grid { display: grid; grid-template-columns: 1fr 440px; gap: 40px; max-width: 1240px; margin: 0 auto; padding-bottom: 56px; align-items: center; }
 .de-eyebrow {
 	font-family: "IBM Plex Mono", monospace; font-size: 12px; letter-spacing: 0.14em;
 	text-transform: uppercase; color: var(--de-brand); font-weight: 600; margin-bottom: 16px;
@@ -110,7 +110,6 @@
 .de-btn-primary:hover { background: #a94a1e; border-color: #a94a1e; }
 .de-btn-outline { border: 1.5px solid var(--de-brand); color: var(--de-brand); padding: 12.5px 20px; transition: background 0.15s, color 0.15s; }
 .de-btn-outline:hover { background: var(--de-brand); color: #fff; }
-.de-stat-rail { border-left: 1.5px solid #1f439333; padding-left: 24px; display: flex; flex-direction: column; gap: 26px; padding-top: 4px; }
 .de-stat .n { font-family: "IBM Plex Mono", monospace; font-size: 30px; font-weight: 600; color: var(--de-brand); font-variant-numeric: tabular-nums; }
 /* Dimension-line tick under each stat, echoing a measurement annotation on a drawing */
 .de-stat .n::after {
@@ -121,6 +120,128 @@
 		linear-gradient(var(--de-brand), var(--de-brand)) center/100% 1.5px no-repeat;
 }
 .de-stat .l { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.07em; color: #5a6478; margin-top: 3px; }
+
+/* ---------- hero: static structural frame (CSS 3D, no WebGL/images) ----------
+   A glazed building skeleton -- steel columns on a podium, an orange beam
+   ring, a teal glass roof -- replacing the old stat-rail. Nothing rotates;
+   it's deliberately static so it doesn't compete with the hero copy. */
+.de-hero-structure { position: relative; height: 460px; }
+.de-struct-scene { width: 100%; height: 100%; position: relative; perspective: 1600px; perspective-origin: 50% 65%; }
+.de-struct-rig { width: 100%; height: 100%; position: relative; transform-style: preserve-3d; transform: translateY(96px) rotateX(-18deg) rotateY(-30deg); }
+
+.de-struct-box { position: relative; transform-style: preserve-3d; }
+/* Each face is centered on its box3's local origin via explicit negative
+   half-margins -- NOT inset:0+margin:auto, which only centers within a
+   containing block that has real size. .de-struct-box is intentionally
+   0x0 (it only exists to hold a 3D transform), so margin:auto silently
+   degenerates to top-left anchoring instead of centering, which throws
+   off every rotated face's pivot point. Negative margins don't have that
+   dependency -- confirmed by isolated before/after testing. */
+.de-struct-f { position: absolute; top: 0; left: 0; }
+
+/* Column: 20 x 220 x 20 (square cross-section, tall) */
+.de-struct-col.de-struct-front, .de-struct-col.de-struct-back  { width: 20px; height: 220px; margin: -110px 0 0 -10px; }
+.de-struct-col.de-struct-front { transform: translateZ(10px); }
+.de-struct-col.de-struct-back  { transform: rotateY(180deg) translateZ(10px); }
+.de-struct-col.de-struct-right, .de-struct-col.de-struct-left  { width: 20px; height: 220px; margin: -110px 0 0 -10px; }
+.de-struct-col.de-struct-right { transform: rotateY(90deg) translateZ(10px); }
+.de-struct-col.de-struct-left  { transform: rotateY(-90deg) translateZ(10px); }
+.de-struct-col.de-struct-top, .de-struct-col.de-struct-bottom  { width: 20px; height: 20px; margin: -10px 0 0 -10px; }
+.de-struct-col.de-struct-top    { transform: rotateX(90deg) translateZ(110px); }
+.de-struct-col.de-struct-bottom { transform: rotateX(-90deg) translateZ(110px); }
+.de-struct-col.de-struct-front { background: linear-gradient(180deg, #8a93ab, #525c78); }
+.de-struct-col.de-struct-right { background: linear-gradient(180deg, #727ca0, #424c68); }
+.de-struct-col.de-struct-left, .de-struct-col.de-struct-back { background: linear-gradient(180deg, #5a6580, #363f58); }
+.de-struct-col.de-struct-top { background: linear-gradient(135deg, #b7bed2, #8a93ab); box-shadow: inset 0 1px 0 rgba(255,255,255,0.5); }
+.de-struct-col.de-struct-bottom { background: #2e3449; }
+
+/* Beam-X: long along width (240), 20 x 20 cross-section in Y/Z */
+.de-struct-beamx.de-struct-front, .de-struct-beamx.de-struct-back { width: 240px; height: 20px; margin: -10px 0 0 -120px; }
+.de-struct-beamx.de-struct-front { transform: translateZ(10px); }
+.de-struct-beamx.de-struct-back  { transform: rotateY(180deg) translateZ(10px); }
+.de-struct-beamx.de-struct-right, .de-struct-beamx.de-struct-left { width: 20px; height: 20px; margin: -10px 0 0 -10px; }
+.de-struct-beamx.de-struct-right { transform: rotateY(90deg) translateZ(120px); }
+.de-struct-beamx.de-struct-left  { transform: rotateY(-90deg) translateZ(120px); }
+.de-struct-beamx.de-struct-top, .de-struct-beamx.de-struct-bottom { width: 240px; height: 20px; margin: -10px 0 0 -120px; }
+.de-struct-beamx.de-struct-top    { transform: rotateX(90deg) translateZ(10px); }
+.de-struct-beamx.de-struct-bottom { transform: rotateX(-90deg) translateZ(10px); }
+.de-struct-beamx.de-struct-front { background: linear-gradient(180deg, #e58a5c 0%, #c85a28 55%, #a94a1e 100%); }
+.de-struct-beamx.de-struct-back  { background: linear-gradient(180deg, #b24f22, #8f3f1b); }
+.de-struct-beamx.de-struct-top   { background: linear-gradient(90deg, #eb9a70, #d87a48 50%, #eb9a70 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,0.45); }
+.de-struct-beamx.de-struct-right, .de-struct-beamx.de-struct-left { background: linear-gradient(180deg, #c85a28, #96421c); }
+.de-struct-beamx.de-struct-bottom { background: #6e3215; }
+
+/* Beam-Z: long along depth (200), 20 x 20 cross-section in X/Y */
+.de-struct-beamz.de-struct-front, .de-struct-beamz.de-struct-back { width: 20px; height: 20px; margin: -10px 0 0 -10px; }
+.de-struct-beamz.de-struct-front { transform: translateZ(100px); }
+.de-struct-beamz.de-struct-back  { transform: rotateY(180deg) translateZ(100px); }
+.de-struct-beamz.de-struct-right, .de-struct-beamz.de-struct-left { width: 200px; height: 20px; margin: -10px 0 0 -100px; }
+.de-struct-beamz.de-struct-right { transform: rotateY(90deg) translateZ(10px); }
+.de-struct-beamz.de-struct-left  { transform: rotateY(-90deg) translateZ(10px); }
+.de-struct-beamz.de-struct-top, .de-struct-beamz.de-struct-bottom { width: 20px; height: 200px; margin: -100px 0 0 -10px; }
+.de-struct-beamz.de-struct-top    { transform: rotateX(90deg) translateZ(10px); }
+.de-struct-beamz.de-struct-bottom { transform: rotateX(-90deg) translateZ(10px); }
+.de-struct-beamz.de-struct-right { background: linear-gradient(180deg, #e58a5c, #c85a28); }
+.de-struct-beamz.de-struct-left  { background: linear-gradient(180deg, #b24f22, #8f3f1b); }
+.de-struct-beamz.de-struct-top   { background: linear-gradient(180deg, #eb9a70, #d87a48); box-shadow: inset 0 1px 0 rgba(255,255,255,0.45); }
+.de-struct-beamz.de-struct-front, .de-struct-beamz.de-struct-back { background: #c85a28; }
+.de-struct-beamz.de-struct-bottom { background: #6e3215; }
+
+/* Podium slab: 320 x 16 x 200 */
+.de-struct-slab.de-struct-front, .de-struct-slab.de-struct-back { width: 320px; height: 16px; margin: -8px 0 0 -160px; }
+.de-struct-slab.de-struct-front { transform: translateZ(100px); }
+.de-struct-slab.de-struct-back  { transform: rotateY(180deg) translateZ(100px); }
+.de-struct-slab.de-struct-right, .de-struct-slab.de-struct-left { width: 200px; height: 16px; margin: -8px 0 0 -100px; }
+.de-struct-slab.de-struct-right { transform: rotateY(90deg) translateZ(160px); }
+.de-struct-slab.de-struct-left  { transform: rotateY(-90deg) translateZ(160px); }
+.de-struct-slab.de-struct-top, .de-struct-slab.de-struct-bottom { width: 320px; height: 200px; margin: -100px 0 0 -160px; }
+.de-struct-slab.de-struct-top    { transform: rotateX(90deg) translateZ(8px); }
+.de-struct-slab.de-struct-bottom { transform: rotateX(-90deg) translateZ(8px); }
+.de-struct-slab.de-struct-top { background: linear-gradient(135deg, #223055, #101a30); box-shadow: inset 0 2px 0 rgba(255,255,255,0.1); }
+.de-struct-slab.de-struct-front { background: linear-gradient(180deg, #16213d, #0c1424); }
+.de-struct-slab.de-struct-right { background: linear-gradient(180deg, #131d36, #0a111f); }
+.de-struct-slab.de-struct-back, .de-struct-slab.de-struct-left { background: #0a111f; }
+.de-struct-slab.de-struct-bottom { background: #060a14; }
+
+/* Roof / glazing panel: 240 x 10 x 200, translucent teal */
+.de-struct-roof.de-struct-front, .de-struct-roof.de-struct-back { width: 240px; height: 10px; margin: -5px 0 0 -120px; }
+.de-struct-roof.de-struct-front { transform: translateZ(100px); }
+.de-struct-roof.de-struct-back  { transform: rotateY(180deg) translateZ(100px); }
+.de-struct-roof.de-struct-right, .de-struct-roof.de-struct-left { width: 200px; height: 10px; margin: -5px 0 0 -100px; }
+.de-struct-roof.de-struct-right { transform: rotateY(90deg) translateZ(120px); }
+.de-struct-roof.de-struct-left  { transform: rotateY(-90deg) translateZ(120px); }
+.de-struct-roof.de-struct-top, .de-struct-roof.de-struct-bottom { width: 240px; height: 200px; margin: -100px 0 0 -120px; }
+.de-struct-roof.de-struct-top    { transform: rotateX(90deg) translateZ(5px); }
+.de-struct-roof.de-struct-bottom { transform: rotateX(-90deg) translateZ(5px); }
+.de-struct-roof.de-struct-top {
+	background:
+		linear-gradient(115deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0) 28%),
+		repeating-linear-gradient(90deg, rgba(6,30,34,0.3) 0 2px, transparent 2px 40px),
+		repeating-linear-gradient(0deg, rgba(6,30,34,0.26) 0 2px, transparent 2px 40px),
+		linear-gradient(135deg, rgba(56,196,180,0.95), rgba(13,148,136,0.85));
+}
+.de-struct-roof.de-struct-front, .de-struct-roof.de-struct-right { background: rgba(45,181,164,0.72); }
+.de-struct-roof.de-struct-back, .de-struct-roof.de-struct-left { background: rgba(13,148,136,0.65); }
+.de-struct-roof.de-struct-bottom { background: rgba(8,100,92,0.6); }
+
+.de-struct-ground-shadow {
+	position: absolute; width: 300px; height: 54px; border-radius: 50%; left: 50%; bottom: 56px;
+	transform: translateX(-50%);
+	background: radial-gradient(ellipse, rgba(16,26,48,0.3) 0%, rgba(16,26,48,0) 72%);
+	filter: blur(4px);
+}
+
+.de-struct-dim-line { position: absolute; border-top: 1px solid rgba(31,67,147,0.4); }
+.de-struct-dim-line::before, .de-struct-dim-line::after { content: ""; position: absolute; top: -3px; width: 1px; height: 7px; background: rgba(31,67,147,0.4); }
+.de-struct-dim-line::before { left: 0; }
+.de-struct-dim-line::after { right: 0; }
+.de-struct-dim-label { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; color: var(--de-brand); position: absolute; opacity: 0.75; white-space: nowrap; }
+
+@media (max-width: 1180px) {
+	.de-hero-grid { grid-template-columns: 1fr 360px; }
+	.de-hero-structure { height: 380px; }
+	.de-struct-rig { transform: translateY(78px) scale(0.82) rotateX(-18deg) rotateY(-30deg); }
+}
 
 /* ---------- proof strip ---------- */
 /* A continuous right-to-left marquee: 10 identical copies of the row sit
@@ -483,7 +604,8 @@
 /* ---------- responsive ---------- */
 @media (max-width: 991px) {
 	.de-hero-grid, .de-about-grid, .de-intro-grid { grid-template-columns: 1fr; }
-	.de-stat-rail { flex-direction: row; border-left: none; border-top: 1.5px solid #1f439333; padding: 20px 0 0; gap: 32px; }
+	.de-hero-structure { height: 320px; margin: 0 auto; max-width: 380px; }
+	.de-struct-rig { transform: translateY(66px) scale(0.68) rotateX(-18deg) rotateY(-30deg); }
 	.de-services-grid { grid-template-columns: repeat(2, 1fr); }
 	.de-proj-grid { grid-template-columns: 1fr 1fr; }
 	.de-foot-grid { grid-template-columns: 1fr 1fr; }
@@ -511,6 +633,8 @@
 
 	.de-hero, .de-section, .de-about, .de-cta-band, .de-footer, .de-banner, .de-intro, .de-spec { padding-left: 20px; padding-right: 20px; }
 	.de-hero h1 { font-size: 34px; }
+	.de-hero-structure { height: 260px; max-width: 300px; }
+	.de-struct-rig { transform: translateY(50px) scale(0.52) rotateX(-18deg) rotateY(-30deg); }
 	.de-hero-sub { font-size: 15.5px; }
 	.de-section h2, .de-spec h2 { font-size: 25px; }
 	.de-banner h1 { font-size: 28px; }

@@ -41,10 +41,76 @@
 						<a href="projects.php" class="de-btn-outline">View Our Projects</a>
 					</div>
 				</div>
-				<div class="de-stat-rail">
-					<div class="de-stat"><div class="n">1985</div><div class="l">Founded</div></div>
-					<div class="de-stat"><div class="n">1,000+</div><div class="l">Projects Delivered</div></div>
-					<div class="de-stat"><div class="n">10M+</div><div class="l">Sq. Ft. Engineered</div></div>
+				<div class="de-hero-structure">
+					<div class="de-struct-scene">
+						<div class="de-struct-rig">
+
+							<!-- Podium -->
+							<div class="de-struct-box" style="position: absolute; left: 50%; top: 50%; transform: translate3d(-10px, 0px, -100px);">
+								<div class="de-struct-f de-struct-slab de-struct-front"></div><div class="de-struct-f de-struct-slab de-struct-back"></div>
+								<div class="de-struct-f de-struct-slab de-struct-right"></div><div class="de-struct-f de-struct-slab de-struct-left"></div>
+								<div class="de-struct-f de-struct-slab de-struct-top"></div><div class="de-struct-f de-struct-slab de-struct-bottom"></div>
+							</div>
+
+							<!-- Columns -->
+							<div class="de-struct-box" style="position: absolute; left: 50%; top: 50%; transform: translate3d(-120px, -118px, -10px);">
+								<div class="de-struct-f de-struct-col de-struct-front"></div><div class="de-struct-f de-struct-col de-struct-back"></div>
+								<div class="de-struct-f de-struct-col de-struct-right"></div><div class="de-struct-f de-struct-col de-struct-left"></div>
+								<div class="de-struct-f de-struct-col de-struct-top"></div><div class="de-struct-f de-struct-col de-struct-bottom"></div>
+							</div>
+							<div class="de-struct-box" style="position: absolute; left: 50%; top: 50%; transform: translate3d(100px, -118px, -10px);">
+								<div class="de-struct-f de-struct-col de-struct-front"></div><div class="de-struct-f de-struct-col de-struct-back"></div>
+								<div class="de-struct-f de-struct-col de-struct-right"></div><div class="de-struct-f de-struct-col de-struct-left"></div>
+								<div class="de-struct-f de-struct-col de-struct-top"></div><div class="de-struct-f de-struct-col de-struct-bottom"></div>
+							</div>
+							<div class="de-struct-box" style="position: absolute; left: 50%; top: 50%; transform: translate3d(-120px, -118px, -190px);">
+								<div class="de-struct-f de-struct-col de-struct-front"></div><div class="de-struct-f de-struct-col de-struct-back"></div>
+								<div class="de-struct-f de-struct-col de-struct-right"></div><div class="de-struct-f de-struct-col de-struct-left"></div>
+								<div class="de-struct-f de-struct-col de-struct-top"></div><div class="de-struct-f de-struct-col de-struct-bottom"></div>
+							</div>
+							<div class="de-struct-box" style="position: absolute; left: 50%; top: 50%; transform: translate3d(100px, -118px, -190px);">
+								<div class="de-struct-f de-struct-col de-struct-front"></div><div class="de-struct-f de-struct-col de-struct-back"></div>
+								<div class="de-struct-f de-struct-col de-struct-right"></div><div class="de-struct-f de-struct-col de-struct-left"></div>
+								<div class="de-struct-f de-struct-col de-struct-top"></div><div class="de-struct-f de-struct-col de-struct-bottom"></div>
+							</div>
+
+							<!-- Top beam ring -->
+							<div class="de-struct-box" style="position: absolute; left: 50%; top: 50%; transform: translate3d(-10px, -238px, -10px);">
+								<div class="de-struct-f de-struct-beamx de-struct-front"></div><div class="de-struct-f de-struct-beamx de-struct-back"></div>
+								<div class="de-struct-f de-struct-beamx de-struct-right"></div><div class="de-struct-f de-struct-beamx de-struct-left"></div>
+								<div class="de-struct-f de-struct-beamx de-struct-top"></div><div class="de-struct-f de-struct-beamx de-struct-bottom"></div>
+							</div>
+							<div class="de-struct-box" style="position: absolute; left: 50%; top: 50%; transform: translate3d(-10px, -238px, -190px);">
+								<div class="de-struct-f de-struct-beamx de-struct-front"></div><div class="de-struct-f de-struct-beamx de-struct-back"></div>
+								<div class="de-struct-f de-struct-beamx de-struct-right"></div><div class="de-struct-f de-struct-beamx de-struct-left"></div>
+								<div class="de-struct-f de-struct-beamx de-struct-top"></div><div class="de-struct-f de-struct-beamx de-struct-bottom"></div>
+							</div>
+							<div class="de-struct-box" style="position: absolute; left: 50%; top: 50%; transform: translate3d(-120px, -238px, -100px);">
+								<div class="de-struct-f de-struct-beamz de-struct-front"></div><div class="de-struct-f de-struct-beamz de-struct-back"></div>
+								<div class="de-struct-f de-struct-beamz de-struct-right"></div><div class="de-struct-f de-struct-beamz de-struct-left"></div>
+								<div class="de-struct-f de-struct-beamz de-struct-top"></div><div class="de-struct-f de-struct-beamz de-struct-bottom"></div>
+							</div>
+							<div class="de-struct-box" style="position: absolute; left: 50%; top: 50%; transform: translate3d(100px, -238px, -100px);">
+								<div class="de-struct-f de-struct-beamz de-struct-front"></div><div class="de-struct-f de-struct-beamz de-struct-back"></div>
+								<div class="de-struct-f de-struct-beamz de-struct-right"></div><div class="de-struct-f de-struct-beamz de-struct-left"></div>
+								<div class="de-struct-f de-struct-beamz de-struct-top"></div><div class="de-struct-f de-struct-beamz de-struct-bottom"></div>
+							</div>
+
+							<!-- Glazed roof -->
+							<div class="de-struct-box" style="position: absolute; left: 50%; top: 50%; transform: translate3d(-10px, -253px, -100px);">
+								<div class="de-struct-f de-struct-roof de-struct-front"></div><div class="de-struct-f de-struct-roof de-struct-back"></div>
+								<div class="de-struct-f de-struct-roof de-struct-right"></div><div class="de-struct-f de-struct-roof de-struct-left"></div>
+								<div class="de-struct-f de-struct-roof de-struct-top"></div><div class="de-struct-f de-struct-roof de-struct-bottom"></div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="de-struct-ground-shadow"></div>
+					<div class="de-struct-dim-line" style="width: 110px; left: 20px; bottom: 44px;"></div>
+					<div class="de-struct-dim-label" style="left: 44px; bottom: 50px;">12.0 m</div>
+					<div class="de-struct-dim-line" style="width: 70px; right: 30px; bottom: 24px;"></div>
+					<div class="de-struct-dim-label" style="right: 44px; bottom: 30px;">9.0 m</div>
 				</div>
 			</div>
 		</div>
