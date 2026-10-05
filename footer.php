@@ -14,22 +14,22 @@ $deLoc = $deLoc ?? 'canada';
 		<div>
 			<h5>Canada</h5>
 			<a class="de-foot-addr" href="https://www.google.com/maps/search/?api=1&amp;query=<?= urlencode('204-4211 Sheppard Ave. E., Scarborough, ON M1S 5H5') ?>" target="_blank" rel="noopener">
-				<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3s6 6.8 6 11a6 6 0 1 1-12 0c0-4.2 6-11 6-11Z" stroke="currentColor" stroke-width="1.5"/></svg>
+				<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3s6 6.8 6 11a6 6 0 1 1-12 0c0-4.2 6-11 6-11Z" stroke="currentColor" stroke-width="1.5" transform="rotate(180 12 12)"/></svg>
 				<span>204-4211 Sheppard Ave. E.<br>Scarborough, ON M1S 5H5</span>
 			</a>
 			<a class="de-foot-addr" href="https://www.google.com/maps/search/?api=1&amp;query=<?= urlencode('2482 Kentucky Derby Way, Oshawa, ON L1L 0R7') ?>" target="_blank" rel="noopener">
-				<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3s6 6.8 6 11a6 6 0 1 1-12 0c0-4.2 6-11 6-11Z" stroke="currentColor" stroke-width="1.5"/></svg>
+				<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3s6 6.8 6 11a6 6 0 1 1-12 0c0-4.2 6-11 6-11Z" stroke="currentColor" stroke-width="1.5" transform="rotate(180 12 12)"/></svg>
 				<span>2482 Kentucky Derby Way<br>Oshawa, ON L1L 0R7</span>
 			</a>
 		</div>
 		<div>
 			<h5><a href="india_engineering_services.php" style="color:inherit">India</a></h5>
 			<a class="de-foot-addr" href="https://www.google.com/maps/search/?api=1&amp;query=<?= urlencode('Dev Arced, New Shahibaug, Nana Chiloda, Ahmedabad, Gujarat') ?>" target="_blank" rel="noopener">
-				<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3s6 6.8 6 11a6 6 0 1 1-12 0c0-4.2 6-11 6-11Z" stroke="currentColor" stroke-width="1.5"/></svg>
+				<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3s6 6.8 6 11a6 6 0 1 1-12 0c0-4.2 6-11 6-11Z" stroke="currentColor" stroke-width="1.5" transform="rotate(180 12 12)"/></svg>
 				<span>Dev Arced, New Shahibaug<br>Nana Chiloda, Ahmedabad<br>Gujarat</span>
 			</a>
 			<a class="de-foot-addr" href="https://www.google.com/maps/search/?api=1&amp;query=<?= urlencode('JP 1 C/31, 2nd Floor, 6th Cross, LIC Colony, 3rd Block East, Jayanagar, Bengaluru 560011') ?>" target="_blank" rel="noopener">
-				<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3s6 6.8 6 11a6 6 0 1 1-12 0c0-4.2 6-11 6-11Z" stroke="currentColor" stroke-width="1.5"/></svg>
+				<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3s6 6.8 6 11a6 6 0 1 1-12 0c0-4.2 6-11 6-11Z" stroke="currentColor" stroke-width="1.5" transform="rotate(180 12 12)"/></svg>
 				<span>JP 1 C/31, 2nd Floor, 6th Cross<br>LIC Colony, 3rd Block East, Jayanagar<br>Bengaluru 560011</span>
 			</a>
 		</div>

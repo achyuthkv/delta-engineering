@@ -88,7 +88,7 @@
 					</div>
 					<?php else: ?>
 					<div class="de-contact-info-row">
-						<div class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3s6 6.8 6 11a6 6 0 1 1-12 0c0-4.2 6-11 6-11Z" stroke="currentColor" stroke-width="1.5"/></svg></div>
+						<div class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3s6 6.8 6 11a6 6 0 1 1-12 0c0-4.2 6-11 6-11Z" stroke="currentColor" stroke-width="1.5" transform="rotate(180 12 12)"/></svg></div>
 						<div>
 							<div class="l">Canada Offices</div>
 							<div class="v">204-4211 Sheppard Ave. E.<br>Scarborough, ON M1S 5H5</div>

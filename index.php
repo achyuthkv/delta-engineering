@@ -109,7 +109,7 @@
 				</div>
 
 				<div class="de-svc-card">
-					<div class="de-svc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3s6 6.8 6 11a6 6 0 1 1-12 0c0-4.2 6-11 6-11Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+					<div class="de-svc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3s6 6.8 6 11a6 6 0 1 1-12 0c0-4.2 6-11 6-11Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" transform="rotate(180 12 12)"/></svg></div>
 					<h3>Infrastructure &amp; Municipal</h3>
 					<p>Roadway design, water and sewer systems, and capital improvement planning for municipalities.</p>
 					<a href="infrastructure_and_municipal_engineering.php?loc=<?= $deLoc ?>" class="de-svc-link">Learn more <svg viewBox="0 0 12 12" fill="none"><path d="M2 6h8m0 0L6 2m4 4L6 10" stroke="currentColor" stroke-width="1.4"/></svg></a>
