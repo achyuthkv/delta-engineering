@@ -101,7 +101,7 @@
 					<?php endif; ?>
 					</div>
 				</div>
-				<img src="assets/images/slider/02_02.jpg" alt="Architectural design work, GTA">
+				<img src="assets/images/gallery_international/009.png" alt="Architectural rendering of a glazed exterior pavilion">
 			</div>
 		</div>
 

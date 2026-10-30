@@ -67,6 +67,34 @@ $deLoc = $deLoc ?? 'canada';
 	
 	<!-- Library - Theme JS -->
 	<script src="assets/js/functions.js"></script>
+
+	<!-- Multi-photo cards (Projects page, gallery pages): cycles through a
+	     project's photos on hover, resets to the first on mouse-out. -->
+	<script>
+		(function () {
+			document.querySelectorAll('[data-multi-photo]').forEach(function (card) {
+				var imgs = card.querySelectorAll('.de-proj-photo-stack img');
+				if (!imgs.length) return;
+				var zoomLink = card.querySelector('.content-block-hover a.zoom-in');
+				var i = 0, timer = null;
+				function show(n) {
+					imgs.forEach(function (img, idx) { img.classList.toggle('is-active', idx === n); });
+					if (zoomLink) zoomLink.href = imgs[n].src;
+				}
+				card.addEventListener('mouseenter', function () {
+					timer = setInterval(function () {
+						i = (i + 1) % imgs.length;
+						show(i);
+					}, 1100);
+				});
+				card.addEventListener('mouseleave', function () {
+					clearInterval(timer);
+					i = 0;
+					show(0);
+				});
+			});
+		})();
+	</script>
 	
 	
 	

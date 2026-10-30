@@ -101,7 +101,7 @@
 					<?php endif; ?>
 					</div>
 				</div>
-				<img src="assets/images/slider/01_02.jpg" alt="Structural steel frame under construction, GTA">
+				<img src="assets/images/gallery_canada/014.jpg" alt="Structural steel framing and roof purlins under construction, Alliston, Ontario">
 			</div>
 		</div>
 

@@ -13,15 +13,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'delet
 	exit;
 }
 
-$categories = $db->query('SELECT DISTINCT category FROM projects ORDER BY category')->fetchAll(PDO::FETCH_COLUMN);
+$categories = $db->query('SELECT id, name FROM project_categories ORDER BY office, sort_order, name')->fetchAll();
+$categoryIds = array_column($categories, 'id');
 
-$filter = $_GET['category'] ?? '';
-if ($filter !== '' && in_array($filter, $categories, true)) {
-	$stmt = $db->prepare('SELECT * FROM projects WHERE category = ? ORDER BY sort_order, id');
+$filter = isset($_GET['category_id']) ? (int) $_GET['category_id'] : 0;
+$baseQuery = "SELECT p.*, c.name AS category_name FROM projects p LEFT JOIN project_categories c ON c.id = p.category_id";
+if ($filter && in_array($filter, $categoryIds, true)) {
+	$stmt = $db->prepare($baseQuery . ' WHERE p.category_id = ? ORDER BY p.sort_order, p.id');
 	$stmt->execute([$filter]);
 } else {
-	$filter = '';
-	$stmt = $db->query('SELECT * FROM projects ORDER BY category, sort_order, id');
+	$filter = 0;
+	$stmt = $db->query($baseQuery . ' ORDER BY c.office, c.sort_order, p.sort_order, p.id');
 }
 $projects = $stmt->fetchAll();
 
@@ -40,9 +42,9 @@ require __DIR__ . '/includes/layout-top.php';
 
 <div class="de-admin-toolbar">
 	<div class="filters">
-		<a href="projects.php" class="<?= $filter === '' ? 'active' : '' ?>">All (<?= count($projects) ?><?= $filter === '' ? '' : '' ?>)</a>
+		<a href="projects.php" class="<?= $filter === 0 ? 'active' : '' ?>">All</a>
 		<?php foreach ($categories as $cat): ?>
-			<a href="projects.php?category=<?= urlencode($cat) ?>" class="<?= $filter === $cat ? 'active' : '' ?>"><?= htmlspecialchars($cat, ENT_QUOTES, 'UTF-8') ?></a>
+			<a href="projects.php?category_id=<?= $cat['id'] ?>" class="<?= $filter === (int) $cat['id'] ? 'active' : '' ?>"><?= htmlspecialchars($cat['name'], ENT_QUOTES, 'UTF-8') ?></a>
 		<?php endforeach; ?>
 	</div>
 	<a href="project-edit.php" class="de-btn">Add a Project</a>
@@ -56,7 +58,7 @@ require __DIR__ . '/includes/layout-top.php';
 		<tbody>
 			<?php foreach ($projects as $p): ?>
 				<tr class="<?= $p['is_published'] ? '' : 'unpublished' ?>">
-					<td><span class="de-admin-tag"><?= htmlspecialchars($p['category'], ENT_QUOTES, 'UTF-8') ?></span></td>
+					<td><span class="de-admin-tag"><?= htmlspecialchars($p['category_name'] ?? 'Uncategorized', ENT_QUOTES, 'UTF-8') ?></span></td>
 					<td><?= htmlspecialchars(mb_strimwidth(trim(strip_tags($p['description'])), 0, 140, '…'), ENT_QUOTES, 'UTF-8') ?></td>
 					<td><span class="de-admin-tag"><?= htmlspecialchars(ucfirst($p['office']), ENT_QUOTES, 'UTF-8') ?></span> <span class="de-admin-tag"><?= htmlspecialchars(str_replace('_', ' ', $p['discipline']), ENT_QUOTES, 'UTF-8') ?></span></td>
 					<td><?= $p['is_published'] ? '' : '<span class="de-admin-tag">Hidden</span>' ?></td>

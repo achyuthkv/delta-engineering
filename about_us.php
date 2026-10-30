@@ -60,7 +60,7 @@
 						<div class="de-stat"><div class="n">10M+</div><div class="l">Sq. Ft. Engineered</div></div>
 					</div>
 				</div>
-				<img src="assets/images/slider/04.jpg" alt="Delta Engineering Services team on site">
+				<img src="assets/images/gallery_international/013.png" alt="Rendering of a glazed diagrid building facade at night">
 			</div>
 		</div>
 
@@ -69,20 +69,22 @@
 			<div class="de-spec-inner">
 				<div class="de-section-eyebrow" style="color:#7fa0d9">Why Delta Engineering</div>
 				<h2>What sets our work apart.</h2>
-				<div class="de-spec-grid de-spec-grid-3">
-					<div>
-						<div class="de-spec-row"><span class="de-spec-tick">01</span><p>Quality Assurance</p></div>
+				<div class="de-spec-grid de-spec-grid-pillars">
+					<div class="de-spec-row">
+						<span class="de-spec-tick">01</span>
+						<div><p class="de-spec-title">Quality Assurance</p><p class="de-spec-desc">Every drawing set is checked against code and coordinated across disciplines before it leaves our office.</p></div>
 					</div>
-					<div>
-						<div class="de-spec-row"><span class="de-spec-tick">02</span><p>Value Engineering</p></div>
+					<div class="de-spec-row">
+						<span class="de-spec-tick">02</span>
+						<div><p class="de-spec-title">Value Engineering</p><p class="de-spec-desc">We look for structural and material efficiencies that cut cost without compromising safety or performance.</p></div>
 					</div>
-					<div>
-						<div class="de-spec-row"><span class="de-spec-tick">03</span><p>Technical Support</p></div>
+					<div class="de-spec-row">
+						<span class="de-spec-tick">03</span>
+						<div><p class="de-spec-title">Technical Support</p><p class="de-spec-desc">Our engineers stay involved through construction, not just design — available for RFIs, site reviews, and field changes.</p></div>
 					</div>
-				</div>
-				<div class="de-spec-grid de-spec-grid-3" style="margin-top:0">
-					<div>
-						<div class="de-spec-row" style="border-bottom:none"><span class="de-spec-tick">04</span><p>Timely Response</p></div>
+					<div class="de-spec-row" style="border-bottom:none">
+						<span class="de-spec-tick">04</span>
+						<div><p class="de-spec-title">Timely Response</p><p class="de-spec-desc">Clear timelines and direct communication, so your project schedule isn't left waiting on us.</p></div>
 					</div>
 				</div>
 			</div>

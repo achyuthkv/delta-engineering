@@ -44,6 +44,7 @@
 				<div class="de-hero-structure">
 					<div class="de-struct-scene">
 						<div class="de-struct-rig">
+						<div class="de-struct-spin">
 
 							<!-- Podium -->
 							<div class="de-struct-box" style="position: absolute; left: 50%; top: 50%; transform: translate3d(-10px, 0px, -100px);">
@@ -103,6 +104,7 @@
 								<div class="de-struct-f de-struct-roof de-struct-top"></div><div class="de-struct-f de-struct-roof de-struct-bottom"></div>
 							</div>
 
+						</div>
 						</div>
 					</div>
 
@@ -251,10 +253,12 @@
 			</div>
 			<div class="de-notable-list">
 				<h4>Notable Projects on Record</h4>
-				<div class="de-notable-row"><span class="name">100,000 sq&nbsp;ft industrial manufacturing plant — Metro Paper Industries</span><span class="loc">Scarborough, ON</span></div>
-				<div class="de-notable-row"><span class="name">140,000 sq&nbsp;ft window glazing plant — Aero Aluminum Ltd.</span><span class="loc">Woodbridge, ON</span></div>
-				<div class="de-notable-row"><span class="name">50,000 sq&nbsp;ft warehouse — JVC</span><span class="loc">Scarborough, ON</span></div>
-				<div class="de-notable-row"><span class="name">Heavy equipment service garage — Cominco Ltd.</span><span class="loc">Trail, BC</span></div>
+				<div class="de-notable-grid">
+					<div class="de-notable-row"><span class="name">100,000 sq&nbsp;ft industrial manufacturing plant — Metro Paper Industries</span><span class="loc">Scarborough, ON</span></div>
+					<div class="de-notable-row"><span class="name">140,000 sq&nbsp;ft window glazing plant — Aero Aluminum Ltd.</span><span class="loc">Woodbridge, ON</span></div>
+					<div class="de-notable-row"><span class="name">50,000 sq&nbsp;ft warehouse — JVC</span><span class="loc">Scarborough, ON</span></div>
+					<div class="de-notable-row"><span class="name">Heavy equipment service garage — Cominco Ltd.</span><span class="loc">Trail, BC</span></div>
+				</div>
 			</div>
 			<p style="max-width:1240px;margin:28px auto 0;text-align:right"><a href="projects.php" class="de-svc-link" style="justify-content:flex-end">See all projects <svg viewBox="0 0 12 12" fill="none"><path d="M2 6h8m0 0L6 2m4 4L6 10" stroke="currentColor" stroke-width="1.4"/></svg></a></p>
 		</section>

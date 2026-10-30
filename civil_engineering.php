@@ -101,7 +101,7 @@
 					<?php endif; ?>
 					</div>
 				</div>
-				<img src="assets/images/slider/02_02.jpg" alt="Civil engineering site works, GTA">
+				<img src="assets/images/gallery_canada/013.jpg" alt="Industrial building under construction, site civil works, Alliston, Ontario">
 			</div>
 		</div>
 

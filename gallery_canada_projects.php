@@ -37,11 +37,12 @@
 	include 'header.php';
 
 	// Photos are managed through /admin/gallery.php (office = canada).
+	require_once __DIR__ . '/includes/gallery-grid.php';
 	$dePhotos = [];
 	try {
 		require_once __DIR__ . '/admin/includes/db.php';
 		$dePhotos = de_db()->query(
-			"SELECT image_path, alt_text, title, location FROM gallery_photos
+			"SELECT image_path, alt_text, title, location, project_id FROM gallery_photos
 			 WHERE office = 'canada' AND is_published = 1
 			 ORDER BY sort_order, id"
 		)->fetchAll();
@@ -66,17 +67,7 @@
 				<p style="text-align:center;color:#6c7690">Gallery is temporarily unavailable.</p>
 			<?php else: ?>
 			<div class="gallery-section de-photo-grid">
-				<?php foreach ($dePhotos as $photo): ?>
-				<div class="de-photo-item">
-					<div class="content-image-block">
-						<img src="<?= htmlspecialchars($photo['image_path'], ENT_QUOTES, 'UTF-8') ?>" alt="<?= htmlspecialchars($photo['alt_text'], ENT_QUOTES, 'UTF-8') ?>">
-						<div class="content-block-hover">
-							<a class="zoom-in" href="<?= htmlspecialchars($photo['image_path'], ENT_QUOTES, 'UTF-8') ?>"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-						</div>
-					</div>
-					<div class="de-photo-cap"><?= htmlspecialchars($photo['title'], ENT_QUOTES, 'UTF-8') ?><span><?= htmlspecialchars($photo['location'], ENT_QUOTES, 'UTF-8') ?></span></div>
-				</div>
-				<?php endforeach; ?>
+				<?php de_render_gallery_grid($dePhotos); ?>
 			</div>
 			<?php endif; ?>
 		</div>

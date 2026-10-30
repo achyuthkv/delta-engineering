@@ -10,13 +10,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="Photo gallery of Delta Engineering Services' completed engineering projects at our India office, including past international work in Oman.">
+    <meta name="description" content="Photo gallery of Delta Engineering Services' completed engineering projects at our India office.">
     <meta name="author" content="Delta Engineering Services">
     <link rel="canonical" href="https://www.delta-engineering.ca/gallery_international_projects.php">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Delta Engineering Services">
     <meta property="og:title" content="Gallery - India Projects | Delta Engineering Services">
-    <meta property="og:description" content="Completed engineering projects at our India office, including past international work in Oman.">
+    <meta property="og:description" content="Completed engineering projects at our India office.">
     <meta property="og:url" content="https://www.delta-engineering.ca/gallery_international_projects.php">
     <meta property="og:image" content="https://www.delta-engineering.ca/assets/images/logo.png">
 
@@ -36,43 +36,22 @@
 	<?php
 	include 'header.php';
 
-	// Photos are managed through /admin/gallery.php (office = oman / india).
-	$deOmanPhotos = [];
+	// Photos are managed through /admin/gallery.php (office = india). Oman
+	// has its own separate gallery page (gallery_oman_projects.php) -- it's
+	// past work, not a current office alongside Canada and India.
+	require_once __DIR__ . '/includes/gallery-grid.php';
 	$deIndiaPhotos = [];
 	try {
 		require_once __DIR__ . '/admin/includes/db.php';
 		$stmt = de_db()->prepare(
-			"SELECT image_path, alt_text, title, location FROM gallery_photos
-			 WHERE office = ? AND is_published = 1
+			"SELECT image_path, alt_text, title, location, project_id FROM gallery_photos
+			 WHERE office = 'india' AND is_published = 1
 			 ORDER BY sort_order, id"
 		);
-		$stmt->execute(['oman']);
-		$deOmanPhotos = $stmt->fetchAll();
-		$stmt->execute(['india']);
+		$stmt->execute();
 		$deIndiaPhotos = $stmt->fetchAll();
 	} catch (Throwable $e) {
-		$deOmanPhotos = [];
 		$deIndiaPhotos = [];
-	}
-
-	function de_render_photo_grid(array $photos): void {
-		foreach ($photos as $photo) {
-			$path = htmlspecialchars($photo['image_path'], ENT_QUOTES, 'UTF-8');
-			$alt = htmlspecialchars($photo['alt_text'], ENT_QUOTES, 'UTF-8');
-			$title = htmlspecialchars($photo['title'], ENT_QUOTES, 'UTF-8');
-			$location = htmlspecialchars($photo['location'], ENT_QUOTES, 'UTF-8');
-			echo <<<HTML
-			<div class="de-photo-item">
-				<div class="content-image-block">
-					<img src="{$path}" alt="{$alt}">
-					<div class="content-block-hover">
-						<a class="zoom-in" href="{$path}"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
-					</div>
-				</div>
-				<div class="de-photo-cap">{$title}<span>{$location}</span></div>
-			</div>
-			HTML;
-		}
 	}
 	?>
 	<main>
@@ -82,7 +61,7 @@
 			<div class="de-banner-inner">
 				<div class="de-crumbs"><a href="index.php">Home</a> / <span class="cur">India Projects</span></div>
 				<h1>India Projects</h1>
-				<p>A photo record of completed engineering work at our <a href="india_engineering_services.php">India office</a>, plus past international project work in Oman.</p>
+				<p>A photo record of completed engineering work at our <a href="india_engineering_services.php">India office</a>. For our earlier international work, see the <a href="gallery_oman_projects.php">Oman project gallery</a>.</p>
 			</div>
 		</div>
 
@@ -96,22 +75,7 @@
 				<p style="text-align:center;color:#6c7690">No photos published yet.</p>
 			<?php else: ?>
 			<div class="gallery-section de-photo-grid">
-				<?php de_render_photo_grid($deIndiaPhotos); ?>
-			</div>
-			<?php endif; ?>
-		</div>
-
-		<div class="de-section">
-			<div class="de-section-head">
-				<div class="de-section-eyebrow">Oman &mdash; Past International Work</div>
-				<h2>Delivered with Al Hashar Engineering.</h2>
-				<p class="de-section-sub">Commercial, hospitality, residential, and master-planning work completed across Muscat, Salalah, Sohar, and Nizwa before we consolidated to Canada and India. See the <a href="oman_engineering_services.php">Oman project archive</a>.</p>
-			</div>
-			<?php if (!$deOmanPhotos): ?>
-				<p style="text-align:center;color:#6c7690">Gallery is temporarily unavailable.</p>
-			<?php else: ?>
-			<div class="gallery-section de-photo-grid">
-				<?php de_render_photo_grid($deOmanPhotos); ?>
+				<?php de_render_gallery_grid($deIndiaPhotos); ?>
 			</div>
 			<?php endif; ?>
 		</div>

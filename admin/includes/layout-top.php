@@ -19,6 +19,7 @@ $admin = de_current_admin();
 		<nav>
 			<a href="index.php"<?= basename($_SERVER['PHP_SELF']) === 'index.php' ? ' class="active"' : '' ?>>Dashboard</a>
 			<a href="projects.php"<?= in_array(basename($_SERVER['PHP_SELF']), ['projects.php', 'project-edit.php']) ? ' class="active"' : '' ?>>Projects</a>
+			<a href="categories.php"<?= in_array(basename($_SERVER['PHP_SELF']), ['categories.php', 'category-edit.php']) ? ' class="active"' : '' ?>>Categories</a>
 			<a href="gallery.php"<?= in_array(basename($_SERVER['PHP_SELF']), ['gallery.php', 'gallery-edit.php']) ? ' class="active"' : '' ?>>Gallery</a>
 			<span>Signed in as <?= htmlspecialchars($admin['username'], ENT_QUOTES, 'UTF-8') ?></span>
 			<a href="logout.php">Log out</a>

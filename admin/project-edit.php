@@ -5,7 +5,7 @@ de_require_login();
 
 $db = de_db();
 $id = isset($_GET['id']) ? (int) $_GET['id'] : null;
-$project = ['category' => '', 'description' => '', 'office' => 'canada', 'discipline' => 'structural', 'sort_order' => 0, 'is_published' => 1];
+$project = ['category_id' => null, 'description' => '', 'office' => 'canada', 'discipline' => 'structural', 'sort_order' => 0, 'is_published' => 1];
 $error = '';
 
 $offices = ['canada' => 'Canada', 'india' => 'India'];
@@ -109,7 +109,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		header('Location: project-edit.php?id=' . $id . '&photo_deleted=1');
 		exit;
 	} else {
-		$project['category'] = trim($_POST['category'] ?? '');
+		$project['category_id'] = ((int) ($_POST['category_id'] ?? 0)) ?: null;
 		// Sanitized here regardless of what the rich text editor's JS sent --
 		// that JS is just a convenience, not a security boundary. A request
 		// could always POST straight to this endpoint bypassing it entirely,
@@ -121,17 +121,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		$project['sort_order'] = (int) ($_POST['sort_order'] ?? 0);
 		$project['is_published'] = isset($_POST['is_published']) ? 1 : 0;
 
+		// A category belongs to one office -- cross-checked here so a project
+		// can't end up tagged with a category from the other office (the
+		// <select> is filtered client-side, but that's not a security
+		// boundary either).
+		$categoryOffice = null;
+		if ($project['category_id']) {
+			$catStmt = $db->prepare('SELECT office FROM project_categories WHERE id = ?');
+			$catStmt->execute([$project['category_id']]);
+			$categoryOffice = $catStmt->fetchColumn();
+		}
+
 		$descriptionIsBlank = trim(strip_tags($project['description'])) === '';
-		if ($project['category'] === '' || $descriptionIsBlank) {
+		if (!$project['category_id'] || $descriptionIsBlank) {
 			$error = 'Category and description are both required.';
+		} elseif ($categoryOffice === false) {
+			$error = 'Choose a valid category.';
+		} elseif ($categoryOffice !== $project['office']) {
+			$error = 'That category belongs to the other office -- pick one that matches, or change the office above.';
 		} else {
 			if ($id) {
-				$stmt = $db->prepare('UPDATE projects SET category = ?, description = ?, office = ?, discipline = ?, sort_order = ?, is_published = ? WHERE id = ?');
-				$stmt->execute([$project['category'], $project['description'], $project['office'], $project['discipline'], $project['sort_order'], $project['is_published'], $id]);
+				$stmt = $db->prepare('UPDATE projects SET category_id = ?, description = ?, office = ?, discipline = ?, sort_order = ?, is_published = ? WHERE id = ?');
+				$stmt->execute([$project['category_id'], $project['description'], $project['office'], $project['discipline'], $project['sort_order'], $project['is_published'], $id]);
 				header('Location: project-edit.php?id=' . $id . '&saved=1');
 			} else {
-				$stmt = $db->prepare('INSERT INTO projects (category, description, office, discipline, sort_order, is_published) VALUES (?, ?, ?, ?, ?, ?)');
-				$stmt->execute([$project['category'], $project['description'], $project['office'], $project['discipline'], $project['sort_order'], $project['is_published']]);
+				$stmt = $db->prepare('INSERT INTO projects (category_id, category, description, office, discipline, sort_order, is_published) VALUES (?, \'\', ?, ?, ?, ?, ?)');
+				$stmt->execute([$project['category_id'], $project['description'], $project['office'], $project['discipline'], $project['sort_order'], $project['is_published']]);
 				header('Location: project-edit.php?id=' . $db->lastInsertId() . '&saved=1');
 			}
 			exit;
@@ -146,7 +161,7 @@ if ($id) {
 	$linkedPhotos = $stmt->fetchAll();
 }
 
-$categories = $db->query('SELECT DISTINCT category FROM projects ORDER BY category')->fetchAll(PDO::FETCH_COLUMN);
+$categories = $db->query('SELECT id, office, name FROM project_categories ORDER BY office, sort_order, name')->fetchAll();
 
 $page_title = $id ? 'Edit Project' : 'Add Project';
 require __DIR__ . '/includes/layout-top.php';
@@ -172,14 +187,22 @@ require __DIR__ . '/includes/layout-top.php';
 		<?= de_csrf_field() ?>
 		<input type="hidden" name="form_action" value="save_project">
 
-		<label for="category">Category</label>
-		<input type="text" id="category" name="category" list="category-list" required value="<?= htmlspecialchars($project['category'], ENT_QUOTES, 'UTF-8') ?>">
-		<datalist id="category-list">
-			<?php foreach ($categories as $cat): ?>
-				<option value="<?= htmlspecialchars($cat, ENT_QUOTES, 'UTF-8') ?>">
-			<?php endforeach; ?>
-		</datalist>
-		<div class="hint">Pick an existing category from the list, or type a new one to start a new accordion section.</div>
+		<label for="category_id">Category</label>
+		<select id="category_id" name="category_id" required>
+			<option value="">Select a category&hellip;</option>
+			<?php $catsByOffice = ['canada' => [], 'india' => []]; foreach ($categories as $cat) { $catsByOffice[$cat['office']][] = $cat; } ?>
+			<optgroup label="Canada" data-office="canada">
+				<?php foreach ($catsByOffice['canada'] as $cat): ?>
+					<option value="<?= $cat['id'] ?>" <?= (int) $project['category_id'] === (int) $cat['id'] ? 'selected' : '' ?>><?= htmlspecialchars($cat['name'], ENT_QUOTES, 'UTF-8') ?></option>
+				<?php endforeach; ?>
+			</optgroup>
+			<optgroup label="India" data-office="india">
+				<?php foreach ($catsByOffice['india'] as $cat): ?>
+					<option value="<?= $cat['id'] ?>" <?= (int) $project['category_id'] === (int) $cat['id'] ? 'selected' : '' ?>><?= htmlspecialchars($cat['name'], ENT_QUOTES, 'UTF-8') ?></option>
+				<?php endforeach; ?>
+			</optgroup>
+		</select>
+		<div class="hint">Only categories for the selected office below are accepted &mdash; <a href="categories.php" target="_blank">manage categories</a> to add a new one.</div>
 
 		<label for="descriptionEditor">Description</label>
 		<div class="de-rte">
@@ -256,6 +279,25 @@ require __DIR__ . '/includes/layout-top.php';
 				<div class="hint">Powers the "Featured Projects" block on that discipline's service page.</div>
 			</div>
 		</div>
+
+		<script>
+			(function () {
+				var officeSelect = document.getElementById('office');
+				var categorySelect = document.getElementById('category_id');
+				function syncCategoryOffice() {
+					var office = officeSelect.value;
+					Array.prototype.forEach.call(categorySelect.querySelectorAll('optgroup'), function (group) {
+						group.disabled = group.dataset.office !== office;
+					});
+					var selected = categorySelect.selectedOptions[0];
+					if (selected && selected.closest('optgroup') && selected.closest('optgroup').disabled) {
+						categorySelect.value = '';
+					}
+				}
+				officeSelect.addEventListener('change', syncCategoryOffice);
+				syncCategoryOffice();
+			})();
+		</script>
 
 		<div class="row">
 			<div>

@@ -272,6 +272,7 @@
 					<div class="de-nav-dropdown-menu">
 						<a href="gallery_canada_projects.php" title="Canada Projects">Canada Projects</a>
 						<a href="gallery_international_projects.php" title="India Projects">India Projects</a>
+						<a href="gallery_oman_projects.php" title="Oman Projects">Oman Projects</a>
 					</div>
 				</div>
 

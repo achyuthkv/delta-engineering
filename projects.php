@@ -36,28 +36,35 @@
 	<?php
 	include 'header.php';
 
-	// Projects are managed through /admin -- grouped by category in the
-	// order each category was first added, matching the accordion order
-	// that used to be hand-written directly into this file.
+	// Categories are managed through /admin/categories.php (name, icon,
+	// sort order, scoped to an office) -- projects.category_id points at
+	// one of them. $deCategories drives both the grouping below and the
+	// icon shown next to each heading / jump-nav chip.
 	$deProjectGroups = [];
+	$deCategories = [];
 	try {
 		require_once __DIR__ . '/admin/includes/db.php';
 		$db = de_db();
+
+		$catStmt = $db->prepare('SELECT id, name, icon_path FROM project_categories WHERE office = ? ORDER BY sort_order, name');
+		$catStmt->execute([$deLoc]);
+		foreach ($catStmt->fetchAll() as $cat) {
+			$deCategories[$cat['id']] = $cat;
+		}
+
 		$stmt = $db->prepare(
-			"SELECT category, description, sort_order, id
+			"SELECT category_id, description, sort_order, id
 			 FROM projects
-			 WHERE is_published = 1 AND office = ?
-			 ORDER BY category, sort_order, id"
+			 WHERE is_published = 1 AND office = ? AND category_id IS NOT NULL
+			 ORDER BY category_id, sort_order, id"
 		);
 		$stmt->execute([$deLoc]);
 		$rows = $stmt->fetchAll();
 
-		// One thumbnail per project -- the project's first published photo
-		// (lowest sort_order, then id), same photos attached via the
-		// "Photos" section on /admin/project-edit.php. A project can have
-		// several photos there for the full gallery pages; only the first
-		// shows inline here, so each accordion row stays a single line.
-		$deProjectThumbs = [];
+		// All published photos per project (not just the first) -- a
+		// project with several shows as a card that cycles through them on
+		// hover instead of a single static thumbnail.
+		$deProjectPhotos = [];
 		$projectIds = array_column($rows, 'id');
 		if ($projectIds) {
 			$placeholders = implode(',', array_fill(0, count($projectIds), '?'));
@@ -68,9 +75,7 @@
 			);
 			$photoStmt->execute($projectIds);
 			foreach ($photoStmt->fetchAll() as $photoRow) {
-				if (!isset($deProjectThumbs[$photoRow['project_id']])) {
-					$deProjectThumbs[$photoRow['project_id']] = $photoRow;
-				}
+				$deProjectPhotos[$photoRow['project_id']][] = $photoRow;
 			}
 		}
 
@@ -81,16 +86,33 @@
 		// text line isn't big enough for that. Order within each bucket
 		// still follows sort_order/id, same as before.
 		foreach ($rows as $row) {
-			$thumb = $deProjectThumbs[$row['id']] ?? null;
-			$bucket = $thumb ? 'photo' : 'text';
-			$deProjectGroups[$row['category']][$bucket][] = [
+			if (!isset($deCategories[$row['category_id']])) {
+				continue; // category since deleted/reassigned elsewhere
+			}
+			$photos = $deProjectPhotos[$row['id']] ?? [];
+			$bucket = $photos ? 'photo' : 'text';
+			$deProjectGroups[$row['category_id']][$bucket][] = [
 				'description' => $row['description'],
-				'thumb' => $thumb,
+				'photos' => $photos,
 			];
 		}
-		uksort($deProjectGroups, 'strcasecmp');
 	} catch (Throwable $e) {
 		$deProjectGroups = [];
+		$deCategories = [];
+	}
+
+	// A small curated set of real project photography (the same files
+	// used on the dedicated gallery pages, with the exact titles/locations
+	// already on record in gallery_photos) for a featured rail at the top
+	// of the page. Canada only for now -- India's gallery doesn't yet have
+	// enough photographed projects on record to feature honestly.
+	$deFeatured = [];
+	if ($deLoc !== 'india') {
+		$deFeatured = [
+			['src' => 'assets/images/gallery_canada/002.jpg', 'tag' => 'Infrastructure', 'cap' => 'Water Tank', 'loc' => 'Norwood, Ontario'],
+			['src' => 'assets/images/gallery_canada/014.jpg', 'tag' => 'Industrial', 'cap' => 'Industrial Building', 'loc' => 'Alliston, Ontario'],
+			['src' => 'assets/images/gallery_canada/016.jpg', 'tag' => 'Community', 'cap' => 'Shikhar Works, Hindu Sabha Temple', 'loc' => 'Hamilton, Ontario'],
+		];
 	}
 	?>
 
@@ -103,9 +125,9 @@
 				<div class="de-eyebrow"><?= $deLoc === 'india' ? 'India' : 'Canada &middot; Greater Toronto Area' ?></div>
 				<h1>Projects</h1>
 				<?php if ($deLoc === 'india'): ?>
-				<p>A record of what we've built in India, organized by the kind of work. For photos, see the <a href="gallery_international_projects.php">India gallery</a>.</p>
+				<p>A record of what we've built in India, organized by the kind of work. See our <a href="projects.php?loc=canada">Canada projects</a> or past work in <a href="gallery_oman_projects.php">Oman</a>. For photos, see the <a href="gallery_international_projects.php">India gallery</a>.</p>
 				<?php else: ?>
-				<p>A record of what we've built across the Greater Toronto Area, organized by the kind of work, spanning four decades since 1985. For our India work, see the <a href="gallery_international_projects.php">India gallery</a>.</p>
+				<p>A record of what we've built across the Greater Toronto Area, organized by the kind of work, spanning four decades since 1985. See our <a href="projects.php?loc=india">India projects</a> or past work in <a href="gallery_oman_projects.php">Oman</a>.</p>
 				<?php endif; ?>
 			</div>
 		</div>
@@ -114,37 +136,93 @@
 			<?php if (!$deProjectGroups): ?>
 				<p style="text-align:center;color:#6c7690">Project list is temporarily unavailable.</p>
 			<?php else: ?>
-			<div class="de-accordion" id="accordion">
-				<?php $i = 0; foreach ($deProjectGroups as $category => $group): $i++; $panelId = 'faqcontent' . $i;
-					$photoItems = $group['photo'] ?? [];
-					$textItems = $group['text'] ?? [];
-				?>
-				<div class="de-accordion-item panel">
-					<h3><a role="button" data-toggle="collapse" data-parent="#accordion" href="#<?= $panelId ?>" aria-expanded="<?= $i === 1 ? 'true' : 'false' ?>" class="de-accordion-toggle<?= $i === 1 ? '' : ' collapsed' ?>"><?= htmlspecialchars($category, ENT_QUOTES, 'UTF-8') ?> <svg class="chev" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg></a></h3>
-					<div id="<?= $panelId ?>" class="collapse<?= $i === 1 ? ' in' : '' ?> de-accordion-body" role="tabpanel">
-						<div class="de-accordion-body-inner">
-							<?php if ($photoItems): ?>
-							<div class="de-proj-photo-grid">
-								<?php foreach ($photoItems as $item): ?>
-								<figure class="de-proj-photo-card">
-									<img src="<?= htmlspecialchars($item['thumb']['image_path'], ENT_QUOTES, 'UTF-8') ?>" alt="<?= htmlspecialchars($item['thumb']['alt_text'], ENT_QUOTES, 'UTF-8') ?>" loading="lazy">
-									<figcaption><div class="de-proj-desc"><?= $item['description'] ?></div></figcaption>
-								</figure>
-								<?php endforeach; ?>
-							</div>
-							<?php endif; ?>
-							<?php if ($textItems): ?>
-							<ul class="de-accordion-list">
-								<?php foreach ($textItems as $item): ?>
-									<li><div class="de-accordion-desc"><?= $item['description'] ?></div></li>
-								<?php endforeach; ?>
-							</ul>
-							<?php endif; ?>
-						</div>
-					</div>
+
+			<?php $deActiveCatCount = count($deProjectGroups); ?>
+			<div class="de-proj-stat-line">
+				<span class="n"><?= count($rows) ?>+</span>
+				<span class="l">documented projects on record<?= $deActiveCatCount > 1 ? ', across ' . $deActiveCatCount . ' categories' : '' ?><?= $deLoc === 'india' ? '' : ' spanning four decades' ?></span>
+			</div>
+
+			<?php if ($deFeatured): ?>
+			<div class="de-proj-grid de-proj-grid-featured">
+				<?php foreach ($deFeatured as $f): ?>
+				<div class="de-proj-card">
+					<img src="<?= htmlspecialchars($f['src'], ENT_QUOTES, 'UTF-8') ?>" alt="<?= htmlspecialchars($f['cap'], ENT_QUOTES, 'UTF-8') ?>" loading="lazy">
+					<span class="de-proj-tag"><?= htmlspecialchars($f['tag'], ENT_QUOTES, 'UTF-8') ?></span>
+					<div class="de-proj-cap"><?= htmlspecialchars($f['cap'], ENT_QUOTES, 'UTF-8') ?><span><?= htmlspecialchars($f['loc'], ENT_QUOTES, 'UTF-8') ?></span></div>
 				</div>
 				<?php endforeach; ?>
 			</div>
+			<?php endif; ?>
+
+			<?php if ($deActiveCatCount > 1): ?>
+			<nav class="de-proj-jump" aria-label="Jump to category">
+				<?php foreach ($deCategories as $catId => $cat):
+					$group = $deProjectGroups[$catId] ?? null;
+					if (!$group) continue;
+					$slug = trim(preg_replace('/[^a-z0-9]+/', '-', strtolower($cat['name'])), '-');
+					$count = count($group['photo'] ?? []) + count($group['text'] ?? []);
+				?>
+				<a href="#cat-<?= $slug ?>">
+					<?php if ($cat['icon_path']): ?><img src="<?= htmlspecialchars($cat['icon_path'], ENT_QUOTES, 'UTF-8') ?>" alt="" class="de-proj-jump-icon"><?php endif; ?>
+					<?= htmlspecialchars($cat['name'], ENT_QUOTES, 'UTF-8') ?> <span><?= $count ?></span>
+				</a>
+				<?php endforeach; ?>
+			</nav>
+			<?php endif; ?>
+
+			<div class="de-proj-register">
+				<?php foreach ($deCategories as $catId => $cat):
+					$group = $deProjectGroups[$catId] ?? null;
+					if (!$group) continue;
+					$slug = trim(preg_replace('/[^a-z0-9]+/', '-', strtolower($cat['name'])), '-');
+					$photoItems = $group['photo'] ?? [];
+					$textItems = $group['text'] ?? [];
+					$count = count($photoItems) + count($textItems);
+				?>
+				<section class="de-proj-cat" id="cat-<?= $slug ?>">
+					<div class="de-proj-cat-head">
+						<?php if ($cat['icon_path']): ?><img src="<?= htmlspecialchars($cat['icon_path'], ENT_QUOTES, 'UTF-8') ?>" alt="" class="de-proj-cat-icon"><?php endif; ?>
+						<h2><?= htmlspecialchars($cat['name'], ENT_QUOTES, 'UTF-8') ?></h2>
+						<span class="de-proj-cat-count"><?= $count ?> project<?= $count === 1 ? '' : 's' ?></span>
+					</div>
+					<div class="de-proj-cat-body<?= ($photoItems && $textItems) ? ' de-proj-cat-body-split' : '' ?>">
+					<?php if ($photoItems): ?>
+					<div class="de-proj-photo-grid">
+						<?php foreach ($photoItems as $item):
+							$photos = $item['photos'];
+							$isMulti = count($photos) > 1;
+						?>
+						<figure class="de-proj-photo-card"<?= $isMulti ? ' data-multi-photo' : '' ?>>
+							<div class="de-proj-photo-stack content-image-block">
+								<?php foreach ($photos as $pi => $photo): ?>
+								<img src="<?= htmlspecialchars($photo['image_path'], ENT_QUOTES, 'UTF-8') ?>" alt="<?= htmlspecialchars($photo['alt_text'], ENT_QUOTES, 'UTF-8') ?>" loading="lazy" class="<?= $pi === 0 ? 'is-active' : '' ?>">
+								<?php endforeach; ?>
+								<div class="content-block-hover">
+									<a class="zoom-in" href="<?= htmlspecialchars($photos[0]['image_path'], ENT_QUOTES, 'UTF-8') ?>"><i class="fa fa-search" style="font-size:30px;margin-left:25px"></i></a>
+								</div>
+							</div>
+							<?php if ($isMulti): ?><span class="de-proj-photo-count"><?= count($photos) ?> photos</span><?php endif; ?>
+							<figcaption><div class="de-proj-desc"><?= $item['description'] ?></div></figcaption>
+						</figure>
+						<?php endforeach; ?>
+					</div>
+					<?php endif; ?>
+					<?php if ($textItems): ?>
+					<div class="de-reg-list">
+						<?php foreach ($textItems as $ti => $item): ?>
+						<div class="de-reg-row">
+							<span class="de-reg-num"><?= str_pad($ti + 1, 2, '0', STR_PAD_LEFT) ?></span>
+							<div class="de-reg-desc"><?= $item['description'] ?></div>
+						</div>
+						<?php endforeach; ?>
+					</div>
+					<?php endif; ?>
+					</div>
+				</section>
+				<?php endforeach; ?>
+			</div>
+
 			<?php endif; ?>
 		</div>
 

@@ -105,7 +105,7 @@
 					<?php endif; ?>
 					</div>
 				</div>
-				<img src="assets/images/slider/03_02.jpg" alt="Municipal infrastructure works, GTA">
+				<img src="assets/images/gallery_canada/001.jpg" alt="Elevated water storage tank under construction, Norwood, Ontario">
 			</div>
 		</div>
 

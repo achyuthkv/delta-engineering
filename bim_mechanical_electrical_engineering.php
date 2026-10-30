@@ -101,7 +101,7 @@
 					<?php endif; ?>
 					</div>
 				</div>
-				<img src="assets/images/bim.jpg" alt="Building Information Modelling (BIM)">
+				<img src="assets/images/gallery_international/001.png" alt="Isometric BIM model of a multi-level parking structure">
 			</div>
 		</div>
 
@@ -143,14 +143,14 @@
 					<h3>Mechanical Engineering</h3>
 					<p>Spiraling product costs and margin pressures are challenging the mechanical engineering industry to reinvent itself. Looking beyond the traditional approach to engineering, intensifying focus on R&amp;D, leveraging new technologies, and enabling faster, better, and more cost-effective product development is imperative to remain competitive.</p>
 				</div>
-				<img src="assets/images/slider/04.jpg" alt="Mechanical engineering design work">
+				<img src="assets/images/gallery_canada/014.jpg" alt="Roof framing and mechanical coordination, open structural ceiling">
 			</div>
 		</div>
 
 		<!-- Electrical -->
 		<div class="de-block" style="background:#f5f4f0">
 			<div class="de-block-grid de-reverse">
-				<img src="assets/images/slider/05.jpg" alt="Electrical engineering design work">
+				<img src="assets/images/gallery_canada/013.jpg" alt="Industrial building construction, electrical and site coordination">
 				<div>
 					<h3>Electrical Engineering</h3>
 					<p>Designing and laying out the right electrical system is not an easy job — it takes weeks of research and analysis, and any lapse in understanding or implementation makes the system vulnerable to failure. Delta Engineering's electrical engineering services help you accomplish the desired results at affordable rates, whether you're designing or modifying a state-of-the-art system.</p>
